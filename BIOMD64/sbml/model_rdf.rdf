@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:bqb="http://biomodels.net/biology-qualifiers/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+  <rdf:Description rdf:about="model.xml#COPASI1">
+    <bqb:is rdf:resource="http://identifiers.org/go/GO:0005576"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI2">
+    <bqb:is rdf:resource="http://identifiers.org/go/GO:0005829"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI3">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI3">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00293"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI3">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI3_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI3_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI4">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00668"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI4">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:17665"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI4">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI4_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI4_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI5">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C05345"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI5">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:15946"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI5">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI5_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI5_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI6">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:16905"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI6">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00354"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI6">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI6_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI6_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI7">
+    <bqb:hasPart rdf:resource="http://identifiers.org/chebi/CHEBI:16108"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI7">
+    <bqb:hasPart rdf:resource="http://identifiers.org/chebi/CHEBI:29052"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI7">
+    <bqb:hasPart rdf:resource="http://identifiers.org/kegg.compound/C00118"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI7">
+    <bqb:hasPart rdf:resource="http://identifiers.org/kegg.compound/C00111"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI7">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI7_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI7_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI8">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:16001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI8">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00236"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI8">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI8_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI8_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI9">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00197"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI9">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:17794"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI9">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI9_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI9_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI10">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00631"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI10">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:17835"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI10">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI10_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI10_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI11">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:18021"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI11">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00074"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI11">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI11_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI11_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI12">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00022"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI12">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:32816"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI12">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:15361"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI12">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI12_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI12_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI13">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00084"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI13">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:15343"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI13">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI13_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI13_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI14">
+    <bqb:hasPart rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI14">
+    <bqb:hasPart rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI14">
+    <bqb:hasPart rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI14">
+    <bqb:hasPart rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI14">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI14_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI14_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI15">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI15">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:15846"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI15">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI15_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI15_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI16">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:16908"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI16">
+    <bqb:is rdf:resource="http://identifiers.org//C00004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI16">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI16_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI16_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI17">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00182"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI17">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:28087"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI17">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI17_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI17_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI18">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C01083"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI18">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:27082"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI18">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI18_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI18_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI19">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00011"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI19">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:16526"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI19">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI19_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI19_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI20">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:30031"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI20">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI20_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI20_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI21">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00293"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI21">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI21">
+    <bqb:occursIn rdf:resource="model.xml#COPASI1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI21_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI21_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI22">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00469"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI22">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:16236"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI22">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI22_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI22_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI23">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00116"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI23">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:17754"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI23">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI23_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI23_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI24">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI24">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI24">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI24_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI24_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI25">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI25">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI25">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI25_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI25_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI26">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:16027"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI26">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00020"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI26">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI26_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI26_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI27">
+    <bqb:hasPart rdf:resource="http://identifiers.org/chebi/CHEBI:16027"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI27">
+    <bqb:hasPart rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI27">
+    <bqb:hasPart rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI27">
+    <bqb:hasPart rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI27">
+    <bqb:hasPart rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI27">
+    <bqb:hasPart rdf:resource="http://identifiers.org/kegg.compound/C00020"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI27">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI27_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI27_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI27"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI28">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.compound/C00665"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI28">
+    <bqb:is rdf:resource="http://identifiers.org/chebi/CHEBI:28602"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#COPASI28">
+    <bqb:occursIn rdf:resource="model.xml#COPASI2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI28_property">
+    <bqb:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00425"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI28_property">
+    <bqb:isPropertyOf rdf:resource="#COPASI28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI44">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R00299"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI44">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/2.7.1.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI44">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_1318"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source0">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source0">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI44">
+    <semsim:hasSourceParticipant rdf:resource="#source0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source1">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source1">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI44">
+    <semsim:hasSourceParticipant rdf:resource="#source1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink0">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink0">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI44">
+    <semsim:hasSinkParticipant rdf:resource="#sink0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator0">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator0">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI44">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator1">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator1">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI44">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI45">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/5.3.1.9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI45">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R00771"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI45">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_116"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source2">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source2">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI45">
+    <semsim:hasSourceParticipant rdf:resource="#source2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink1">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink1">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI45">
+    <semsim:hasSinkParticipant rdf:resource="#sink1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI46">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_1736"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI46">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/go/GO:0005978"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source3">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source3">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI46">
+    <semsim:hasSourceParticipant rdf:resource="#source3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source4">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source4">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI46">
+    <semsim:hasSourceParticipant rdf:resource="#source4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink2">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink2">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI46">
+    <semsim:hasSinkParticipant rdf:resource="#sink2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI47">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/go/GO:0005992"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source5">
+    <semsim:hasMultiplier>2</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source5">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI47">
+    <semsim:hasSourceParticipant rdf:resource="#source5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source6">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source6">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI47">
+    <semsim:hasSourceParticipant rdf:resource="#source6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink3">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink3">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI47">
+    <semsim:hasSinkParticipant rdf:resource="#sink3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/2.7.1.11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R00756"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_736"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source7">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source7">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <semsim:hasSourceParticipant rdf:resource="#source7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source8">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source8">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <semsim:hasSourceParticipant rdf:resource="#source8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink4">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink4">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <semsim:hasSinkParticipant rdf:resource="#sink4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator2">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator2">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator3">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator3">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator4">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator4">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI48">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI49">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/4.1.2.13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI49">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R01070"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI49">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_1602"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source9">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source9">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI49">
+    <semsim:hasSourceParticipant rdf:resource="#source9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink5">
+    <semsim:hasMultiplier>2</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink5">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI49">
+    <semsim:hasSinkParticipant rdf:resource="#sink5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI50">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/1.2.1.12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI50">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R01061"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI50">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_1847"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source10">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source10">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI50">
+    <semsim:hasSourceParticipant rdf:resource="#source10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source11">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source11">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI50">
+    <semsim:hasSourceParticipant rdf:resource="#source11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink6">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink6">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI50">
+    <semsim:hasSinkParticipant rdf:resource="#sink6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink7">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink7">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI50">
+    <semsim:hasSinkParticipant rdf:resource="#sink7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI51">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R01512"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI51">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/2.7.2.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI51">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_1771"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source12">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source12">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI51">
+    <semsim:hasSourceParticipant rdf:resource="#source12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink8">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink8">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI51">
+    <semsim:hasSinkParticipant rdf:resource="#sink8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink9">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink9">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI51">
+    <semsim:hasSinkParticipant rdf:resource="#sink9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator5">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator5">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI51">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator6">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator6">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI51">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI52">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R01518"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI52">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/5.4.2.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI52">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_576"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source13">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source13">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI52">
+    <semsim:hasSourceParticipant rdf:resource="#source13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink10">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink10">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI52">
+    <semsim:hasSinkParticipant rdf:resource="#sink10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI53">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/4.2.1.11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI53">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R00658"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI53">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_1400"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source14">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source14">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI53">
+    <semsim:hasSourceParticipant rdf:resource="#source14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink11">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink11">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI53">
+    <semsim:hasSinkParticipant rdf:resource="#sink11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI54">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R00200"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI54">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/2.7.1.40"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI54">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_1911"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source15">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source15">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI54">
+    <semsim:hasSourceParticipant rdf:resource="#source15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink12">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink12">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI54">
+    <semsim:hasSinkParticipant rdf:resource="#sink12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink13">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink13">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI54">
+    <semsim:hasSinkParticipant rdf:resource="#sink13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator7">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator7">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI54">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator8">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator8">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI54">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI55">
+    <bqb:is rdf:resource="http://identifiers.org/kegg.reaction/R00224"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI55">
+    <bqb:is rdf:resource="http://identifiers.org/ec-code/4.1.1.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source16">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source16">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI55">
+    <semsim:hasSourceParticipant rdf:resource="#source16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink14">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink14">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI55">
+    <semsim:hasSinkParticipant rdf:resource="#sink14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink15">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink15">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI55">
+    <semsim:hasSinkParticipant rdf:resource="#sink15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI56">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/go/GO:0006105"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source17">
+    <semsim:hasMultiplier>2</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source17">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI56">
+    <semsim:hasSourceParticipant rdf:resource="#source17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source18">
+    <semsim:hasMultiplier>3</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source18">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI56">
+    <semsim:hasSourceParticipant rdf:resource="#source18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source19">
+    <semsim:hasMultiplier>4</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source19">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI56">
+    <semsim:hasSourceParticipant rdf:resource="#source19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink16">
+    <semsim:hasMultiplier>3</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink16">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI56">
+    <semsim:hasSinkParticipant rdf:resource="#sink16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink17">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink17">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI56">
+    <semsim:hasSinkParticipant rdf:resource="#sink17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI57">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_2092"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI57">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/go/GO:0046323"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source20">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source20">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI57">
+    <semsim:hasSourceParticipant rdf:resource="#source20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink18">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink18">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI57">
+    <semsim:hasSinkParticipant rdf:resource="#sink18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI58">
+    <bqb:isHomologTo rdf:resource="http://identifiers.org/reactome/REACT_799"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI58">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/kegg.reaction/R00746"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI58">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/ec-code/1.1.1.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source21">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source21">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI58">
+    <semsim:hasSourceParticipant rdf:resource="#source21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source22">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source22">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI58">
+    <semsim:hasSourceParticipant rdf:resource="#source22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink19">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink19">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI58">
+    <semsim:hasSinkParticipant rdf:resource="#sink19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink20">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink20">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI58">
+    <semsim:hasSinkParticipant rdf:resource="#sink20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI59">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/ec-code/1.1.1.8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source23">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source23">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI59">
+    <semsim:hasSourceParticipant rdf:resource="#source23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source24">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source24">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI59">
+    <semsim:hasSourceParticipant rdf:resource="#source24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink21">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink21">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI59">
+    <semsim:hasSinkParticipant rdf:resource="#sink21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink22">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sink22">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI59">
+    <semsim:hasSinkParticipant rdf:resource="#sink22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI60">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/go/GO:0016887"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI60">
+    <bqb:isVersionOf rdf:resource="http://identifiers.org/ec-code/3.6.1.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source25">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#source25">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI60">
+    <semsim:hasSourceParticipant rdf:resource="#source25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator9">
+    <semsim:hasMultiplier>1</semsim:hasMultiplier>
+  </rdf:Description>
+  <rdf:Description rdf:about="#mediator9">
+    <semsim:hasPhysicalEntityReference rdf:resource="model.xml#COPASI24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI60">
+    <semsim:hasMediatorParticipant rdf:resource="#mediator9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI29">
+    <semsim:hasValue>5.12</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI30">
+    <semsim:hasValue>0.1</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI31">
+    <semsim:hasValue>0.71</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI32">
+    <semsim:hasValue>0.66</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI33">
+    <semsim:hasValue>100</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI34">
+    <semsim:hasValue>0.65</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI35">
+    <semsim:hasValue>0.0845</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI36">
+    <semsim:hasValue>0.0995</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI37">
+    <semsim:hasValue>0.0174</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI38">
+    <semsim:hasValue>0.000682</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI39">
+    <semsim:hasValue>0.397</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI40">
+    <semsim:hasValue>0.111</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI41">
+    <semsim:hasValue>3</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI42">
+    <semsim:hasValue>0.45</semsim:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="model.xml#COPASI43">
+    <semsim:hasValue>0.045</semsim:hasValue>
+  </rdf:Description>
+</rdf:RDF>
+
