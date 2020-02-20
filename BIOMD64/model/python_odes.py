@@ -64,7 +64,7 @@ NADH = 0.39
 y0 = [GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH]
 
 
-def teusink2000(t, y0):
+def teusink2000(y0, t):
     # Unpack Species
     GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH = y0
 
@@ -120,12 +120,12 @@ def teusink2000(t, y0):
     KmPFKATP = 0.71
     KmPFKF6P = 0.1
     Lzero = 0.66
-    VmPFK = 182.903
     gR = 5.12
+    VmPFK = 182.903
 
     # Aldolase parameters
-    KeqALD = 0.069
     KeqTPI = 0.045  # note parameter also used in Glycer 3p dehy
+    KeqALD = 0.069
     KmALDDHAP = 2.4
     KmALDF16P = 0.3
     KmALDGAP = 2
@@ -207,8 +207,8 @@ def teusink2000(t, y0):
 
     # assignment rules
     adp = (SUM_P - (P ** 2 * (1 - 4 * KeqAK)
-                   + 2 * SUM_P * P * (4 * KeqAK - 1)
-                   + SUM_P ** 2) ** 0.5) / (1 - 4 * KeqAK)
+                    + 2 * SUM_P * P * (4 * KeqAK - 1)
+                    + SUM_P ** 2) ** 0.5) / (1 - 4 * KeqAK)
     atp = (P - adp) / 2
     amp = SUM_P - atp - adp
 
@@ -219,24 +219,32 @@ def teusink2000(t, y0):
     def trehalose6p_synthesis():
         return vTreha_v
 
+    '''
+    function Function_for_Alcohol_dehydrogenase(ACE, ETOH, KeqADH, KiADHACE, KiADHETOH, KiADHNAD, KiADHNADH, KmADHACE, KmADHETOH, KmADHNAD, KmADHNADH, NAD, NADH, VmADH, cytosol)
+        -cytosol*((VmADH/(KiADHNAD*KmADHETOH))*(NAD*ETOH - NADH*ACE/KeqADH)/(1 + NAD/KiADHNAD + KmADHNAD*ETOH/(KiADHNAD*KmADHETOH) + KmADHNADH*ACE/(KiADHNADH*KmADHACE) + NADH/KiADHNADH + NAD*ETOH/(KiADHNAD*KmADHETOH) + KmADHNADH*NAD*ACE/(KiADHNAD*KiADHNADH*KmADHACE) + KmADHNAD*ETOH*NADH/(KiADHNAD*KmADHETOH*KiADHNADH) + NADH*ACE/(KiADHNADH*KmADHACE) + NAD*ETOH*ACE/(KiADHNAD*KmADHETOH*KiADHACE) + ETOH*NADH*ACE/(KiADHETOH*KiADHNADH*KmADHACE)))/cytosol;
+    end'''
+
     def alcohol_dehydrogenase():
         numerator = (VmADH / (KiADHNAD * KmADHETOH)) * (NAD * ETOH - (NADH * ACE / KeqADH))
-        denom = 1   + (NAD / KiADHNAD) \
-                    + KmADHNAD * ETOH / (KiADHNAD * KmADHETOH) \
-                    + KmADHNADH * ACE / (KiADHNADH * KmADHACE) \
-                    + NADH / KiADHNADH \
-                    + NAD * ETOH / (KiADHNAD * KmADHETOH) \
-                    + KmADHNADH * NAD * ACE / (KiADHNAD * KiADHNADH * KmADHACE)\
-                    + KmADHNAD * ETOH * NADH / (KiADHNAD * KmADHETOH * KiADHNADH) \
-                    + NADH * ACE / (KiADHNADH * KmADHACE) \
-                    + NAD * ETOH * ACE / (KiADHNAD * KmADHETOH * KiADHACE) \
-                    + ETOH * NADH * ACE / (KiADHETOH * KiADHNADH * KmADHACE)
+        denom = 1 + (NAD / KiADHNAD) \
+                + KmADHNAD * ETOH / (KiADHNAD * KmADHETOH) \
+                + KmADHNADH * ACE / (KiADHNADH * KmADHACE) \
+                + NADH / KiADHNADH \
+                + NAD * ETOH / (KiADHNAD * KmADHETOH) \
+                + KmADHNADH * NAD * ACE / (KiADHNAD * KiADHNADH * KmADHACE) \
+                + KmADHNAD * ETOH * NADH / (KiADHNAD * KmADHETOH * KiADHNADH) \
+                + NADH * ACE / (KiADHNADH * KmADHACE) \
+                + NAD * ETOH * ACE / (KiADHNAD * KmADHETOH * KiADHACE) \
+                + ETOH * NADH * ACE / (KiADHETOH * KiADHNADH * KmADHACE)
         return numerator / denom
 
     def glycerol_3_phosphate_dehydrogenase():
-        return (VmG3PDH / (KmG3PDHDHAP * KmG3PDHNADH)) * ((1 / (1 + KeqTPI)) * TRIO * NADH - GLY * NAD / KeqG3PDH) / (
-                (1 + (1 / (1 + KeqTPI)) * TRIO / KmG3PDHDHAP + GLY / KmG3PDHGLY) * (
-                1 + NADH / KmG3PDHNADH + NAD / KmG3PDHNAD))
+        numerator = (VmG3PDH / (KmG3PDHDHAP * KmG3PDHNADH)) * ((1 / (1 + KeqTPI)) * TRIO * NADH
+                                                               - GLY * NAD / KeqG3PDH)
+
+        denom = (1 + (1 / (1 + KeqTPI)) * TRIO / KmG3PDHDHAP + GLY / KmG3PDHGLY) * (
+                    1 + NADH / KmG3PDHNADH + NAD / KmG3PDHNAD)
+        return numerator / denom
 
     def r_pfk():
         return 1 + F6P / KmPFKF6P + atp / KmPFKATP + gR * (F6P / KmPFKF6P) * (atp / KmPFKATP)
@@ -248,7 +256,7 @@ def teusink2000(t, y0):
         return Lzero * ((1 + CiPFKATP * (atp / KiPFKATP)) / (1 + atp / KiPFKATP)) ** 2 \
                * ((1 + CPFKAMP * (amp / KPFKAMP)) / (1 + amp / KPFKAMP)) ** 2 \
                * ((1 + CPFKF26BP * F26BP / KPFKF26BP + CPFKF16BP * F16P / KPFKF16BP) / (
-                    1 + F26BP / KPFKF26BP + F16P / KPFKF16BP)) ** 2
+                1 + F26BP / KPFKF26BP + F16P / KPFKF16BP)) ** 2
 
     def hexokinase():
         return (VmGLK / (KmGLKGLCi * KmGLKATP)) * (GLCi * atp - G6P * adp / KeqGLK) / (
@@ -268,17 +276,23 @@ def teusink2000(t, y0):
         return (VmPGK / (KmPGKP3G * KmPGKATP)) * (KeqPGK * BPG * adp - P3G * atp) / (
                 (1 + BPG / KmPGKBPG + P3G / KmPGKP3G) * (1 + atp / KmPGKATP + adp / KmPGKADP))
 
+    '''
+    function Function_for_Glyceraldehyde_3_phosphate_dehydrogenase(BPG, KeqTPI, KmGAPDHBPG, KmGAPDHGAP, KmGAPDHNAD, KmGAPDHNADH, NAD, NADH, TRIO, VmGAPDHf, VmGAPDHr)
+        (VmGAPDHf*(KeqTPI/(1 + KeqTPI))*TRIO*NAD/(KmGAPDHGAP*KmGAPDHNAD) - VmGAPDHr*BPG*NADH/(KmGAPDHBPG*KmGAPDHNADH))/((1 + (KeqTPI/(1 + KeqTPI))*TRIO/KmGAPDHGAP + BPG/KmGAPDHBPG)*(1 + NAD/KmGAPDHNAD + NADH/KmGAPDHNADH));
+'''
     def glyceraldehyde_3_phosphate_dehydrogenase():
-        return (VmGAPDHf * (KeqTPI / (1 + KeqTPI)) * TRIO * NAD / (KmGAPDHGAP * KmGAPDHNAD) - VmGAPDHr * BPG * NADH / (
-                KmGAPDHBPG * KmGAPDHNADH)) / (
-                       (1 + (KeqTPI / (1 + KeqTPI)) * TRIO / KmGAPDHGAP + BPG / KmGAPDHBPG) * (
-                       1 + NAD / KmGAPDHNAD + NADH / KmGAPDHNADH))
+        numerator = VmGAPDHf * (KeqTPI / (1 + KeqTPI)) * TRIO * NAD / (KmGAPDHGAP * KmGAPDHNAD) \
+                    - VmGAPDHr * BPG * NADH / (KmGAPDHBPG * KmGAPDHNADH)
+        denom = (1 + (KeqTPI / (1 + KeqTPI)) * TRIO / KmGAPDHGAP + BPG / KmGAPDHBPG) \
+                * (1 + NAD / KmGAPDHNAD + NADH / KmGAPDHNADH)
+        return numerator / denom
 
     def enolase():
         return (VmENO / KmENOP2G) * (P2G - PEP / KeqENO) / (1 + P2G / KmENOP2G + PEP / KmENOPEP)
 
     def pyruvate_decarboxylase():
-        return VmPDC * (PYR ** nPDC / (KmPDCPYR ** nPDC)) / (1 + (PYR ** nPDC) / (KmPDCPYR ** nPDC))
+        x = PYR ** nPDC / (KmPDCPYR ** nPDC)
+        return VmPDC * x / (1 + x)
 
     def succinate_synthesis():
         return KSUCC * ACE
@@ -375,15 +389,31 @@ def teusink2000(t, y0):
 
 import numpy as np
 from scipy.integrate import odeint, ode
+
 t = np.linspace(0, 10, 11)
-print(teusink2000(0, y0))
+# print(teusink2000(y0, 0))
 
-solver = ode(teusink2000)
-solver.set_integrator('lsoda', method='bdf')
-solver.set_initial_value(y0)
+# solver = ode(teusink2000)
+# solver.set_integrator('lsoda', method='bdf')
+# solver.set_initial_value(y0)
+#
+# print(solver.integrate(10, 1))
 
+sol = odeint(func=teusink2000, y0=y0, t=t, full_output=True)
+y, d = sol
 
-# sol = scipy.integrate.odeint(teusink2000, y0, t)
+import pandas as pd
+
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_colwidth', -1)
+
+df = pd.DataFrame(y)
+cols = ['GLCi','G6P', 'F6P', 'F16P', 'TRIO', 'BPG', 'P3G', 'P2G', 'PEP', 'PYR', 'ACE', 'P', 'NAD', 'NADH']
+df.columns = cols
+print(df)
+
 
 # print(sol)
 
