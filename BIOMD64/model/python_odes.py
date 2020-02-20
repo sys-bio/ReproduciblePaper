@@ -64,20 +64,22 @@ NADH = 0.39
 y0 = [GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH]
 
 
-def teusink2000(y0, t):
+def teusink2000(t, y0):
     # Unpack Species
     GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH = y0
 
+    # These metabolites are sinks. Not sure why CO2 has to be 1 though.
+    # Should be 0? does it make a difference?
     Glyc = 0  # fixed
     Trh = 0  # fixed
     CO2 = 1  # fixed
     SUCC = 0  # fixed
 
     ETOH = 50  # fixed
-    GLCo = 50  # fixed
     GLY = 0.15  # fixed
     SUM_P = 4.1  # fixed
     F26BP = 0.02  # fixed
+    GLCo = 50  # fixed, extracellular glucose
 
     # Compartment
     extracellular = 1
@@ -204,20 +206,13 @@ def teusink2000(y0, t):
     KATPASE = 33.7
 
     # assignment rules
-
-    def adp():
-        return (SUM_P
-                - (P ** (2 * (1 - 4 * KeqAK))
+    adp = (SUM_P - (P ** 2 * (1 - 4 * KeqAK)
                    + 2 * SUM_P * P * (4 * KeqAK - 1)
                    + SUM_P ** 2) ** 0.5) / (1 - 4 * KeqAK)
+    atp = (P - adp) / 2
+    amp = SUM_P - atp - adp
 
-    def atp():
-        return (P - adp()) / 2
-
-    def amp():
-        return SUM_P - atp() - adp()
-
-    # # functions
+    # functions
     def glycogen_synthesis():
         return vGLYCO_v
 
@@ -225,15 +220,18 @@ def teusink2000(y0, t):
         return vTreha_v
 
     def alcohol_dehydrogenase():
-        return -cytosol * ((VmADH / (KiADHNAD * KmADHETOH)) * (NAD * ETOH - NADH * ACE / KeqADH) / (
-                1 + NAD / KiADHNAD + KmADHNAD * ETOH / (KiADHNAD * KmADHETOH) + KmADHNADH * ACE / (
-                KiADHNADH * KmADHACE) + NADH / KiADHNADH + NAD * ETOH / (
-                        KiADHNAD * KmADHETOH) + KmADHNADH * NAD * ACE / (
-                        KiADHNAD * KiADHNADH * KmADHACE) + KmADHNAD * ETOH * NADH / (
-                        KiADHNAD * KmADHETOH * KiADHNADH) + NADH * ACE / (
-                        KiADHNADH * KmADHACE) + NAD * ETOH * ACE / (
-                        KiADHNAD * KmADHETOH * KiADHACE) + ETOH * NADH * ACE / (
-                        KiADHETOH * KiADHNADH * KmADHACE))) / cytosol
+        numerator = (VmADH / (KiADHNAD * KmADHETOH)) * (NAD * ETOH - (NADH * ACE / KeqADH))
+        denom = 1   + (NAD / KiADHNAD) \
+                    + KmADHNAD * ETOH / (KiADHNAD * KmADHETOH) \
+                    + KmADHNADH * ACE / (KiADHNADH * KmADHACE) \
+                    + NADH / KiADHNADH \
+                    + NAD * ETOH / (KiADHNAD * KmADHETOH) \
+                    + KmADHNADH * NAD * ACE / (KiADHNAD * KiADHNADH * KmADHACE)\
+                    + KmADHNAD * ETOH * NADH / (KiADHNAD * KmADHETOH * KiADHNADH) \
+                    + NADH * ACE / (KiADHNADH * KmADHACE) \
+                    + NAD * ETOH * ACE / (KiADHNAD * KmADHETOH * KiADHACE) \
+                    + ETOH * NADH * ACE / (KiADHETOH * KiADHNADH * KmADHACE)
+        return numerator / denom
 
     def glycerol_3_phosphate_dehydrogenase():
         return (VmG3PDH / (KmG3PDHDHAP * KmG3PDHNADH)) * ((1 / (1 + KeqTPI)) * TRIO * NADH - GLY * NAD / KeqG3PDH) / (
@@ -241,20 +239,20 @@ def teusink2000(y0, t):
                 1 + NADH / KmG3PDHNADH + NAD / KmG3PDHNAD))
 
     def r_pfk():
-        return 1 + F6P / KmPFKF6P + atp() / KmPFKATP + gR * (F6P / KmPFKF6P) * (atp() / KmPFKATP)
+        return 1 + F6P / KmPFKF6P + atp / KmPFKATP + gR * (F6P / KmPFKF6P) * (atp / KmPFKATP)
 
     def t_pfk():
-        return 1 + CPFKATP * (atp() / KmPFKATP)
+        return 1 + CPFKATP * (atp / KmPFKATP)
 
     def l_pfk():
-        return Lzero * ((1 + CiPFKATP * (atp() / KiPFKATP)) / (1 + atp() / KiPFKATP)) ** 2 \
-               * ((1 + CPFKAMP * (amp() / KPFKAMP)) / (1 + amp() / KPFKAMP)) ** 2 \
+        return Lzero * ((1 + CiPFKATP * (atp / KiPFKATP)) / (1 + atp / KiPFKATP)) ** 2 \
+               * ((1 + CPFKAMP * (amp / KPFKAMP)) / (1 + amp / KPFKAMP)) ** 2 \
                * ((1 + CPFKF26BP * F26BP / KPFKF26BP + CPFKF16BP * F16P / KPFKF16BP) / (
                     1 + F26BP / KPFKF26BP + F16P / KPFKF16BP)) ** 2
 
     def hexokinase():
-        return (VmGLK / (KmGLKGLCi * KmGLKATP)) * (GLCi * atp() - G6P * adp() / KeqGLK) / (
-                (1 + GLCi / KmGLKGLCi + G6P / KmGLKG6P) * (1 + atp() / KmGLKATP + adp() / KmGLKADP))
+        return (VmGLK / (KmGLKGLCi * KmGLKATP)) * (GLCi * atp - G6P * adp / KeqGLK) / (
+                (1 + GLCi / KmGLKGLCi + G6P / KmGLKG6P) * (1 + atp / KmGLKATP + adp / KmGLKADP))
 
     def glucose_6_phosphate_isomerase():
         return (VmPGI_2 / KmPGIG6P_2) * (G6P - F6P / KeqPGI_2) / (1 + G6P / KmPGIG6P_2 + F6P / KmPGIF6P_2)
@@ -267,8 +265,8 @@ def teusink2000(y0, t):
                         KeqTPI / (1 + KeqTPI)) * TRIO / (KmALDGAPi * KmALDF16P))
 
     def phosphoglycerate_kinase():
-        return (VmPGK / (KmPGKP3G * KmPGKATP)) * (KeqPGK * BPG * adp() - P3G * atp()) / (
-                (1 + BPG / KmPGKBPG + P3G / KmPGKP3G) * (1 + atp() / KmPGKATP + adp() / KmPGKADP))
+        return (VmPGK / (KmPGKP3G * KmPGKATP)) * (KeqPGK * BPG * adp - P3G * atp) / (
+                (1 + BPG / KmPGKBPG + P3G / KmPGKP3G) * (1 + atp / KmPGKATP + adp / KmPGKADP))
 
     def glyceraldehyde_3_phosphate_dehydrogenase():
         return (VmGAPDHf * (KeqTPI / (1 + KeqTPI)) * TRIO * NAD / (KmGAPDHGAP * KmGAPDHNAD) - VmGAPDHr * BPG * NADH / (
@@ -280,7 +278,7 @@ def teusink2000(y0, t):
         return (VmENO / KmENOP2G) * (P2G - PEP / KeqENO) / (1 + P2G / KmENOP2G + PEP / KmENOPEP)
 
     def pyruvate_decarboxylase():
-        return VmPDC * (PYR ** nPDC / (KmPDCPYR ** nPDC)) / (1 + PYR ** nPDC / (KmPDCPYR ** nPDC))
+        return VmPDC * (PYR ** nPDC / (KmPDCPYR ** nPDC)) / (1 + (PYR ** nPDC) / (KmPDCPYR ** nPDC))
 
     def succinate_synthesis():
         return KSUCC * ACE
@@ -293,14 +291,14 @@ def teusink2000(y0, t):
         return (VmPGM / KmPGMP3G) * (P3G - P2G / KeqPGM) / (1 + P3G / KmPGMP3G + P2G / KmPGMP2G)
 
     def pyruvate_kinase():
-        return (VmPYK / (KmPYKPEP * KmPYKADP)) * (PEP * adp() - PYR * atp() / KeqPYK) / (
-                (1 + PEP / KmPYKPEP + PYR / KmPYKPYR) * (1 + atp() / KmPYKATP + adp() / KmPYKADP))
+        return (VmPYK / (KmPYKPEP * KmPYKADP)) * (PEP * adp - PYR * atp / KeqPYK) / (
+                (1 + PEP / KmPYKPEP + PYR / KmPYKPYR) * (1 + atp / KmPYKATP + adp / KmPYKADP))
 
     def atpase_activity():
-        return KATPASE * atp()
+        return KATPASE * atp
 
     def phosphofructokinase():
-        return VmPFK * gR * (F6P / KmPFKF6P) * (atp() / KmPFKATP) * r_pfk() / (r_pfk() ** 2 + l_pfk() * t_pfk() ** 2)
+        return VmPFK * gR * (F6P / KmPFKF6P) * (atp / KmPFKATP) * r_pfk() / (r_pfk() ** 2 + l_pfk() * t_pfk() ** 2)
 
     return [
         # GLCi, glucose in cytosol
@@ -347,8 +345,8 @@ def teusink2000(y0, t):
         - cytosol * pyruvate_decarboxylase(),
 
         # ACE, Acetaldehyde
-        - cytosol * pyruvate_decarboxylase()
-        + 2 * cytosol * succinate_synthesis()
+        + cytosol * pyruvate_decarboxylase()
+        - 2 * cytosol * succinate_synthesis()
         - cytosol * alcohol_dehydrogenase(),
 
         # P high energy phosphates
@@ -376,23 +374,33 @@ def teusink2000(y0, t):
 
 
 import numpy as np
-from scipy.integrate import odeint
-
+from scipy.integrate import odeint, ode
 t = np.linspace(0, 10, 11)
-sol = odeint(teusink2000, y0, t)
+print(teusink2000(0, y0))
 
-import pandas as pd
-import matplotlib
-pd.set_option("display.precision", 20)
+solver = ode(teusink2000)
+solver.set_integrator('lsoda', method='bdf')
+solver.set_initial_value(y0)
 
-matplotlib.use('TkAgg')
 
-data = pd.DataFrame(sol)
-data.columns = ['GLCi', 'G6P', 'F6P', 'F16P', 'TRIO', 'BPG', 'P3G', 'P2G', 'PEP', 'PYR', 'ACE', 'P', 'NAD', 'NADH']
-print(data)
+# sol = scipy.integrate.odeint(teusink2000, y0, t)
 
-for i in data:
-    plt.figure()
-    plt.plot(data.index, data[i])
+# print(sol)
 
-plt.show()
+# print()
+#
+# import pandas as pd
+# import matplotlib
+# pd.set_option("display.precision", 20)
+#
+# matplotlib.use('TkAgg')
+#
+# data = pd.DataFrame(sol)
+# data.columns = ['GLCi', 'G6P', 'F6P', 'F16P', 'TRIO', 'BPG', 'P3G', 'P2G', 'PEP', 'PYR', 'ACE', 'P', 'NAD', 'NADH']
+# print(data)
+#
+# for i in data:
+#     plt.figure()
+#     plt.plot(data.index, data[i])
+#
+# plt.show()
