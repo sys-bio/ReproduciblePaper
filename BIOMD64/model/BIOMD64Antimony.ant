@@ -1,0 +1,456 @@
+// Created by libAntimony v2.11.0
+function Constant_flux__irreversible(v)
+  v;
+end
+
+Constant_flux__irreversible is "Constant flux (irreversible)"
+
+function Function_for_Alcohol_dehydrogenase(ACE, ETOH, KeqADH, KiADHACE, KiADHETOH, KiADHNAD, KiADHNADH, KmADHACE, KmADHETOH, KmADHNAD, KmADHNADH, NAD, NADH, VmADH, cytosol)
+  -cytosol*((VmADH/(KiADHNAD*KmADHETOH))*(NAD*ETOH - NADH*ACE/KeqADH)/(1 + NAD/KiADHNAD + KmADHNAD*ETOH/(KiADHNAD*KmADHETOH) + KmADHNADH*ACE/(KiADHNADH*KmADHACE) + NADH/KiADHNADH + NAD*ETOH/(KiADHNAD*KmADHETOH) + KmADHNADH*NAD*ACE/(KiADHNAD*KiADHNADH*KmADHACE) + KmADHNAD*ETOH*NADH/(KiADHNAD*KmADHETOH*KiADHNADH) + NADH*ACE/(KiADHNADH*KmADHACE) + NAD*ETOH*ACE/(KiADHNAD*KmADHETOH*KiADHACE) + ETOH*NADH*ACE/(KiADHETOH*KiADHNADH*KmADHACE)))/cytosol;
+end
+
+Function_for_Alcohol_dehydrogenase is "Function for Alcohol dehydrogenase"
+
+function Function_for_Glycerol_3_phosphate_dehydrogenase(GLY, KeqG3PDH, KeqTPI, KmG3PDHDHAP, KmG3PDHGLY, KmG3PDHNAD, KmG3PDHNADH, NAD, NADH, TRIO, VmG3PDH)
+  (VmG3PDH/(KmG3PDHDHAP*KmG3PDHNADH))*((1/(1 + KeqTPI))*TRIO*NADH - GLY*NAD/KeqG3PDH)/((1 + (1/(1 + KeqTPI))*TRIO/KmG3PDHDHAP + GLY/KmG3PDHGLY)*(1 + NADH/KmG3PDHNADH + NAD/KmG3PDHNAD));
+end
+
+Function_for_Glycerol_3_phosphate_dehydrogenase is "Function for Glycerol 3-phosphate dehydrogenase"
+
+function R_PFK(KmF6P, KmATP, g, AT_, F6)
+  1 + F6/KmF6P + AT_/KmATP + g*(F6/KmF6P)*(AT_/KmATP);
+end
+
+R_PFK is "R_PFK"
+
+function T_PFK(CATP, KmATP, AT_)
+  1 + CATP*(AT_/KmATP);
+end
+
+T_PFK is "T_PFK"
+
+function L_PFK(L, CiATP, KiATP, CAMP, KAMP, CF26BP, KF26BP, CF16BP, KF16BP, AT_, AM, F16, F26)
+  L*((1 + CiATP*(AT_/KiATP))/(1 + AT_/KiATP))^2*((1 + CAMP*(AM/KAMP))/(1 + AM/KAMP))^2*((1 + CF26BP*F26/KF26BP + CF16BP*F16/KF16BP)/(1 + F26/KF26BP + F16/KF16BP))^2;
+end
+
+L_PFK is "L_PFK"
+
+function Function_for_Hexokinase(ADP, ATP, G6P, GLCi, KeqGLK, KmGLKADP, KmGLKATP, KmGLKG6P, KmGLKGLCi, VmGLK)
+  (VmGLK/(KmGLKGLCi*KmGLKATP))*(GLCi*ATP - G6P*ADP/KeqGLK)/((1 + GLCi/KmGLKGLCi + G6P/KmGLKG6P)*(1 + ATP/KmGLKATP + ADP/KmGLKADP));
+end
+
+Function_for_Hexokinase is "Function for Hexokinase"
+
+function Function_for_Glucose_6_phosphate_isomerase(F6P, G6P, KeqPGI_2, KmPGIF6P_2, KmPGIG6P_2, VmPGI_2)
+  (VmPGI_2/KmPGIG6P_2)*(G6P - F6P/KeqPGI_2)/(1 + G6P/KmPGIG6P_2 + F6P/KmPGIF6P_2);
+end
+
+Function_for_Glucose_6_phosphate_isomerase is "Function for Glucose-6-phosphate isomerase"
+
+function Function_for_Aldolase(F16P, KeqALD, KeqTPI, KmALDDHAP, KmALDF16P, KmALDGAP, KmALDGAPi, TRIO, VmALD)
+  (VmALD/KmALDF16P)*(F16P - (KeqTPI/(1 + KeqTPI))*TRIO*(1/(1 + KeqTPI))*TRIO/KeqALD)/(1 + F16P/KmALDF16P + (KeqTPI/(1 + KeqTPI))*TRIO/KmALDGAP + (1/(1 + KeqTPI))*TRIO/KmALDDHAP + (KeqTPI/(1 + KeqTPI))*TRIO*(1/(1 + KeqTPI))*TRIO/(KmALDGAP*KmALDDHAP) + F16P*(KeqTPI/(1 + KeqTPI))*TRIO/(KmALDGAPi*KmALDF16P));
+end
+
+Function_for_Aldolase is "Function for Aldolase"
+
+function Function_for_Phosphoglycerate_kinase(ADP, ATP, BPG, KeqPGK, KmPGKADP, KmPGKATP, KmPGKBPG, KmPGKP3G, P3G, VmPGK)
+  (VmPGK/(KmPGKP3G*KmPGKATP))*(KeqPGK*BPG*ADP - P3G*ATP)/((1 + BPG/KmPGKBPG + P3G/KmPGKP3G)*(1 + ATP/KmPGKATP + ADP/KmPGKADP));
+end
+
+Function_for_Phosphoglycerate_kinase is "Function for Phosphoglycerate kinase"
+
+function Function_for_Glyceraldehyde_3_phosphate_dehydrogenase(BPG, KeqTPI, KmGAPDHBPG, KmGAPDHGAP, KmGAPDHNAD, KmGAPDHNADH, NAD, NADH, TRIO, VmGAPDHf, VmGAPDHr)
+  (VmGAPDHf*(KeqTPI/(1 + KeqTPI))*TRIO*NAD/(KmGAPDHGAP*KmGAPDHNAD) - VmGAPDHr*BPG*NADH/(KmGAPDHBPG*KmGAPDHNADH))/((1 + (KeqTPI/(1 + KeqTPI))*TRIO/KmGAPDHGAP + BPG/KmGAPDHBPG)*(1 + NAD/KmGAPDHNAD + NADH/KmGAPDHNADH));
+end
+
+Function_for_Glyceraldehyde_3_phosphate_dehydrogenase is "Function for Glyceraldehyde 3-phosphate dehydrogenase"
+
+function Function_for_Enolase(KeqENO, KmENOP2G, KmENOPEP, P2G, PEP, VmENO)
+  (VmENO/KmENOP2G)*(P2G - PEP/KeqENO)/(1 + P2G/KmENOP2G + PEP/KmENOPEP);
+end
+
+Function_for_Enolase is "Function for Enolase"
+
+function Function_for_Pyruvate_decarboxylase(KmPDCPYR, PYR, VmPDC, nPDC)
+  VmPDC*(PYR^nPDC/KmPDCPYR^nPDC)/(1 + PYR^nPDC/KmPDCPYR^nPDC);
+end
+
+Function_for_Pyruvate_decarboxylase is "Function for Pyruvate decarboxylase"
+
+function Function_for_Succinate_synthesis(ACE, KSUCC)
+  KSUCC*ACE;
+end
+
+Function_for_Succinate_synthesis is "Function for Succinate synthesis"
+
+function Function_for_Glucose_transport(GLCi, GLCo, KeqGLT, KmGLTGLCi, KmGLTGLCo, VmGLT)
+  (VmGLT/KmGLTGLCo)*(GLCo - GLCi/KeqGLT)/(1 + GLCo/KmGLTGLCo + GLCi/KmGLTGLCi + 0.91*GLCo*GLCi/(KmGLTGLCo*KmGLTGLCi));
+end
+
+Function_for_Glucose_transport is "Function for Glucose transport"
+
+function Function_for_Phosphoglycerate_mutase(KeqPGM, KmPGMP2G, KmPGMP3G, P2G, P3G, VmPGM)
+  (VmPGM/KmPGMP3G)*(P3G - P2G/KeqPGM)/(1 + P3G/KmPGMP3G + P2G/KmPGMP2G);
+end
+
+Function_for_Phosphoglycerate_mutase is "Function for Phosphoglycerate mutase"
+
+function Function_for_Pyruvate_kinase(ADP, ATP, KeqPYK, KmPYKADP, KmPYKATP, KmPYKPEP, KmPYKPYR, PEP, PYR, VmPYK)
+  (VmPYK/(KmPYKPEP*KmPYKADP))*(PEP*ADP - PYR*ATP/KeqPYK)/((1 + PEP/KmPYKPEP + PYR/KmPYKPYR)*(1 + ATP/KmPYKATP + ADP/KmPYKADP));
+end
+
+Function_for_Pyruvate_kinase is "Function for Pyruvate kinase"
+
+function Function_for_ATPase_activity(ATP, KATPASE)
+  KATPASE*ATP;
+end
+
+Function_for_ATPase_activity is "Function for ATPase activity"
+
+function Function_for_Phosphofructokinase(AMP, ATP, CPFKAMP, CPFKATP, CPFKF16BP, CPFKF26BP, CiPFKATP, F16P, F26BP, F6P, KPFKAMP, KPFKF16BP, KPFKF26BP, KiPFKATP, KmPFKATP, KmPFKF6P, Lzero, VmPFK, gR)
+  VmPFK*gR*(F6P/KmPFKF6P)*(ATP/KmPFKATP)*R_PFK(KmPFKF6P, KmPFKATP, gR, ATP, F6P)/(R_PFK(KmPFKF6P, KmPFKATP, gR, ATP, F6P)^2 + L_PFK(Lzero, CiPFKATP, KiPFKATP, CPFKAMP, KPFKAMP, CPFKF26BP, KPFKF26BP, CPFKF16BP, KPFKF16BP, ATP, AMP, F16P, F26BP)*T_PFK(CPFKATP, KmPFKATP, ATP)^2);
+end
+
+Function_for_Phosphofructokinase is "Function for Phosphofructokinase"
+
+
+model *Teusink2000_Glycolysis()
+
+  // Compartments and Species:
+  compartment extracellular, cytosol;
+  species GLCi in cytosol, G6P in cytosol, F6P in cytosol, F16P in cytosol;
+  species TRIO in cytosol, BPG in cytosol, P3G in cytosol, P2G in cytosol;
+  species PEP in cytosol, PYR in cytosol, ACE in cytosol, P in cytosol, NAD in cytosol;
+  species NADH in cytosol, $Glyc in cytosol, $Trh in cytosol, $CO2 in cytosol;
+  species $SUCC in cytosol, $GLCo in extracellular, $ETOH in cytosol, $GLY in cytosol;
+  species $ATP in cytosol, $ADP in cytosol, $SUM_P in cytosol, $AMP in cytosol;
+  species $F26BP in cytosol;
+
+  // Assignment Rules:
+  ATP := (P - ADP)/2;
+  ADP := (SUM_P - (P^2*(1 - 4*KeqAK) + 2*SUM_P*P*(4*KeqAK - 1) + SUM_P^2)^0.5)/(1 - 4*KeqAK);
+  AMP := SUM_P - ATP - ADP;
+
+  // Reactions:
+  vGLK: GLCi + P -> G6P; cytosol*Function_for_Hexokinase(ADP, ATP, G6P, GLCi, vGLK_KeqGLK, vGLK_KmGLKADP, vGLK_KmGLKATP, vGLK_KmGLKG6P, vGLK_KmGLKGLCi, vGLK_VmGLK);
+  vPGI: G6P -> F6P; cytosol*Function_for_Glucose_6_phosphate_isomerase(F6P, G6P, vPGI_KeqPGI_2, vPGI_KmPGIF6P_2, vPGI_KmPGIG6P_2, vPGI_VmPGI_2);
+  vGLYCO: G6P + P => $Glyc; cytosol*Constant_flux__irreversible(vGLYCO_v);
+  vTreha: 2 G6P + P => $Trh; cytosol*Constant_flux__irreversible(vTreha_v);
+  vPFK: F6P + P => F16P; cytosol*Function_for_Phosphofructokinase(AMP, ATP, CPFKAMP, CPFKATP, CPFKF16BP, CPFKF26BP, CiPFKATP, F16P, F26BP, F6P, KPFKAMP, KPFKF16BP, KPFKF26BP, KiPFKATP, KmPFKATP, KmPFKF6P, Lzero, vPFK_VmPFK, gR);
+  vALD: F16P -> 2 TRIO; cytosol*Function_for_Aldolase(F16P, vALD_KeqALD, KeqTPI, vALD_KmALDDHAP, vALD_KmALDF16P, vALD_KmALDGAP, vALD_KmALDGAPi, TRIO, vALD_VmALD);
+  vGAPDH: TRIO + NAD -> BPG + NADH; cytosol*Function_for_Glyceraldehyde_3_phosphate_dehydrogenase(BPG, KeqTPI, vGAPDH_KmGAPDHBPG, vGAPDH_KmGAPDHGAP, vGAPDH_KmGAPDHNAD, vGAPDH_KmGAPDHNADH, NAD, NADH, TRIO, vGAPDH_VmGAPDHf, vGAPDH_VmGAPDHr);
+  vPGK: BPG -> P3G + P; cytosol*Function_for_Phosphoglycerate_kinase(ADP, ATP, BPG, vPGK_KeqPGK, vPGK_KmPGKADP, vPGK_KmPGKATP, vPGK_KmPGKBPG, vPGK_KmPGKP3G, P3G, vPGK_VmPGK);
+  vPGM: P3G -> P2G; cytosol*Function_for_Phosphoglycerate_mutase(vPGM_KeqPGM, vPGM_KmPGMP2G, vPGM_KmPGMP3G, P2G, P3G, vPGM_VmPGM);
+  vENO: P2G -> PEP; cytosol*Function_for_Enolase(vENO_KeqENO, vENO_KmENOP2G, vENO_KmENOPEP, P2G, PEP, vENO_VmENO);
+  vPYK: PEP -> PYR + P; cytosol*Function_for_Pyruvate_kinase(ADP, ATP, vPYK_KeqPYK, vPYK_KmPYKADP, vPYK_KmPYKATP, vPYK_KmPYKPEP, vPYK_KmPYKPYR, PEP, PYR, vPYK_VmPYK);
+  vPDC: PYR => ACE + $CO2; cytosol*Function_for_Pyruvate_decarboxylase(vPDC_KmPDCPYR, PYR, vPDC_VmPDC, vPDC_nPDC);
+  vSUC: 2 ACE + 3 NAD + 4 P => 3 NADH + $SUCC; cytosol*Function_for_Succinate_synthesis(ACE, vSUC_KSUCC);
+  vGLT: $GLCo -> GLCi; Function_for_Glucose_transport(GLCi, GLCo, vGLT_KeqGLT, vGLT_KmGLTGLCi, vGLT_KmGLTGLCo, vGLT_VmGLT);
+  vADH: ACE + NADH -> NAD + $ETOH; cytosol*Function_for_Alcohol_dehydrogenase(ACE, ETOH, vADH_KeqADH, vADH_KiADHACE, vADH_KiADHETOH, vADH_KiADHNAD, vADH_KiADHNADH, vADH_KmADHACE, vADH_KmADHETOH, vADH_KmADHNAD, vADH_KmADHNADH, NAD, NADH, vADH_VmADH, cytosol);
+  vG3PDH: TRIO + NADH => NAD + $GLY; cytosol*Function_for_Glycerol_3_phosphate_dehydrogenase(GLY, vG3PDH_KeqG3PDH, KeqTPI, vG3PDH_KmG3PDHDHAP, vG3PDH_KmG3PDHGLY, vG3PDH_KmG3PDHNAD, vG3PDH_KmG3PDHNADH, NAD, NADH, TRIO, vG3PDH_VmG3PDH);
+  vATP: P -> ; cytosol*Function_for_ATPase_activity(ATP, vATP_KATPASE);
+
+  // Species initializations:
+  GLCi = 0.087;
+  G6P = 2.45;
+  F6P = 0.62;
+  F16P = 5.51;
+  TRIO = 0.96;
+  BPG = 0;
+  P3G = 0.9;
+  P2G = 0.12;
+  PEP = 0.07;
+  PYR = 1.85;
+  ACE = 0.17;
+  P = 6.31;
+  NAD = 1.2;
+  NADH = 0.39;
+  Glyc = 0;
+  Trh = 0;
+  CO2 = 1;
+  SUCC = 0;
+  GLCo = 50;
+  ETOH = 50;
+  GLY = 0.15;
+  SUM_P = 4.1;
+  F26BP = 0.02;
+
+  // Compartment initializations:
+  extracellular = 1;
+  cytosol = 1;
+
+  // Variable initializations:
+  KeqAK = 0.45;
+  KeqAK has unit_0;
+  gR = 5.12;
+  gR has unit_0;
+  KmPFKF6P = 0.1;
+  KmPFKF6P has unit_1;
+  KmPFKATP = 0.71;
+  KmPFKATP has unit_1;
+  Lzero = 0.66;
+  Lzero has unit_0;
+  CiPFKATP = 100;
+  CiPFKATP has unit_0;
+  KiPFKATP = 0.65;
+  KiPFKATP has unit_1;
+  CPFKAMP = 0.0845;
+  CPFKAMP has unit_0;
+  KPFKAMP = 0.0995;
+  KPFKAMP has unit_1;
+  CPFKF26BP = 0.0174;
+  CPFKF26BP has unit_0;
+  KPFKF26BP = 0.000682;
+  KPFKF26BP has unit_1;
+  CPFKF16BP = 0.397;
+  CPFKF16BP has unit_0;
+  KPFKF16BP = 0.111;
+  KPFKF16BP has unit_1;
+  CPFKATP = 3;
+  CPFKATP has unit_0;
+  KeqTPI = 0.045;
+  KeqTPI has unit_0;
+  vGLK_KeqGLK = 3800;
+  vGLK_KmGLKADP = 0.23;
+  vGLK_KmGLKATP = 0.15;
+  vGLK_KmGLKG6P = 30;
+  vGLK_KmGLKGLCi = 0.08;
+  vGLK_VmGLK = 226.452;
+  vPGI_KeqPGI_2 = 0.314;
+  vPGI_KmPGIF6P_2 = 0.3;
+  vPGI_KmPGIG6P_2 = 1.4;
+  vPGI_VmPGI_2 = 339.677;
+  vGLYCO_v = 6;
+  vTreha_v = 2.4;
+  vPFK_VmPFK = 182.903;
+  vALD_KeqALD = 0.069;
+  vALD_KmALDDHAP = 2.4;
+  vALD_KmALDF16P = 0.3;
+  vALD_KmALDGAP = 2;
+  vALD_KmALDGAPi = 10;
+  vALD_VmALD = 322.258;
+  vGAPDH_KmGAPDHBPG = 0.0098;
+  vGAPDH_KmGAPDHGAP = 0.21;
+  vGAPDH_KmGAPDHNAD = 0.09;
+  vGAPDH_KmGAPDHNADH = 0.06;
+  vGAPDH_VmGAPDHf = 1184.52;
+  vGAPDH_VmGAPDHr = 6549.8;
+  vPGK_KeqPGK = 3200;
+  vPGK_KmPGKADP = 0.2;
+  vPGK_KmPGKATP = 0.3;
+  vPGK_KmPGKBPG = 0.003;
+  vPGK_KmPGKP3G = 0.53;
+  vPGK_VmPGK = 1306.45;
+  vPGM_KeqPGM = 0.19;
+  vPGM_KmPGMP2G = 0.08;
+  vPGM_KmPGMP3G = 1.2;
+  vPGM_VmPGM = 2525.81;
+  vENO_KeqENO = 6.7;
+  vENO_KmENOP2G = 0.04;
+  vENO_KmENOPEP = 0.5;
+  vENO_VmENO = 365.806;
+  vPYK_KeqPYK = 6500;
+  vPYK_KmPYKADP = 0.53;
+  vPYK_KmPYKATP = 1.5;
+  vPYK_KmPYKPEP = 0.14;
+  vPYK_KmPYKPYR = 21;
+  vPYK_VmPYK = 1088.71;
+  vPDC_KmPDCPYR = 4.33;
+  vPDC_VmPDC = 174.194;
+  vPDC_nPDC = 1.9;
+  vSUC_KSUCC = 21.4;
+  vGLT_KeqGLT = 1;
+  vGLT_KmGLTGLCi = 1.1918;
+  vGLT_KmGLTGLCo = 1.1918;
+  vGLT_VmGLT = 97.264;
+  vADH_KeqADH = 6.9e-05;
+  vADH_KiADHACE = 1.1;
+  vADH_KiADHETOH = 90;
+  vADH_KiADHNAD = 0.92;
+  vADH_KiADHNADH = 0.031;
+  vADH_KmADHACE = 1.11;
+  vADH_KmADHETOH = 17;
+  vADH_KmADHNAD = 0.17;
+  vADH_KmADHNADH = 0.11;
+  vADH_VmADH = 810;
+  vG3PDH_KeqG3PDH = 4300;
+  vG3PDH_KmG3PDHDHAP = 0.4;
+  vG3PDH_KmG3PDHGLY = 1;
+  vG3PDH_KmG3PDHNAD = 0.93;
+  vG3PDH_KmG3PDHNADH = 0.023;
+  vG3PDH_VmG3PDH = 70.15;
+  vATP_KATPASE = 33.7;
+
+  // Other declarations:
+  const extracellular, cytosol, KeqAK, gR, KmPFKF6P, KmPFKATP, Lzero, CiPFKATP;
+  const KiPFKATP, CPFKAMP, KPFKAMP, CPFKF26BP, KPFKF26BP, CPFKF16BP, KPFKF16BP;
+  const CPFKATP, KeqTPI;
+
+  // Unit definitions:
+  unit time_unit = 60 second;
+  unit substance = 1e-3 mole;
+  unit unit_0 = 1 / dimensionless^-0;
+  unit unit_1 = 1e-3 mole / litre;
+
+  // Display Names:
+  time_unit is "time";
+  unit_0 is "1";
+  unit_1 is "mmol/l";
+  GLCi is "Glucose in Cytosol";
+  G6P is "Glucose 6 Phosphate";
+  F6P is "Fructose 6 Phosphate";
+  F16P is "Fructose-1,6 bisphosphate";
+  TRIO is "Triose-phosphate";
+  BPG is "1,3-bisphosphoglycerate";
+  P3G is "3-phosphoglycerate";
+  P2G is "2-phosphoglycerate";
+  PEP is "Phosphoenolpyruvate";
+  PYR is "Pyruvate";
+  ACE is "Acetaldehyde";
+  P is "High energy phosphates";
+  Glyc is "Glycogen";
+  Trh is "Trehalose";
+  SUCC is "Succinate";
+  GLCo is "Extracellular Glucose";
+  ETOH is "Ethanol";
+  GLY is "Glycerol";
+  ATP is "ATP concentration";
+  ADP is "ADP concentration";
+  SUM_P is "sum of AXP conc";
+  KeqAK is "AK eq constant";
+  AMP is "AMP concentration";
+  F26BP is "F2,6P";
+  KeqTPI is "TPI eq constant";
+  vGLK is "Hexokinase";
+  vPGI is "Glucose-6-phosphate isomerase";
+  vGLYCO is "Glycogen synthesis";
+  vTreha is "Trehalose 6-phosphate synthase";
+  vPFK is "Phosphofructokinase";
+  vALD is "Aldolase";
+  vGAPDH is "Glyceraldehyde 3-phosphate dehydrogenase";
+  vPGK is "Phosphoglycerate kinase";
+  vPGM is "Phosphoglycerate mutase";
+  vENO is "Enolase";
+  vPYK is "Pyruvate kinase";
+  vPDC is "Pyruvate decarboxylase";
+  vSUC is "Succinate synthesis";
+  vGLT is "Glucose transport";
+  vADH is "Alcohol dehydrogenase";
+  vG3PDH is "Glycerol 3-phosphate dehydrogenase";
+  vATP is "ATPase activity";
+
+  // CV terms:
+  extracellular identity "http://identifiers.org/go/GO:0005576"
+  cytosol identity "http://identifiers.org/go/GO:0005829"
+  GLCi identity "http://identifiers.org/chebi/CHEBI:17234"
+  GLCi identity "http://identifiers.org/kegg.compound/C00293"
+  G6P identity "http://identifiers.org/kegg.compound/C00668"
+  G6P identity "http://identifiers.org/chebi/CHEBI:17665"
+  F6P identity "http://identifiers.org/kegg.compound/C05345"
+  F6P identity "http://identifiers.org/chebi/CHEBI:15946"
+  F16P identity "http://identifiers.org/chebi/CHEBI:16905"
+  F16P identity "http://identifiers.org/kegg.compound/C00354"
+  TRIO part "http://identifiers.org/chebi/CHEBI:16108"
+  TRIO part "http://identifiers.org/chebi/CHEBI:29052"
+  TRIO part "http://identifiers.org/kegg.compound/C00118"
+  TRIO part "http://identifiers.org/kegg.compound/C00111"
+  BPG identity "http://identifiers.org/chebi/CHEBI:16001"
+  BPG identity "http://identifiers.org/kegg.compound/C00236"
+  P3G identity "http://identifiers.org/kegg.compound/C00197"
+  P3G identity "http://identifiers.org/chebi/CHEBI:17794"
+  P2G identity "http://identifiers.org/kegg.compound/C00631"
+  P2G identity "http://identifiers.org/chebi/CHEBI:17835"
+  PEP identity "http://identifiers.org/chebi/CHEBI:18021"
+  PEP identity "http://identifiers.org/kegg.compound/C00074"
+  PYR identity "http://identifiers.org/kegg.compound/C00022"
+  PYR identity "http://identifiers.org/chebi/CHEBI:32816"
+  PYR identity "http://identifiers.org/chebi/CHEBI:15361"
+  ACE identity "http://identifiers.org/kegg.compound/C00084"
+  ACE identity "http://identifiers.org/chebi/CHEBI:15343"
+  P part "http://identifiers.org/chebi/CHEBI:16761"
+  P part "http://identifiers.org/kegg.compound/C00008"
+  P part "http://identifiers.org/kegg.compound/C00002"
+  P part "http://identifiers.org/chebi/CHEBI:15422"
+  NAD identity "http://identifiers.org/kegg.compound/C00003"
+  NAD identity "http://identifiers.org/chebi/CHEBI:15846"
+  NADH identity "http://identifiers.org/chebi/CHEBI:16908"
+  NADH identity "http://identifiers.org//C00004"
+  Glyc identity "http://identifiers.org/kegg.compound/C00182"
+  Glyc identity "http://identifiers.org/chebi/CHEBI:28087"
+  Trh identity "http://identifiers.org/kegg.compound/C01083"
+  Trh identity "http://identifiers.org/chebi/CHEBI:27082"
+  CO2 identity "http://identifiers.org/kegg.compound/C00011"
+  CO2 identity "http://identifiers.org/chebi/CHEBI:16526"
+  SUCC identity "http://identifiers.org/chebi/CHEBI:30031"
+  GLCo identity "http://identifiers.org/kegg.compound/C00293"
+  GLCo identity "http://identifiers.org/chebi/CHEBI:17234"
+  ETOH identity "http://identifiers.org/kegg.compound/C00469"
+  ETOH identity "http://identifiers.org/chebi/CHEBI:16236"
+  GLY identity "http://identifiers.org/kegg.compound/C00116"
+  GLY identity "http://identifiers.org/chebi/CHEBI:17754"
+  ATP identity "http://identifiers.org/kegg.compound/C00002"
+  ATP identity "http://identifiers.org/chebi/CHEBI:15422"
+  ADP identity "http://identifiers.org/kegg.compound/C00008"
+  ADP identity "http://identifiers.org/chebi/CHEBI:16761"
+  SUM_P part "http://identifiers.org/chebi/CHEBI:16027"
+  SUM_P part "http://identifiers.org/kegg.compound/C00008"
+  SUM_P part "http://identifiers.org/chebi/CHEBI:15422"
+  SUM_P part "http://identifiers.org/kegg.compound/C00002"
+  SUM_P part "http://identifiers.org/chebi/CHEBI:16761"
+  SUM_P part "http://identifiers.org/kegg.compound/C00020"
+  AMP identity "http://identifiers.org/chebi/CHEBI:16027"
+  AMP identity "http://identifiers.org/kegg.compound/C00020"
+  F26BP identity "http://identifiers.org/kegg.compound/C00665"
+  F26BP identity "http://identifiers.org/chebi/CHEBI:28602"
+  vGLK identity "http://identifiers.org/kegg.reaction/R00299"
+  vGLK identity "http://identifiers.org/ec-code/2.7.1.2"
+  vGLK homolog "http://identifiers.org/reactome/REACT_1318"
+  vPGI identity "http://identifiers.org/ec-code/5.3.1.9"
+  vPGI identity "http://identifiers.org/kegg.reaction/R00771"
+  vPGI homolog "http://identifiers.org/reactome/REACT_116"
+  vGLYCO homolog "http://identifiers.org/reactome/REACT_1736"
+  vGLYCO hypernym "http://identifiers.org/go/GO:0005978"
+  vTreha hypernym "http://identifiers.org/go/GO:0005992"
+  vPFK identity "http://identifiers.org/ec-code/2.7.1.11"
+  vPFK identity "http://identifiers.org/kegg.reaction/R00756"
+  vPFK homolog "http://identifiers.org/reactome/REACT_736"
+  vALD identity "http://identifiers.org/ec-code/4.1.2.13"
+  vALD identity "http://identifiers.org/kegg.reaction/R01070"
+  vALD homolog "http://identifiers.org/reactome/REACT_1602"
+  vGAPDH identity "http://identifiers.org/ec-code/1.2.1.12"
+  vGAPDH identity "http://identifiers.org/kegg.reaction/R01061"
+  vGAPDH homolog "http://identifiers.org/reactome/REACT_1847"
+  vPGK identity "http://identifiers.org/kegg.reaction/R01512"
+  vPGK identity "http://identifiers.org/ec-code/2.7.2.3"
+  vPGK homolog "http://identifiers.org/reactome/REACT_1771"
+  vPGM identity "http://identifiers.org/kegg.reaction/R01518"
+  vPGM identity "http://identifiers.org/ec-code/5.4.2.1"
+  vPGM homolog "http://identifiers.org/reactome/REACT_576"
+  vENO identity "http://identifiers.org/ec-code/4.2.1.11"
+  vENO identity "http://identifiers.org/kegg.reaction/R00658"
+  vENO homolog "http://identifiers.org/reactome/REACT_1400"
+  vPYK identity "http://identifiers.org/kegg.reaction/R00200"
+  vPYK identity "http://identifiers.org/ec-code/2.7.1.40"
+  vPYK homolog "http://identifiers.org/reactome/REACT_1911"
+  vPDC identity "http://identifiers.org/kegg.reaction/R00224"
+  vPDC identity "http://identifiers.org/ec-code/4.1.1.1"
+  vSUC hypernym "http://identifiers.org/go/GO:0006105"
+  vGLT homolog "http://identifiers.org/reactome/REACT_2092"
+  vGLT hypernym "http://identifiers.org/go/GO:0046323"
+  vADH homolog "http://identifiers.org/reactome/REACT_799"
+  vADH hypernym "http://identifiers.org/kegg.reaction/R00746"
+  vADH hypernym "http://identifiers.org/ec-code/1.1.1.2"
+  vG3PDH hypernym "http://identifiers.org/ec-code/1.1.1.8"
+  vATP hypernym "http://identifiers.org/go/GO:0016887"
+  vATP hypernym "http://identifiers.org/ec-code/3.6.1.3"
+end
+
+Teusink2000_Glycolysis is "Teusink2000_Glycolysis_1"
+
+Teusink2000_Glycolysis identity "http://identifiers.org/biomodels.db/MODEL6623915522"
+Teusink2000_Glycolysis identity "http://identifiers.org/biomodels.db/BIOMD0000000064"
+Teusink2000_Glycolysis identity "http://identifiers.org/go/GO:0006096"
+Teusink2000_Glycolysis identity "http://identifiers.org/kegg.pathway/sce00010"
+Teusink2000_Glycolysis homolog "http://identifiers.org/reactome/REACT_723"
+Teusink2000_Glycolysis taxon "http://identifiers.org/taxonomy/4932"
+Teusink2000_Glycolysis description "http://identifiers.org/pubmed/10951190"

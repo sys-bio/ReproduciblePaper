@@ -8,10 +8,10 @@ But does not work. Why?
 
 """
 
-
 import os
 import tellurium as te
 import tesedml as libsedml
+import matplotlib.pyplot as plt
 
 # find the sbml and sedml directories
 sbml_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sbml')
@@ -48,5 +48,17 @@ with open(sedml_file, 'r') as f:
     sedml = f.read()
 
 # run the simulations
-te.executeSEDML(sedml, workingDir=os.path.dirname(__file__))
+te.executeSEDML(sedml_file)
+
+
+
+
+plt.show()
+
+
+
+
+
+
+
 

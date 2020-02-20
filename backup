@@ -1,0 +1,105 @@
+
+def Constant_flux__irreversible(v):
+    return v
+
+
+def Alcohol_dehydrogenase(ACE, ETOH, KeqADH, KiADHACE, KiADHETOH, KiADHNAD, KiADHNADH, KmADHACE, KmADHETOH,
+                          KmADHNAD, KmADHNADH, NAD, NADH, VmADH, cytosol):
+    return -cytosol * ((VmADH / (KiADHNAD * KmADHETOH)) * (NAD * ETOH - NADH * ACE / KeqADH) / (
+            1 + NAD / KiADHNAD + KmADHNAD * ETOH / (KiADHNAD * KmADHETOH) + KmADHNADH * ACE / (
+            KiADHNADH * KmADHACE) + NADH / KiADHNADH + NAD * ETOH / (
+                    KiADHNAD * KmADHETOH) + KmADHNADH * NAD * ACE / (
+                    KiADHNAD * KiADHNADH * KmADHACE) + KmADHNAD * ETOH * NADH / (
+                    KiADHNAD * KmADHETOH * KiADHNADH) + NADH * ACE / (
+                    KiADHNADH * KmADHACE) + NAD * ETOH * ACE / (
+                    KiADHNAD * KmADHETOH * KiADHACE) + ETOH * NADH * ACE / (
+                    KiADHETOH * KiADHNADH * KmADHACE))) / cytosol
+
+
+def Glycerol_3_phosphate_dehydrogenase(GLY, KeqG3PDH, KeqTPI, KmG3PDHDHAP, KmG3PDHGLY, KmG3PDHNAD,
+                                       KmG3PDHNADH, NAD, NADH, TRIO, VmG3PDH):
+    return (VmG3PDH / (KmG3PDHDHAP * KmG3PDHNADH)) * ((1 / (1 + KeqTPI)) * TRIO * NADH - GLY * NAD / KeqG3PDH) / (
+            (1 + (1 / (1 + KeqTPI)) * TRIO / KmG3PDHDHAP + GLY / KmG3PDHGLY) * (
+            1 + NADH / KmG3PDHNADH + NAD / KmG3PDHNAD))
+
+
+def R_PFK(KmF6P, KmATP, g, AT_, F6):
+    return 1 + F6 / KmF6P + AT_ / KmATP + g * (F6 / KmF6P) * (AT_ / KmATP)
+
+
+def T_PFK(CATP, KmATP, AT_):
+    return 1 + CATP * (AT_ / KmATP)
+
+
+def L_PFK(L, CiATP, KiATP, CAMP, KAMP, CF26BP, KF26BP, CF16BP, KF16BP, AT_, AM, F16, F26):
+    return L * ((1 + CiATP * (AT_ / KiATP)) / (1 + AT_ / KiATP)) ^ 2 * (
+            (1 + CAMP * (AM / KAMP)) / (1 + AM / KAMP)) ^ 2 * (
+                   (1 + CF26BP * F26 / KF26BP + CF16BP * F16 / KF16BP) / (1 + F26 / KF26BP + F16 / KF16BP)) ^ 2
+
+
+def Hexokinase(ADP, ATP, G6P, GLCi, KeqGLK, KmGLKADP, KmGLKATP, KmGLKG6P, KmGLKGLCi, VmGLK):
+    return (VmGLK / (KmGLKGLCi * KmGLKATP)) * (GLCi * ATP - G6P * ADP / KeqGLK) / (
+            (1 + GLCi / KmGLKGLCi + G6P / KmGLKG6P) * (1 + ATP / KmGLKATP + ADP / KmGLKADP))
+
+
+def Glucose_6_phosphate_isomerase(F6P, G6P, KeqPGI_2, KmPGIF6P_2, KmPGIG6P_2, VmPGI_2):
+    return (VmPGI_2 / KmPGIG6P_2) * (G6P - F6P / KeqPGI_2) / (1 + G6P / KmPGIG6P_2 + F6P / KmPGIF6P_2)
+
+
+def Aldolase(F16P, KeqALD, KeqTPI, KmALDDHAP, KmALDF16P, KmALDGAP, KmALDGAPi, TRIO, VmALD):
+    return (VmALD / KmALDF16P) * (F16P - (KeqTPI / (1 + KeqTPI)) * TRIO * (1 / (1 + KeqTPI)) * TRIO / KeqALD) / (
+            1 + F16P / KmALDF16P + (KeqTPI / (1 + KeqTPI)) * TRIO / KmALDGAP + (
+            1 / (1 + KeqTPI)) * TRIO / KmALDDHAP + (KeqTPI / (1 + KeqTPI)) * TRIO * (
+                    1 / (1 + KeqTPI)) * TRIO / (KmALDGAP * KmALDDHAP) + F16P * (
+                    KeqTPI / (1 + KeqTPI)) * TRIO / (KmALDGAPi * KmALDF16P))
+
+
+def Phosphoglycerate_kinase(ADP, ATP, BPG, KeqPGK, KmPGKADP, KmPGKATP, KmPGKBPG, KmPGKP3G, P3G, VmPGK):
+    return (VmPGK / (KmPGKP3G * KmPGKATP)) * (KeqPGK * BPG * ADP - P3G * ATP) / (
+            (1 + BPG / KmPGKBPG + P3G / KmPGKP3G) * (1 + ATP / KmPGKATP + ADP / KmPGKADP))
+
+
+def Glyceraldehyde_3_phosphate_dehydrogenase(BPG, KeqTPI, KmGAPDHBPG, KmGAPDHGAP, KmGAPDHNAD, KmGAPDHNADH,
+                                             NAD, NADH, TRIO, VmGAPDHf, VmGAPDHr):
+    return (VmGAPDHf * (KeqTPI / (1 + KeqTPI)) * TRIO * NAD / (KmGAPDHGAP * KmGAPDHNAD) - VmGAPDHr * BPG * NADH / (
+            KmGAPDHBPG * KmGAPDHNADH)) / ((1 + (KeqTPI / (1 + KeqTPI)) * TRIO / KmGAPDHGAP + BPG / KmGAPDHBPG) * (
+            1 + NAD / KmGAPDHNAD + NADH / KmGAPDHNADH))
+
+
+def Enolase(KeqENO, KmENOP2G, KmENOPEP, P2G, PEP, VmENO):
+    return (VmENO / KmENOP2G) * (P2G - PEP / KeqENO) / (1 + P2G / KmENOP2G + PEP / KmENOPEP)
+
+
+def Pyruvate_decarboxylase(KmPDCPYR, PYR, VmPDC, nPDC):
+    return VmPDC * (PYR ^ nPDC / KmPDCPYR ^ nPDC) / (1 + PYR ^ nPDC / KmPDCPYR ^ nPDC)
+
+
+def Succinate_synthesis(ACE, KSUCC):
+    return KSUCC * ACE
+
+
+def Glucose_transport(GLCi, GLCo, KeqGLT, KmGLTGLCi, KmGLTGLCo, VmGLT):
+    return (VmGLT / KmGLTGLCo) * (GLCo - GLCi / KeqGLT) / (
+            1 + GLCo / KmGLTGLCo + GLCi / KmGLTGLCi + 0.91 * GLCo * GLCi / (KmGLTGLCo * KmGLTGLCi))
+
+
+def Phosphoglycerate_mutase(KeqPGM, KmPGMP2G, KmPGMP3G, P2G, P3G, VmPGM):
+    return (VmPGM / KmPGMP3G) * (P3G - P2G / KeqPGM) / (1 + P3G / KmPGMP3G + P2G / KmPGMP2G)
+
+
+def Pyruvate_kinase(ADP, ATP, KeqPYK, KmPYKADP, KmPYKATP, KmPYKPEP, KmPYKPYR, PEP, PYR, VmPYK):
+    return (VmPYK / (KmPYKPEP * KmPYKADP)) * (PEP * ADP - PYR * ATP / KeqPYK) / (
+            (1 + PEP / KmPYKPEP + PYR / KmPYKPYR) * (1 + ATP / KmPYKATP + ADP / KmPYKADP))
+
+
+def ATPase_activity(ATP, KATPASE):
+    return KATPASE * ATP
+
+
+def Phosphofructokinase(AMP, ATP, CPFKAMP, CPFKATP, CPFKF16BP, CPFKF26BP, CiPFKATP, F16P, F26BP, F6P,
+                        KPFKAMP, KPFKF16BP, KPFKF26BP, KiPFKATP, KmPFKATP, KmPFKF6P, Lzero, VmPFK, gR):
+    return VmPFK * gR * (F6P / KmPFKF6P) * (ATP / KmPFKATP) * R_PFK(KmPFKF6P, KmPFKATP, gR, ATP, F6P) / (
+            R_PFK(KmPFKF6P, KmPFKATP, gR, ATP, F6P) ^ 2 + L_PFK(Lzero, CiPFKATP, KiPFKATP, CPFKAMP, KPFKAMP,
+                                                                CPFKF26BP, KPFKF26BP, CPFKF16BP, KPFKF16BP, ATP,
+                                                                AMP, F16P, F26BP) * T_PFK(CPFKATP, KmPFKATP,
+                                                                                          ATP) ^ 2)
