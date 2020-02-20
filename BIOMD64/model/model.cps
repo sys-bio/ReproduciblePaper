@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.27 (Build 217) (http://www.copasi.org) at 2020-02-19T23:53:42Z -->
+<!-- generated with COPASI 4.27 (Build 217) (http://www.copasi.org) at 2020-02-20T17:44:46Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="27" versionDevel="217" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -913,418 +913,484 @@
     <ListOfMetabolites>
       <Metabolite key="Metabolite_0" name="Glucose in Cytosol" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_0">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00293" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00293"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_1" name="Glucose 6 Phosphate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_1">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17665" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17665"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00668" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00668"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_2" name="Fructose 6 Phosphate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_2">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C05345" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C05345"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15946" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15946"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_3" name="Fructose-1,6 bisphosphate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_3">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16905" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16905"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00354" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00354"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_4" name="Triose-phosphate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_4">
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16108" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16108"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29052" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29052"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00118" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00118"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00111" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00111"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_5" name="1,3-bisphosphoglycerate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_5">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16001" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16001"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00236" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00236"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_6" name="3-phosphoglycerate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_6">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17794" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17794"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00197" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00197"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_7" name="2-phosphoglycerate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_7">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00631" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00631"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17835" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17835"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_8" name="Phosphoenolpyruvate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_8">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18021" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18021"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00074" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00074"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_9" name="Pyruvate" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_9">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32816" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:32816"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15361" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15361"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00022" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00022"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_10" name="Acetaldehyde" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_10">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00084" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00084"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15343" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15343"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_11" name="High energy phosphates" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_11">
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_12" name="NAD" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_12">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15846" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15846"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00003" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00003"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_13" name="NADH" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_13">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16908" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16908"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org//C00004" />
+        <rdf:li rdf:resource="http://identifiers.org//C00004"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_14" name="Glycogen" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_14">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00182" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00182"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28087" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28087"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_15" name="Trehalose" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_15">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01083" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01083"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27082" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27082"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_16" name="CO2" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_16">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00011" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00011"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16526" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16526"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_17" name="Succinate" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_17">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:30031" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:30031"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_18" name="Extracellular Glucose" simulationType="fixed" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_18">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00293" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00293"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_19" name="Ethanol" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_19">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00469" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00469"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16236" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16236"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_20" name="Glycerol" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_20">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00116" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00116"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17754" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17754"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_21" name="ATP concentration" simulationType="assignment" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_21">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Expression>
           (&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[High energy phosphates],Reference=Concentration>-&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[ADP concentration],Reference=Concentration>)/2
@@ -1332,20 +1398,23 @@
       </Metabolite>
       <Metabolite key="Metabolite_22" name="ADP concentration" simulationType="assignment" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_22">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Expression>
           (&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[sum of AXP conc],Reference=Concentration>-(&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[High energy phosphates],Reference=Concentration>^2*(1-4*&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Values[AK eq constant],Reference=Value>)+2*&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[sum of AXP conc],Reference=Concentration>*&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[High energy phosphates],Reference=Concentration>*(4*&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Values[AK eq constant],Reference=Value>-1)+&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[sum of AXP conc],Reference=Concentration>^2)^0.5)/(1-4*&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Values[AK eq constant],Reference=Value>)
@@ -1353,20 +1422,23 @@
       </Metabolite>
       <Metabolite key="Metabolite_23" name="AMP concentration" simulationType="assignment" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_23">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16027" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16027"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00020" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00020"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Expression>
           &lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[sum of AXP conc],Reference=Concentration>-&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[ATP concentration],Reference=Concentration>-&lt;CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[ADP concentration],Reference=Concentration>
@@ -1374,58 +1446,64 @@
       </Metabolite>
       <Metabolite key="Metabolite_24" name="sum of AXP conc" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_24">
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16027" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16027"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00020" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00020"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
     <CopasiMT:hasPart>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
       </rdf:Bag>
     </CopasiMT:hasPart>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_25" name="F2,6P" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_25">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28602" />
+        <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28602"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00665" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00665"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
     </ListOfMetabolites>
@@ -1674,25 +1752,28 @@
     <ListOfReactions>
       <Reaction key="Reaction_0" name="Hexokinase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_0">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00299" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00299"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.2" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.2"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1318" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1318"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
@@ -1750,25 +1831,28 @@
       </Reaction>
       <Reaction key="Reaction_1" name="Glucose-6-phosphate isomerase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_1">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/5.3.1.9" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/5.3.1.9"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00771" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00771"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_116" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_116"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
@@ -1807,20 +1891,23 @@
       </Reaction>
       <Reaction key="Reaction_2" name="Glycogen synthesis" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_2">
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1736" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1736"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/go/GO:0005978" />
+        <rdf:li rdf:resource="http://identifiers.org/go/GO:0005978"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
@@ -1872,25 +1959,28 @@
       </Reaction>
       <Reaction key="Reaction_4" name="Phosphofructokinase" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_4">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.11" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.11"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00756" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00756"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_736" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_736"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
@@ -1984,25 +2074,28 @@
       </Reaction>
       <Reaction key="Reaction_5" name="Aldolase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_5">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01070" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01070"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/4.1.2.13" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/4.1.2.13"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1602" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1602"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_3" stoichiometry="1"/>
@@ -2053,25 +2146,28 @@
       </Reaction>
       <Reaction key="Reaction_6" name="Glyceraldehyde 3-phosphate dehydrogenase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_6">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/1.2.1.12" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/1.2.1.12"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01061" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01061"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1847" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1847"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
@@ -2130,25 +2226,28 @@
       </Reaction>
       <Reaction key="Reaction_7" name="Phosphoglycerate kinase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_7">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01512" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01512"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.2.3" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.2.3"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1771" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1771"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
@@ -2206,25 +2305,28 @@
       </Reaction>
       <Reaction key="Reaction_8" name="Phosphoglycerate mutase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_8">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/5.4.2.1" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/5.4.2.1"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01518" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01518"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_576" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_576"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_6" stoichiometry="1"/>
@@ -2263,25 +2365,28 @@
       </Reaction>
       <Reaction key="Reaction_9" name="Enolase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_9">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00658" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00658"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/4.2.1.11" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/4.2.1.11"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1400" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1400"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_7" stoichiometry="1"/>
@@ -2320,25 +2425,28 @@
       </Reaction>
       <Reaction key="Reaction_10" name="Pyruvate kinase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_10">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00200" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00200"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.40" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.40"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1911" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1911"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_8" stoichiometry="1"/>
@@ -2396,20 +2504,23 @@
       </Reaction>
       <Reaction key="Reaction_11" name="Pyruvate decarboxylase" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_11">
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00224" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00224"/>
       </rdf:Bag>
     </CopasiMT:is>
     <CopasiMT:is>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/4.1.1.1" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/4.1.1.1"/>
       </rdf:Bag>
     </CopasiMT:is>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_9" stoichiometry="1"/>
@@ -2442,15 +2553,18 @@
       </Reaction>
       <Reaction key="Reaction_12" name="Succinate synthesis" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_12">
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/go/GO:0006105" />
+        <rdf:li rdf:resource="http://identifiers.org/go/GO:0006105"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_10" stoichiometry="2"/>
@@ -2477,20 +2591,23 @@
       </Reaction>
       <Reaction key="Reaction_13" name="Glucose transport" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_13">
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_2092" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_2092"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/go/GO:0046323" />
+        <rdf:li rdf:resource="http://identifiers.org/go/GO:0046323"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_18" stoichiometry="1"/>
@@ -2529,25 +2646,28 @@
       </Reaction>
       <Reaction key="Reaction_14" name="Alcohol dehydrogenase" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_14">
     <CopasiMT:isHomologTo>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_799" />
+        <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_799"/>
       </rdf:Bag>
     </CopasiMT:isHomologTo>
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.2" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.2"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00746" />
+        <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00746"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_10" stoichiometry="1"/>
@@ -2621,15 +2741,18 @@
       </Reaction>
       <Reaction key="Reaction_15" name="Glycerol 3-phosphate dehydrogenase" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_15">
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.8" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.8"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
@@ -2688,20 +2811,23 @@
       </Reaction>
       <Reaction key="Reaction_16" name="ATPase activity" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_16">
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/ec-code/3.6.1.3" />
+        <rdf:li rdf:resource="http://identifiers.org/ec-code/3.6.1.3"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="http://identifiers.org/go/GO:0016887" />
+        <rdf:li rdf:resource="http://identifiers.org/go/GO:0016887"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_11" stoichiometry="1"/>
@@ -3417,6 +3543,218 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Footer>
     </Report>
   </ListOfReports>
+  <ListOfPlots>
+    <PlotSpecification name="Concentrations, Volumes, and Global Quantity Values" type="Plot2D" active="1" taskTypes="">
+      <Parameter name="log X" type="bool" value="0"/>
+      <Parameter name="log Y" type="bool" value="0"/>
+      <ListOfPlotItems>
+        <PlotItem name="[Glucose in Cytosol]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[Glucose in Cytosol],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Glucose 6 Phosphate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[Glucose 6 Phosphate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Fructose 6 Phosphate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[Fructose 6 Phosphate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Fructose-1,6 bisphosphate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[Fructose-1\,6 bisphosphate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Triose-phosphate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[Triose-phosphate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[1,3-bisphosphoglycerate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[1\,3-bisphosphoglycerate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[3-phosphoglycerate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[3-phosphoglycerate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[2-phosphoglycerate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[2-phosphoglycerate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Phosphoenolpyruvate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[Phosphoenolpyruvate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Pyruvate]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[Pyruvate],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Acetaldehyde]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[Acetaldehyde],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[High energy phosphates]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[High energy phosphates],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[NAD]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[NAD],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[NADH]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[NADH],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[ATP concentration]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[ATP concentration],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[ADP concentration]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[ADP concentration],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[AMP concentration]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Teusink2000_Glycolysis_1,Vector=Compartments[cytosol],Vector=Metabolites[AMP concentration],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+      </ListOfPlotItems>
+    </PlotSpecification>
+  </ListOfPlots>
   <GUI>
   </GUI>
   <SBMLReference file="model1.xml">

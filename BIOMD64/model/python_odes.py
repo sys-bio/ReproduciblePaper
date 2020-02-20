@@ -83,76 +83,104 @@ def teusink2000(y0, t):
     extracellular = 1
     cytosol = 1
 
-    # parameters
     KeqAK = 0.45
-    gR = 5.12
-    KmPFKF6P = 0.1
-    KmPFKATP = 0.71
-    Lzero = 0.66
-    CiPFKATP = 100
-    KiPFKATP = 0.65
-    CPFKAMP = 0.0845
-    KPFKAMP = 0.0995
-    CPFKF26BP = 0.0174
-    KPFKF26BP = 0.000682
-    CPFKF16BP = 0.397
-    KPFKF16BP = 0.111
-    CPFKATP = 3
-    KeqTPI = 0.045
 
+    # Hexokinase reaction parameters
     KeqGLK = 3800
     KmGLKADP = 0.23
     KmGLKATP = 0.15
     KmGLKG6P = 30
     KmGLKGLCi = 0.08
     VmGLK = 226.452
+
+    # Glucose-6-phosphate isomerase parameters
     KeqPGI_2 = 0.314
     KmPGIF6P_2 = 0.3
     KmPGIG6P_2 = 1.4
     VmPGI_2 = 339.677
+
+    # Glycogen synthesis parameters
     vGLYCO_v = 6
+
+    # Trehalose 6-phosphate synthase parameters
     vTreha_v = 2.4
+
+    # Phosphofructokinase parameters
+    CPFKAMP = 0.0845
+    CPFKATP = 3
+    CPFKF16BP = 0.397
+    CPFKF26BP = 0.0174
+    CiPFKATP = 100
+    KPFKAMP = 0.0995
+    KPFKF16BP = 0.111
+    KPFKF26BP = 0.000682
+    KiPFKATP = 0.65
+    KmPFKATP = 0.71
+    KmPFKF6P = 0.1
+    Lzero = 0.66
     VmPFK = 182.903
+    gR = 5.12
+
+    # Aldolase parameters
     KeqALD = 0.069
+    KeqTPI = 0.045  # note parameter also used in Glycer 3p dehy
     KmALDDHAP = 2.4
     KmALDF16P = 0.3
     KmALDGAP = 2
     KmALDGAPi = 10
     VmALD = 322.258
+
+    # Glyceraldehyde 3-phosphate dehydrogenase parameters
     KmGAPDHBPG = 0.0098
     KmGAPDHGAP = 0.21
     KmGAPDHNAD = 0.09
     KmGAPDHNADH = 0.06
     VmGAPDHf = 1184.52
     VmGAPDHr = 6549.8
+
+    # Phosphoglycerate kinase parameters
     KeqPGK = 3200
     KmPGKADP = 0.2
     KmPGKATP = 0.3
     KmPGKBPG = 0.003
     KmPGKP3G = 0.53
     VmPGK = 1306.45
+
+    # Phosphoglycerate mutase parameters
     KeqPGM = 0.19
     KmPGMP2G = 0.08
     KmPGMP3G = 1.2
     VmPGM = 2525.81
+
+    # Enolase parameters
     KeqENO = 6.7
     KmENOP2G = 0.04
     KmENOPEP = 0.5
     VmENO = 365.806
+
+    # Pyruvate kinase parameters
     KeqPYK = 6500
     KmPYKADP = 0.53
     KmPYKATP = 1.5
     KmPYKPEP = 0.14
     KmPYKPYR = 21
     VmPYK = 1088.71
+
+    # Pyruvate decarboxylase parameters
     KmPDCPYR = 4.33
     VmPDC = 174.194
     nPDC = 1.9
+
+    # Succinate synthesis parameters
     KSUCC = 21.4
+
+    # Glucose transport parameters
     KeqGLT = 1
     KmGLTGLCi = 1.1918
     KmGLTGLCo = 1.1918
     VmGLT = 97.264
+
+    # Alcohol dehydrogenase parameters
     KeqADH = 6.9e-05
     KiADHACE = 1.1
     KiADHETOH = 90
@@ -163,12 +191,16 @@ def teusink2000(y0, t):
     KmADHNAD = 0.17
     KmADHNADH = 0.11
     VmADH = 810
+
+    # Glycerol 3-phosphate dehydrogenase parameters
     KeqG3PDH = 4300
     KmG3PDHDHAP = 0.4
     KmG3PDHGLY = 1
     KmG3PDHNAD = 0.93
     KmG3PDHNADH = 0.023
     VmG3PDH = 70.15
+
+    # ATPase activity parameters
     KATPASE = 33.7
 
     # assignment rules
@@ -185,7 +217,12 @@ def teusink2000(y0, t):
     def amp():
         return SUM_P - atp() - adp()
 
-    # functions
+    # # functions
+    def glycogen_synthesis():
+        return vGLYCO_v
+
+    def trehalose6p_synthesis():
+        return vTreha_v
 
     def alcohol_dehydrogenase():
         return -cytosol * ((VmADH / (KiADHNAD * KmADHETOH)) * (NAD * ETOH - NADH * ACE / KeqADH) / (
@@ -210,10 +247,10 @@ def teusink2000(y0, t):
         return 1 + CPFKATP * (atp() / KmPFKATP)
 
     def l_pfk():
-        return Lzero * ((1 + CiPFKATP * (atp() / KiPFKATP)) / (1 + atp() / KiPFKATP)) ** 2 * (
-                (1 + CPFKAMP * (amp() / KPFKAMP)) / (1 + amp() / KPFKAMP)) ** 2 * (
-                       (1 + CPFKF26BP * F26BP / KPFKF26BP + CPFKF26BP * F16P / KPFKF16BP) / (
-                       1 + F26BP / KPFKF26BP + F16P / KPFKF16BP)) ** 2
+        return Lzero * ((1 + CiPFKATP * (atp() / KiPFKATP)) / (1 + atp() / KiPFKATP)) ** 2 \
+               * ((1 + CPFKAMP * (amp() / KPFKAMP)) / (1 + amp() / KPFKAMP)) ** 2 \
+               * ((1 + CPFKF26BP * F26BP / KPFKF26BP + CPFKF16BP * F16P / KPFKF16BP) / (
+                    1 + F26BP / KPFKF26BP + F16P / KPFKF16BP)) ** 2
 
     def hexokinase():
         return (VmGLK / (KmGLKGLCi * KmGLKATP)) * (GLCi * atp() - G6P * adp() / KeqGLK) / (
@@ -235,14 +272,15 @@ def teusink2000(y0, t):
 
     def glyceraldehyde_3_phosphate_dehydrogenase():
         return (VmGAPDHf * (KeqTPI / (1 + KeqTPI)) * TRIO * NAD / (KmGAPDHGAP * KmGAPDHNAD) - VmGAPDHr * BPG * NADH / (
-                KmGAPDHBPG * KmGAPDHNADH)) / ((1 + (KeqTPI / (1 + KeqTPI)) * TRIO / KmGAPDHGAP + BPG / KmGAPDHBPG) * (
-                1 + NAD / KmGAPDHNAD + NADH / KmGAPDHNADH))
+                KmGAPDHBPG * KmGAPDHNADH)) / (
+                       (1 + (KeqTPI / (1 + KeqTPI)) * TRIO / KmGAPDHGAP + BPG / KmGAPDHBPG) * (
+                       1 + NAD / KmGAPDHNAD + NADH / KmGAPDHNADH))
 
     def enolase():
         return (VmENO / KmENOP2G) * (P2G - PEP / KeqENO) / (1 + P2G / KmENOP2G + PEP / KmENOPEP)
 
     def pyruvate_decarboxylase():
-        return VmPDC * (PYR ** nPDC / KmPDCPYR ** nPDC) / (1 + PYR ** nPDC / KmPDCPYR ** nPDC)
+        return VmPDC * (PYR ** nPDC / (KmPDCPYR ** nPDC)) / (1 + PYR ** nPDC / (KmPDCPYR ** nPDC))
 
     def succinate_synthesis():
         return KSUCC * ACE
@@ -258,17 +296,11 @@ def teusink2000(y0, t):
         return (VmPYK / (KmPYKPEP * KmPYKADP)) * (PEP * adp() - PYR * atp() / KeqPYK) / (
                 (1 + PEP / KmPYKPEP + PYR / KmPYKPYR) * (1 + atp() / KmPYKATP + adp() / KmPYKADP))
 
-    def ATPase_activity():
+    def atpase_activity():
         return KATPASE * atp()
 
     def phosphofructokinase():
         return VmPFK * gR * (F6P / KmPFKF6P) * (atp() / KmPFKATP) * r_pfk() / (r_pfk() ** 2 + l_pfk() * t_pfk() ** 2)
-
-    def glycogen_synthesis():
-        return vGLYCO_v
-
-    def trehalose6p_synthesis():
-        return vTreha_v
 
     return [
         # GLCi, glucose in cytosol
@@ -323,7 +355,7 @@ def teusink2000(y0, t):
         - cytosol * hexokinase()
         + cytosol * pyruvate_kinase()
         - 4 * cytosol * succinate_synthesis()
-        - cytosol * ATPase_activity()
+        - cytosol * atpase_activity()
         - cytosol * glycogen_synthesis()
         - cytosol * trehalose6p_synthesis()
         - cytosol * phosphofructokinase()
@@ -351,6 +383,7 @@ sol = odeint(teusink2000, y0, t)
 
 import pandas as pd
 import matplotlib
+pd.set_option("display.precision", 20)
 
 matplotlib.use('TkAgg')
 
