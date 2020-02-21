@@ -1,251 +1,235 @@
-import os
-# import site
-# site.addsitedir(r'D:\tellurium')
-import tellurium as te
-# from tellurium.utils.misc import ODEExtractor
-import tesedml as libsedml
+import matplotlib
 import matplotlib.pyplot as plt
+import pandas as pd
+from scipy.integrate import solve_ivp
 from collections import namedtuple
 
-parameters_named_tuple = namedtuple(
-    'params', ['extracellular', 'cytosol', 'KeqAK', 'KeqGLK', 'KmGLKADP', 'KmGLKATP', 'KmGLKG6P', 'KmGLKGLCi', 'VmGLK',
-               'KeqPGI_2', 'KmPGIF6P_2', 'KmPGIG6P_2', 'VmPGI_2', 'vGLYCO_v', 'vTreha_v', 'CPFKAMP', 'CPFKATP',
-               'CPFKF16BP', 'CPFKF26BP', 'CiPFKATP', 'KPFKAMP', 'KPFKF16BP', 'KPFKF26BP', 'KiPFKATP', 'KmPFKATP',
-               'KmPFKF6P', 'Lzero', 'gR', 'VmPFK', 'KeqTPI', 'KeqALD', 'KmALDDHAP', 'KmALDF16P', 'KmALDGAP',
-               'KmALDGAPi', 'VmALD', 'KmGAPDHBPG', 'KmGAPDHGAP', 'KmGAPDHNAD', 'KmGAPDHNADH', 'VmGAPDHf', 'VmGAPDHr',
-               'KeqPGK', 'KmPGKADP', 'KmPGKATP', 'KmPGKBPG', 'KmPGKP3G', 'VmPGK', 'KeqPGM', 'KmPGMP2G', 'KmPGMP3G',
-               'VmPGM', 'KeqENO', 'KmENOP2G', 'KmENOPEP', 'VmENO', 'KeqPYK', 'KmPYKADP', 'KmPYKATP', 'KmPYKPEP',
-               'KmPYKPYR', 'VmPYK', 'KmPDCPYR', 'VmPDC', 'nPDC', 'KSUCC', 'KeqGLT', 'KmGLTGLCi', 'KmGLTGLCo', 'VmGLT',
-               'KeqADH', 'KiADHACE', 'KiADHETOH', 'KiADHNAD', 'KiADHNADH', 'KmADHACE', 'KmADHETOH', 'KmADHNAD',
-               'KmADHNADH', 'VmADH', 'KeqG3PDH', 'KmG3PDHDHAP', 'KmG3PDHGLY', 'KmG3PDHNAD', 'KmG3PDHNADH', 'VmG3PDH',
-               'KATPASE'])
+# set matplotlib backend
+matplotlib.use('TkAgg')
 
+# configure pandas to show full dataframe
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_colwidth', -1)
+
+# create named tuple for parameters so we can refer to them by name and not a number in an array
+param_named_tuple = namedtuple(
+    'params',
+    [
+        # volumes
+        'extracellular', 'cytosol',
+        # kinetic parameters
+        'KeqAK', 'KeqGLK', 'KmGLKADP', 'KmGLKATP', 'KmGLKG6P', 'KmGLKGLCi',
+        'VmGLK', 'KeqPGI_2', 'KmPGIF6P_2', 'KmPGIG6P_2', 'VmPGI_2', 'vGLYCO_v', 'vTreha_v', 'CPFKAMP', 'CPFKATP',
+        'CPFKF16BP', 'CPFKF26BP', 'CiPFKATP', 'KPFKAMP', 'KPFKF16BP', 'KPFKF26BP', 'KiPFKATP', 'KmPFKATP', 'KmPFKF6P',
+        'Lzero', 'gR', 'VmPFK', 'KeqTPI', 'KeqALD', 'KmALDDHAP', 'KmALDF16P', 'KmALDGAP', 'KmALDGAPi', 'VmALD',
+        'KmGAPDHBPG', 'KmGAPDHGAP', 'KmGAPDHNAD', 'KmGAPDHNADH', 'VmGAPDHf', 'VmGAPDHr', 'KeqPGK', 'KmPGKADP',
+        'KmPGKATP', 'KmPGKBPG', 'KmPGKP3G', 'VmPGK', 'KeqPGM', 'KmPGMP2G', 'KmPGMP3G', 'VmPGM', 'KeqENO', 'KmENOP2G',
+        'KmENOPEP', 'VmENO', 'KeqPYK', 'KmPYKADP', 'KmPYKATP', 'KmPYKPEP', 'KmPYKPYR', 'VmPYK', 'KmPDCPYR', 'VmPDC',
+        'nPDC', 'KSUCC', 'KeqGLT', 'KmGLTGLCi', 'KmGLTGLCo', 'VmGLT', 'KeqADH', 'KiADHACE', 'KiADHETOH', 'KiADHNAD',
+        'KiADHNADH', 'KmADHACE', 'KmADHETOH', 'KmADHNAD', 'KmADHNADH', 'VmADH', 'KeqG3PDH', 'KmG3PDHDHAP', 'KmG3PDHGLY',
+        'KmG3PDHNAD', 'KmG3PDHNADH', 'VmG3PDH', 'KATPASE',
+        # fixed parameters
+        'Glyc', 'Trh', 'CO2', 'SUCC', 'ETOH', 'GLY', 'SUM_P', 'F26BP', 'GLCo',
+    ])
 
 
 
 def teusink2000(t, y0, p):
-    # Unpack Species
+    """
+    Callable function that can be integrated with scipy.integrate functions.
+
+    Args:
+        t (vector, list, np.array): integration time points
+        y0 (vector, list, np.array): initial concentration parameters
+        p (named tuple): all other model parameters
+
+    Returns:
+
+    """
+    # Collect parameters again in a namedTuple
+    p = param_named_tuple(*p)
     GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH = y0
 
-    # These metabolites are sinks. Not sure why CO2 has to be 1 though.
-    # Should be 0? does it make a difference?
-    Glyc = 0  # fixed
-    Trh = 0  # fixed
-    CO2 = 1  # fixed
-    SUCC = 0  # fixed
-
-    ETOH = 50  # fixed
-    GLY = 0.15  # fixed
-    SUM_P = 4.1  # fixed
-    F26BP = 0.02  # fixed
-    GLCo = 50  # fixed, extracellular glucose
-
     # assignment rules
-    adp = (SUM_P - (P ** 2 * (1 - 4 * KeqAK)
-                    + 2 * SUM_P * P * (4 * KeqAK - 1)
-                    + SUM_P ** 2) ** 0.5) / (1 - 4 * KeqAK)
+    adp = (p.SUM_P - (P ** 2 * (1 - 4 * p.KeqAK)
+                    + 2 * p.SUM_P * P * (4 * p.KeqAK - 1)
+                    + p.SUM_P ** 2) ** 0.5) / (1 - 4 * p.KeqAK)
     atp = (P - adp) / 2
-    amp = SUM_P - atp - adp
+    amp = p.SUM_P - atp - adp
 
-    # functions
+    # reaction functions
     def glycogen_synthesis():
-        return vGLYCO_v
+        return p.vGLYCO_v
 
     def trehalose6p_synthesis():
-        return vTreha_v
-
-    '''
-    function Function_for_Alcohol_dehydrogenase(ACE, ETOH, KeqADH, KiADHACE, KiADHETOH, KiADHNAD, KiADHNADH, KmADHACE, KmADHETOH, KmADHNAD, KmADHNADH, NAD, NADH, VmADH, cytosol)
-        -cytosol*((VmADH/(KiADHNAD*KmADHETOH))*(NAD*ETOH - NADH*ACE/KeqADH)/(1 + NAD/KiADHNAD + KmADHNAD*ETOH/(KiADHNAD*KmADHETOH) + KmADHNADH*ACE/(KiADHNADH*KmADHACE) + NADH/KiADHNADH + NAD*ETOH/(KiADHNAD*KmADHETOH) + KmADHNADH*NAD*ACE/(KiADHNAD*KiADHNADH*KmADHACE) + KmADHNAD*ETOH*NADH/(KiADHNAD*KmADHETOH*KiADHNADH) + NADH*ACE/(KiADHNADH*KmADHACE) + NAD*ETOH*ACE/(KiADHNAD*KmADHETOH*KiADHACE) + ETOH*NADH*ACE/(KiADHETOH*KiADHNADH*KmADHACE)))/cytosol;
-    end'''
+        return p.vTreha_v
 
     def alcohol_dehydrogenase():
-        numerator = (VmADH / (KiADHNAD * KmADHETOH)) * (NAD * ETOH - (NADH * ACE / KeqADH))
-        denom = 1 + (NAD / KiADHNAD) \
-                + KmADHNAD * ETOH / (KiADHNAD * KmADHETOH) \
-                + KmADHNADH * ACE / (KiADHNADH * KmADHACE) \
-                + NADH / KiADHNADH \
-                + NAD * ETOH / (KiADHNAD * KmADHETOH) \
-                + KmADHNADH * NAD * ACE / (KiADHNAD * KiADHNADH * KmADHACE) \
-                + KmADHNAD * ETOH * NADH / (KiADHNAD * KmADHETOH * KiADHNADH) \
-                + NADH * ACE / (KiADHNADH * KmADHACE) \
-                + NAD * ETOH * ACE / (KiADHNAD * KmADHETOH * KiADHACE) \
-                + ETOH * NADH * ACE / (KiADHETOH * KiADHNADH * KmADHACE)
-        return - numerator / denom
+        numerator = (p.VmADH / (p.KiADHNAD * p.KmADHETOH)) * (NAD * p.ETOH - (NADH * ACE / p.KeqADH))
+        denom = 1 + (NAD / p.KiADHNAD) \
+                + p.KmADHNAD * p.ETOH / (p.KiADHNAD * p.KmADHETOH) \
+                + p.KmADHNADH * ACE / (p.KiADHNADH * p.KmADHACE) \
+                + NADH / p.KiADHNADH \
+                + NAD * p.ETOH / (p.KiADHNAD * p.KmADHETOH) \
+                + p.KmADHNADH * NAD * ACE / (p.KiADHNAD * p.KiADHNADH * p.KmADHACE) \
+                + p.KmADHNAD * p.ETOH * NADH / (p.KiADHNAD * p.KmADHETOH * p.KiADHNADH) \
+                + NADH * ACE / (p.KiADHNADH * p.KmADHACE) \
+                + NAD * p.ETOH * ACE / (p.KiADHNAD * p.KmADHETOH * p.KiADHACE) \
+                + p.ETOH * NADH * ACE / (p.KiADHETOH * p.KiADHNADH * p.KmADHACE)
+        return -numerator / denom
 
     def glycerol_3_phosphate_dehydrogenase():
-        numerator = (VmG3PDH / (KmG3PDHDHAP * KmG3PDHNADH)) * ((1 / (1 + KeqTPI)) * TRIO * NADH
-                                                               - GLY * NAD / KeqG3PDH)
+        numerator = (p.VmG3PDH / (p.KmG3PDHDHAP * p.KmG3PDHNADH)) * ((1 / (1 + p.KeqTPI)) * TRIO * NADH
+                                                                     - p.GLY * NAD / p.KeqG3PDH)
 
-        denom = (1 + (1 / (1 + KeqTPI)) * TRIO / KmG3PDHDHAP + GLY / KmG3PDHGLY) * (
-                1 + NADH / KmG3PDHNADH + NAD / KmG3PDHNAD)
+        denom = (1 + (1 / (1 + p.KeqTPI)) * TRIO / p.KmG3PDHDHAP + p.GLY / p.KmG3PDHGLY) * (
+                1 + NADH / p.KmG3PDHNADH + NAD / p.KmG3PDHNAD)
         return numerator / denom
 
+    def r_pfk():
+        return 1 + F6P / p.KmPFKF6P + atp / p.KmPFKATP + p.gR * (F6P / p.KmPFKF6P) * (atp / p.KmPFKATP)
+
+    def t_pfk():
+        return 1 + p.CPFKATP * (atp / p.KmPFKATP)
+
+    def l_pfk():
+        return p.Lzero * ((1 + p.CiPFKATP * (atp / p.KiPFKATP)) / (1 + atp / p.KiPFKATP)) ** 2 \
+               * ((1 + p.CPFKAMP * (amp / p.KPFKAMP)) / (1 + amp / p.KPFKAMP)) ** 2 \
+               * ((1 + p.CPFKF26BP * p.F26BP / p.KPFKF26BP + p.CPFKF16BP * F16P / p.KPFKF16BP) / (
+                1 + p.F26BP / p.KPFKF26BP + F16P / p.KPFKF16BP)) ** 2
+
     def hexokinase():
-        return (VmGLK / (KmGLKGLCi * KmGLKATP)) * (GLCi * atp - G6P * adp / KeqGLK) / (
-                (1 + GLCi / KmGLKGLCi + G6P / KmGLKG6P) * (1 + atp / KmGLKATP + adp / KmGLKADP))
+        return (p.VmGLK / (p.KmGLKGLCi * p.KmGLKATP)) * (GLCi * atp - G6P * adp / p.KeqGLK) / (
+                (1 + GLCi / p.KmGLKGLCi + G6P / p.KmGLKG6P) * (1 + atp / p.KmGLKATP + adp / p.KmGLKADP))
 
     def glucose_6_phosphate_isomerase():
-        return (VmPGI_2 / KmPGIG6P_2) * (G6P - F6P / KeqPGI_2) / (1 + G6P / KmPGIG6P_2 + F6P / KmPGIF6P_2)
+        return (p.VmPGI_2 / p.KmPGIG6P_2) * (G6P - F6P / p.KeqPGI_2) / (
+                1 + G6P / p.KmPGIG6P_2 + F6P / p.KmPGIF6P_2)
 
     def aldolase():
-        return (VmALD / KmALDF16P) * (F16P - (KeqTPI / (1 + KeqTPI)) * TRIO * (1 / (1 + KeqTPI)) * TRIO / KeqALD) / (
-                1 + F16P / KmALDF16P + (KeqTPI / (1 + KeqTPI)) * TRIO / KmALDGAP + (
-                1 / (1 + KeqTPI)) * TRIO / KmALDDHAP + (KeqTPI / (1 + KeqTPI)) * TRIO * (
-                        1 / (1 + KeqTPI)) * TRIO / (KmALDGAP * KmALDDHAP) + F16P * (
-                        KeqTPI / (1 + KeqTPI)) * TRIO / (KmALDGAPi * KmALDF16P))
+        return (p.VmALD / p.KmALDF16P) * (
+                F16P - (p.KeqTPI / (1 + p.KeqTPI)) * TRIO * (1 / (1 + p.KeqTPI)) * TRIO / p.KeqALD) / (
+                       1 + F16P / p.KmALDF16P + (p.KeqTPI / (1 + p.KeqTPI)) * TRIO / p.KmALDGAP + (
+                       1 / (1 + p.KeqTPI)) * TRIO / p.KmALDDHAP + (p.KeqTPI / (1 + p.KeqTPI)) * TRIO * (
+                               1 / (1 + p.KeqTPI)) * TRIO / (p.KmALDGAP * p.KmALDDHAP) + F16P * (
+                               p.KeqTPI / (1 + p.KeqTPI)) * TRIO / (p.KmALDGAPi * p.KmALDF16P))
 
     def phosphoglycerate_kinase():
-        return (VmPGK / (KmPGKP3G * KmPGKATP)) * (KeqPGK * BPG * adp - P3G * atp) / (
-                (1 + BPG / KmPGKBPG + P3G / KmPGKP3G) * (1 + atp / KmPGKATP + adp / KmPGKADP))
+        return (p.VmPGK / (p.KmPGKP3G * p.KmPGKATP)) * (p.KeqPGK * BPG * adp - P3G * atp) / (
+                (1 + BPG / p.KmPGKBPG + P3G / p.KmPGKP3G) * (1 + atp / p.KmPGKATP + adp / p.KmPGKADP))
 
     def glyceraldehyde_3_phosphate_dehydrogenase():
-        numerator = VmGAPDHf * (KeqTPI / (1 + KeqTPI)) * TRIO * NAD / (KmGAPDHGAP * KmGAPDHNAD) \
-                    - VmGAPDHr * BPG * NADH / (KmGAPDHBPG * KmGAPDHNADH)
-        denom = (1 + (KeqTPI / (1 + KeqTPI)) * TRIO / KmGAPDHGAP + BPG / KmGAPDHBPG) \
-                * (1 + NAD / KmGAPDHNAD + NADH / KmGAPDHNADH)
+        numerator = p.VmGAPDHf * (p.KeqTPI / (1 + p.KeqTPI)) * TRIO * NAD / (p.KmGAPDHGAP * p.KmGAPDHNAD) \
+                    - p.VmGAPDHr * BPG * NADH / (p.KmGAPDHBPG * p.KmGAPDHNADH)
+        denom = (1 + (p.KeqTPI / (1 + p.KeqTPI)) * TRIO / p.KmGAPDHGAP + BPG / p.KmGAPDHBPG) \
+                * (1 + NAD / p.KmGAPDHNAD + NADH / p.KmGAPDHNADH)
         return numerator / denom
 
     def enolase():
-        return (VmENO / KmENOP2G) * (P2G - PEP / KeqENO) / (1 + P2G / KmENOP2G + PEP / KmENOPEP)
+        return (p.VmENO / p.KmENOP2G) * (P2G - PEP / p.KeqENO) / (1 + P2G / p.KmENOP2G + PEP / p.KmENOPEP)
 
     def pyruvate_decarboxylase():
-        x = PYR ** nPDC / (KmPDCPYR ** nPDC)
-        return VmPDC * x / (1 + x)
+        x = PYR ** p.nPDC / (p.KmPDCPYR ** p.nPDC)
+        return p.VmPDC * x / (1 + x)
 
     def succinate_synthesis():
-        return KSUCC * ACE
+        return p.KSUCC * ACE
 
     def glucose_transport():
-        return (VmGLT / KmGLTGLCo) * (GLCo - GLCi / KeqGLT) / (
-                1 + GLCo / KmGLTGLCo + GLCi / KmGLTGLCi + 0.91 * GLCo * GLCi / (KmGLTGLCo * KmGLTGLCi))
+        return (p.VmGLT / p.KmGLTGLCo) * (p.GLCo - GLCi / p.KeqGLT) / (
+                1 + p.GLCo / p.KmGLTGLCo + GLCi / p.KmGLTGLCi + 0.91 * p.GLCo * GLCi / (p.KmGLTGLCo * p.KmGLTGLCi))
 
     def phosphoglycerate_mutase():
-        return (VmPGM / KmPGMP3G) * (P3G - P2G / KeqPGM) / (1 + P3G / KmPGMP3G + P2G / KmPGMP2G)
+        return (p.VmPGM / p.KmPGMP3G) * (P3G - P2G / p.KeqPGM) / (1 + P3G / p.KmPGMP3G + P2G / p.KmPGMP2G)
 
     def pyruvate_kinase():
-        return (VmPYK / (KmPYKPEP * KmPYKADP)) * (PEP * adp - PYR * atp / KeqPYK) / (
-                (1 + PEP / KmPYKPEP + PYR / KmPYKPYR) * (1 + atp / KmPYKATP + adp / KmPYKADP))
+        return (p.VmPYK / (p.KmPYKPEP * p.KmPYKADP)) * (PEP * adp - PYR * atp / p.KeqPYK) / (
+                (1 + PEP / p.KmPYKPEP + PYR / p.KmPYKPYR) * (1 + atp / p.KmPYKATP + adp / p.KmPYKADP))
 
     def atpase_activity():
-        return KATPASE * atp
-
-    '''
-        
-    function R_PFK(KmF6P, KmATP, g, AT_, F6)
-      1 + F6/KmF6P + AT_/KmATP + g*(F6/KmF6P)*(AT_/KmATP);
-    end
-    
-    function T_PFK(CATP, KmATP, AT_)
-      1 + CATP*(AT_/KmATP);
-    end
-    
-    function L_PFK(L, CiATP, KiATP, CAMP, KAMP, CF26BP, KF26BP, CF16BP, KF16BP, AT_, AM, F16, F26)
-      L*((1 + CiATP*(AT_/KiATP))/(1 + AT_/KiATP))^2
-      *((1 + CAMP*(AM/KAMP))/(1 + AM/KAMP))^2
-      *((1 + CF26BP*F26/KF26BP + CF16BP*F16/KF16BP)/(1 + F26/KF26BP + F16/KF16BP))^2;
-    end
-    
-    function Function_for_Phosphofructokinase(AMP, ATP, CPFKAMP, CPFKATP, CPFKF16BP, CPFKF26BP, CiPFKATP, F16P, F26BP, F6P, KPFKAMP, KPFKF16BP, KPFKF26BP, KiPFKATP, KmPFKATP, KmPFKF6P, Lzero, VmPFK, gR)
-        VmPFK*gR*(F6P/KmPFKF6P)*(ATP/KmPFKATP)*
-            R_PFK(KmPFKF6P, KmPFKATP, gR, ATP, F6P)/
-            (R_PFK(KmPFKF6P, KmPFKATP, gR, ATP, F6P)^2 + 
-            L_PFK(Lzero, CiPFKATP, KiPFKATP, CPFKAMP, KPFKAMP, CPFKF26BP, KPFKF26BP, CPFKF16BP, KPFKF16BP, ATP, AMP, F16P, F26BP)*
-            T_PFK(CPFKATP, KmPFKATP, ATP)^2);
-    end
-
-    
-    '''
-
-    def r_pfk():
-        return 1 + F6P / KmPFKF6P + atp / KmPFKATP + gR * (F6P / KmPFKF6P) * (atp / KmPFKATP)
-
-    def t_pfk():
-        return 1 + CPFKATP * (atp / KmPFKATP)
-
-    def l_pfk():
-        return Lzero * ((1 + CiPFKATP * (atp / KiPFKATP)) / (1 + atp / KiPFKATP)) ** 2 \
-               * ((1 + CPFKAMP * (amp / KPFKAMP)) / (1 + amp / KPFKAMP)) ** 2 \
-               * ((1 + CPFKF26BP * F26BP / KPFKF26BP + CPFKF16BP * F16P / KPFKF16BP) / (
-                1 + F26BP / KPFKF26BP + F16P / KPFKF16BP)) ** 2
+        return p.KATPASE * atp
 
     def phosphofructokinase():
-        return VmPFK * gR * (F6P / KmPFKF6P) * (atp / KmPFKATP) * r_pfk() / (r_pfk() ** 2 + l_pfk() * t_pfk() ** 2)
+        return p.VmPFK * p.gR * (F6P / p.KmPFKF6P) * (atp / p.KmPFKATP) * r_pfk() / (
+                r_pfk() ** 2 + l_pfk() * t_pfk() ** 2)
 
+    # list of ODEs
     return [
-        # GLCi, glucose in cytosol
-        -cytosol * hexokinase()
+        # GLCi, glucose in p.cytosol
+        -p.cytosol * hexokinase()
         + glucose_transport(),
 
         # G6P, glucose 6 phosphase
-        + cytosol * hexokinase()
-        - cytosol * glucose_6_phosphate_isomerase()
-        - cytosol * glycogen_synthesis()
-        - 2 * cytosol * trehalose6p_synthesis(),
+        + p.cytosol * hexokinase()
+        - p.cytosol * glucose_6_phosphate_isomerase()
+        - p.cytosol * glycogen_synthesis()
+        - 2 * p.cytosol * trehalose6p_synthesis(),
 
         # F6P, fructose 6 phosphate
-        + cytosol * glucose_6_phosphate_isomerase()
-        - cytosol * phosphofructokinase(),
+        + p.cytosol * glucose_6_phosphate_isomerase()
+        - p.cytosol * phosphofructokinase(),
 
         # F16BP, fructose-1-6-bisphosphate
-        + cytosol * phosphofructokinase()
-        - cytosol * aldolase(),
+        + p.cytosol * phosphofructokinase()
+        - p.cytosol * aldolase(),
 
         # TRIO Triose-phosphate
-        - cytosol * glycerol_3_phosphate_dehydrogenase()
-        + 2 * cytosol * aldolase()
-        - cytosol * glyceraldehyde_3_phosphate_dehydrogenase(),
+        - p.cytosol * glycerol_3_phosphate_dehydrogenase()
+        + 2 * p.cytosol * aldolase()
+        - p.cytosol * glyceraldehyde_3_phosphate_dehydrogenase(),
 
         # BPG, 1,3-bisphosphoglycerate
-        + cytosol * glyceraldehyde_3_phosphate_dehydrogenase()
-        - cytosol * phosphoglycerate_kinase(),
+        + p.cytosol * glyceraldehyde_3_phosphate_dehydrogenase()
+        - p.cytosol * phosphoglycerate_kinase(),
 
         # P3G, 3-phosphoglycerate
-        + cytosol * phosphoglycerate_kinase()
-        - cytosol * phosphoglycerate_mutase(),
+        + p.cytosol * phosphoglycerate_kinase()
+        - p.cytosol * phosphoglycerate_mutase(),
 
         # P2G, 2-phosphoglycerate
-        + cytosol * phosphoglycerate_mutase()
-        - cytosol * enolase(),
+        + p.cytosol * phosphoglycerate_mutase()
+        - p.cytosol * enolase(),
 
         # PEP, Phosphoenolpyruvate
-        - cytosol * pyruvate_kinase()
-        + cytosol * enolase(),
+        - p.cytosol * pyruvate_kinase()
+        + p.cytosol * enolase(),
 
         # PYR, Pyruvate
-        + cytosol * pyruvate_kinase()
-        - cytosol * pyruvate_decarboxylase(),
+        + p.cytosol * pyruvate_kinase()
+        - p.cytosol * pyruvate_decarboxylase(),
 
         # ACE, Acetaldehyde
-        + cytosol * pyruvate_decarboxylase()
-        - 2 * cytosol * succinate_synthesis()
-        - cytosol * alcohol_dehydrogenase(),
+        + p.cytosol * pyruvate_decarboxylase()
+        - 2 * p.cytosol * succinate_synthesis()
+        - p.cytosol * alcohol_dehydrogenase(),
 
         # P high energy phosphates
-        - cytosol * hexokinase()
-        + cytosol * pyruvate_kinase()
-        - 4 * cytosol * succinate_synthesis()
-        - cytosol * atpase_activity()
-        - cytosol * glycogen_synthesis()
-        - cytosol * trehalose6p_synthesis()
-        - cytosol * phosphofructokinase()
-        + cytosol * phosphoglycerate_kinase(),
+        - p.cytosol * hexokinase()
+        + p.cytosol * pyruvate_kinase()
+        - 4 * p.cytosol * succinate_synthesis()
+        - p.cytosol * atpase_activity()
+        - p.cytosol * glycogen_synthesis()
+        - p.cytosol * trehalose6p_synthesis()
+        - p.cytosol * phosphofructokinase()
+        + p.cytosol * phosphoglycerate_kinase(),
 
         # NAD,
-        - 3 * cytosol * succinate_synthesis()
-        + cytosol * alcohol_dehydrogenase()
-        + cytosol * glycerol_3_phosphate_dehydrogenase()
-        - cytosol * glyceraldehyde_3_phosphate_dehydrogenase(),
+        - 3 * p.cytosol * succinate_synthesis()
+        + p.cytosol * alcohol_dehydrogenase()
+        + p.cytosol * glycerol_3_phosphate_dehydrogenase()
+        - p.cytosol * glyceraldehyde_3_phosphate_dehydrogenase(),
 
         # NADH,
-        + 3 * cytosol * succinate_synthesis()
-        - cytosol * alcohol_dehydrogenase()
-        - cytosol * glycerol_3_phosphate_dehydrogenase()
-        + cytosol * glyceraldehyde_3_phosphate_dehydrogenase()
+        + 3 * p.cytosol * succinate_synthesis()
+        - p.cytosol * alcohol_dehydrogenase()
+        - p.cytosol * glycerol_3_phosphate_dehydrogenase()
+        + p.cytosol * glyceraldehyde_3_phosphate_dehydrogenase()
     ]
 
-# initial conditions
-GLCi=0.087
+# initial concentration parameters
+GLCi = 0.087
 G6P = 2.45
 F6P = 0.62
 F16P = 5.51
@@ -260,9 +244,11 @@ P = 6.31
 NAD = 1.2
 NADH = 0.39
 
+# collect initial concentration parameters into list
 y0 = [GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH]
 
-parameters = parameters_named_tuple(
+# create instance of named tuple for kinetic parameters
+parameters = param_named_tuple(
     # Compartment
     extracellular=1,
     cytosol=1,
@@ -385,60 +371,73 @@ parameters = parameters_named_tuple(
     VmG3PDH=70.15,
 
     # ATPase activity parameters
-    KATPASE=33.7
+    KATPASE=33.7,
+
+    # These metabolites are sinks. Not sure why CO2 has to be 1 though.
+    # Should be 0? does it make a difference?
+    Glyc=0,
+    Trh=0,
+    CO2=1,
+    SUCC=0,
+    ETOH=50,
+    GLY=0.15,
+    SUM_P=4.1,
+    F26BP=0.02,
+    GLCo=50
 )
+# list of column names
+cols = ['GLCi','G6P', 'F6P', 'F16P', 'TRIO', 'BPG', 'P3G', 'P2G', 'PEP', 'PYR', 'ACE', 'P', 'NAD', 'NADH']
+
+# integrate the model
+data = solve_ivp(teusink2000, t_span=(0, 10), y0=y0, args=(parameters,), method="LSODA")
+df = pd.DataFrame(data.y, columns=data.t, index=cols).transpose()
+
+# plot data
+for i in df.columns:
+    plt.figure()
+    plt.plot(df.index, df[i])
+    plt.xlabel('Time')
+    plt.ylabel(i)
+
+# after 10 time steps the model is at steady state
+print(df.iloc[-1])
+
+'''
+Steady state calculated by scipy integration
+--------------------------------------------
+GLCi    0.098759
+G6P     1.033246
+F6P     0.112813
+F16P    0.601908
+TRIO    0.777524
+BPG     0.000330
+P3G     0.356484
+P2G     0.044844
+PEP     0.073617
+PYR     8.523153
+ACE     0.170114
+P       6.308882
+NAD     1.545560
+NADH    0.044440
 
 
-import numpy as np
-from scipy.integrate import odeint, ode, solve_ivp
+Steady state calculated by copasi steady state task
+---------------------------------------------------
+GLCi  0.09875869199169003       
+G6P   1.033245613681812         
+F6P   0.1128128145855018        
+F16P  0.6019076395836982        
+TRIO  0.7775235367088307        
+BPG   0.0003295738869195608     
+P3G   0.3564840378592988        
+P2G   0.04484371111903231       
+PEP   0.07361684247063681       
+PYR   8.52315246355188          
+ACE   0.17011445161350183       
+P     6.308881637770621         
+NAD   1.5455597670249495        
+NADH  0.044440232975050405      
 
-# print(solve_ivp(teusink2000, t_span=(0, 10), y0)
-# print(teusink2000(y0, 0))
 
-# solver = ode(teusink2000)
-# solver.set_integrator('lsoda', method='bdf')
-# solver.set_initial_value(y0)
+'''
 
-# t1 = 10
-# dt = 1
-# while solver.successful() and solver.t < t1:
-#     solver.integrate(solver.t + dt)
-#     print(solver.t, solver.y)
-# print(solver)
-# print(solver.integrate(t=10))
-
-t = np.linspace(0, 10, 11)
-sol = odeint(func=teusink2000, y0=y0, t=t, full_output=True)
-# y, d = sol
-#
-# import pandas as pd
-#
-# pd.set_option('display.max_rows', None)
-# pd.set_option('display.max_columns', None)
-# pd.set_option('display.width', None)
-# pd.set_option('display.max_colwidth', -1)
-#
-# df = pd.DataFrame(y)
-# cols = ['GLCi', 'G6P', 'F6P', 'F16P', 'TRIO', 'BPG', 'P3G', 'P2G', 'PEP', 'PYR', 'ACE', 'P', 'NAD', 'NADH']
-# df.columns = cols
-# print(df)
-
-# print(sol)
-
-# print()
-#
-# import pandas as pd
-# import matplotlib
-# pd.set_option("display.precision", 20)
-#
-# matplotlib.use('TkAgg')
-#
-# data = pd.DataFrame(sol)
-# data.columns = ['GLCi', 'G6P', 'F6P', 'F16P', 'TRIO', 'BPG', 'P3G', 'P2G', 'PEP', 'PYR', 'ACE', 'P', 'NAD', 'NADH']
-# print(data)
-#
-# for i in data:
-#     plt.figure()
-#     plt.plot(data.index, data[i])
-#
-# plt.show()
