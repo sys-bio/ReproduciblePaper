@@ -5,66 +5,25 @@ import tellurium as te
 # from tellurium.utils.misc import ODEExtractor
 import tesedml as libsedml
 import matplotlib.pyplot as plt
+from collections import namedtuple
 
-# # find the sbml and sedml directories
-# sbml_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sbml')
-#
-# if not os.path.isdir(sbml_dir):
-#     raise ValueError('cannot find sbml directory {}'.format(sbml_dir))
-#
-# # find the sbml and sedml files
-# teusink2000 = os.path.join(sbml_dir, 'model.xml')
-
-# if not os.path.isfile(teusink2000):
-#     raise FileNotFoundError(teusink2000)
-#
-# r = te.loadSBMLModel(teusink2000)
-
-# print(r.getAntimony())
+parameters_named_tuple = namedtuple(
+    'params', ['extracellular', 'cytosol', 'KeqAK', 'KeqGLK', 'KmGLKADP', 'KmGLKATP', 'KmGLKG6P', 'KmGLKGLCi', 'VmGLK',
+               'KeqPGI_2', 'KmPGIF6P_2', 'KmPGIG6P_2', 'VmPGI_2', 'vGLYCO_v', 'vTreha_v', 'CPFKAMP', 'CPFKATP',
+               'CPFKF16BP', 'CPFKF26BP', 'CiPFKATP', 'KPFKAMP', 'KPFKF16BP', 'KPFKF26BP', 'KiPFKATP', 'KmPFKATP',
+               'KmPFKF6P', 'Lzero', 'gR', 'VmPFK', 'KeqTPI', 'KeqALD', 'KmALDDHAP', 'KmALDF16P', 'KmALDGAP',
+               'KmALDGAPi', 'VmALD', 'KmGAPDHBPG', 'KmGAPDHGAP', 'KmGAPDHNAD', 'KmGAPDHNADH', 'VmGAPDHf', 'VmGAPDHr',
+               'KeqPGK', 'KmPGKADP', 'KmPGKATP', 'KmPGKBPG', 'KmPGKP3G', 'VmPGK', 'KeqPGM', 'KmPGMP2G', 'KmPGMP3G',
+               'VmPGM', 'KeqENO', 'KmENOP2G', 'KmENOPEP', 'VmENO', 'KeqPYK', 'KmPYKADP', 'KmPYKATP', 'KmPYKPEP',
+               'KmPYKPYR', 'VmPYK', 'KmPDCPYR', 'VmPDC', 'nPDC', 'KSUCC', 'KeqGLT', 'KmGLTGLCi', 'KmGLTGLCo', 'VmGLT',
+               'KeqADH', 'KiADHACE', 'KiADHETOH', 'KiADHNAD', 'KiADHNADH', 'KmADHACE', 'KmADHETOH', 'KmADHNAD',
+               'KmADHNADH', 'VmADH', 'KeqG3PDH', 'KmG3PDHDHAP', 'KmG3PDHGLY', 'KmG3PDHNAD', 'KmG3PDHNADH', 'VmG3PDH',
+               'KATPASE'])
 
 
-# y0 = [
-#     GLCi, G6P, F6P, F16P, TRIO,
-#     BPG, P3G, P2G, PEP, PYR, ACE, P,
-#     NAD, NADH, Glyc, Trh, CO2, SUCC,
-#     GLCo, ETOH, GLY, SUM_P, F26BP]
-
-'''
-GLCi
-G6P
-F6P
-F16BP
-TRIO
-BPG
-P3G
-P2G
-PEP
-PYR
-ACE
-P
-NAD
-NADH
-'''
-
-GLCi = 0.087
-G6P = 2.45
-F6P = 0.62
-F16P = 5.51
-TRIO = 0.96
-BPG = 0
-P3G = 0.9
-P2G = 0.12
-PEP = 0.07
-PYR = 1.85
-ACE = 0.17
-P = 6.31
-NAD = 1.2
-NADH = 0.39
-
-y0 = [GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH]
 
 
-def teusink2000(y0, t):
+def teusink2000(t, y0, p):
     # Unpack Species
     GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH = y0
 
@@ -80,130 +39,6 @@ def teusink2000(y0, t):
     SUM_P = 4.1  # fixed
     F26BP = 0.02  # fixed
     GLCo = 50  # fixed, extracellular glucose
-
-    # Compartment
-    extracellular = 1
-    cytosol = 1
-
-    KeqAK = 0.45
-
-    # Hexokinase reaction parameters
-    KeqGLK = 3800
-    KmGLKADP = 0.23
-    KmGLKATP = 0.15
-    KmGLKG6P = 30
-    KmGLKGLCi = 0.08
-    VmGLK = 226.452
-
-    # Glucose-6-phosphate isomerase parameters
-    KeqPGI_2 = 0.314
-    KmPGIF6P_2 = 0.3
-    KmPGIG6P_2 = 1.4
-    VmPGI_2 = 339.677
-
-    # Glycogen synthesis parameters
-    vGLYCO_v = 6
-
-    # Trehalose 6-phosphate synthase parameters
-    vTreha_v = 2.4
-
-    # Phosphofructokinase parameters
-    CPFKAMP = 0.0845
-    CPFKATP = 3
-    CPFKF16BP = 0.397
-    CPFKF26BP = 0.0174
-    CiPFKATP = 100
-    KPFKAMP = 0.0995
-    KPFKF16BP = 0.111
-    KPFKF26BP = 0.000682
-    KiPFKATP = 0.65
-    KmPFKATP = 0.71
-    KmPFKF6P = 0.1
-    Lzero = 0.66
-    gR = 5.12
-    VmPFK = 182.903
-
-    # Aldolase parameters
-    KeqTPI = 0.045  # note parameter also used in Glycer 3p dehy
-    KeqALD = 0.069
-    KmALDDHAP = 2.4
-    KmALDF16P = 0.3
-    KmALDGAP = 2
-    KmALDGAPi = 10
-    VmALD = 322.258
-
-    # Glyceraldehyde 3-phosphate dehydrogenase parameters
-    KmGAPDHBPG = 0.0098
-    KmGAPDHGAP = 0.21
-    KmGAPDHNAD = 0.09
-    KmGAPDHNADH = 0.06
-    VmGAPDHf = 1184.52
-    VmGAPDHr = 6549.8
-
-    # Phosphoglycerate kinase parameters
-    KeqPGK = 3200
-    KmPGKADP = 0.2
-    KmPGKATP = 0.3
-    KmPGKBPG = 0.003
-    KmPGKP3G = 0.53
-    VmPGK = 1306.45
-
-    # Phosphoglycerate mutase parameters
-    KeqPGM = 0.19
-    KmPGMP2G = 0.08
-    KmPGMP3G = 1.2
-    VmPGM = 2525.81
-
-    # Enolase parameters
-    KeqENO = 6.7
-    KmENOP2G = 0.04
-    KmENOPEP = 0.5
-    VmENO = 365.806
-
-    # Pyruvate kinase parameters
-    KeqPYK = 6500
-    KmPYKADP = 0.53
-    KmPYKATP = 1.5
-    KmPYKPEP = 0.14
-    KmPYKPYR = 21
-    VmPYK = 1088.71
-
-    # Pyruvate decarboxylase parameters
-    KmPDCPYR = 4.33
-    VmPDC = 174.194
-    nPDC = 1.9
-
-    # Succinate synthesis parameters
-    KSUCC = 21.4
-
-    # Glucose transport parameters
-    KeqGLT = 1
-    KmGLTGLCi = 1.1918
-    KmGLTGLCo = 1.1918
-    VmGLT = 97.264
-
-    # Alcohol dehydrogenase parameters
-    KeqADH = 6.9e-05
-    KiADHACE = 1.1
-    KiADHETOH = 90
-    KiADHNAD = 0.92
-    KiADHNADH = 0.031
-    KmADHACE = 1.11
-    KmADHETOH = 17
-    KmADHNAD = 0.17
-    KmADHNADH = 0.11
-    VmADH = 810
-
-    # Glycerol 3-phosphate dehydrogenase parameters
-    KeqG3PDH = 4300
-    KmG3PDHDHAP = 0.4
-    KmG3PDHGLY = 1
-    KmG3PDHNAD = 0.93
-    KmG3PDHNADH = 0.023
-    VmG3PDH = 70.15
-
-    # ATPase activity parameters
-    KATPASE = 33.7
 
     # assignment rules
     adp = (SUM_P - (P ** 2 * (1 - 4 * KeqAK)
@@ -236,27 +71,15 @@ def teusink2000(y0, t):
                 + NADH * ACE / (KiADHNADH * KmADHACE) \
                 + NAD * ETOH * ACE / (KiADHNAD * KmADHETOH * KiADHACE) \
                 + ETOH * NADH * ACE / (KiADHETOH * KiADHNADH * KmADHACE)
-        return numerator / denom
+        return - numerator / denom
 
     def glycerol_3_phosphate_dehydrogenase():
         numerator = (VmG3PDH / (KmG3PDHDHAP * KmG3PDHNADH)) * ((1 / (1 + KeqTPI)) * TRIO * NADH
                                                                - GLY * NAD / KeqG3PDH)
 
         denom = (1 + (1 / (1 + KeqTPI)) * TRIO / KmG3PDHDHAP + GLY / KmG3PDHGLY) * (
-                    1 + NADH / KmG3PDHNADH + NAD / KmG3PDHNAD)
+                1 + NADH / KmG3PDHNADH + NAD / KmG3PDHNAD)
         return numerator / denom
-
-    def r_pfk():
-        return 1 + F6P / KmPFKF6P + atp / KmPFKATP + gR * (F6P / KmPFKF6P) * (atp / KmPFKATP)
-
-    def t_pfk():
-        return 1 + CPFKATP * (atp / KmPFKATP)
-
-    def l_pfk():
-        return Lzero * ((1 + CiPFKATP * (atp / KiPFKATP)) / (1 + atp / KiPFKATP)) ** 2 \
-               * ((1 + CPFKAMP * (amp / KPFKAMP)) / (1 + amp / KPFKAMP)) ** 2 \
-               * ((1 + CPFKF26BP * F26BP / KPFKF26BP + CPFKF16BP * F16P / KPFKF16BP) / (
-                1 + F26BP / KPFKF26BP + F16P / KPFKF16BP)) ** 2
 
     def hexokinase():
         return (VmGLK / (KmGLKGLCi * KmGLKATP)) * (GLCi * atp - G6P * adp / KeqGLK) / (
@@ -276,10 +99,6 @@ def teusink2000(y0, t):
         return (VmPGK / (KmPGKP3G * KmPGKATP)) * (KeqPGK * BPG * adp - P3G * atp) / (
                 (1 + BPG / KmPGKBPG + P3G / KmPGKP3G) * (1 + atp / KmPGKATP + adp / KmPGKADP))
 
-    '''
-    function Function_for_Glyceraldehyde_3_phosphate_dehydrogenase(BPG, KeqTPI, KmGAPDHBPG, KmGAPDHGAP, KmGAPDHNAD, KmGAPDHNADH, NAD, NADH, TRIO, VmGAPDHf, VmGAPDHr)
-        (VmGAPDHf*(KeqTPI/(1 + KeqTPI))*TRIO*NAD/(KmGAPDHGAP*KmGAPDHNAD) - VmGAPDHr*BPG*NADH/(KmGAPDHBPG*KmGAPDHNADH))/((1 + (KeqTPI/(1 + KeqTPI))*TRIO/KmGAPDHGAP + BPG/KmGAPDHBPG)*(1 + NAD/KmGAPDHNAD + NADH/KmGAPDHNADH));
-'''
     def glyceraldehyde_3_phosphate_dehydrogenase():
         numerator = VmGAPDHf * (KeqTPI / (1 + KeqTPI)) * TRIO * NAD / (KmGAPDHGAP * KmGAPDHNAD) \
                     - VmGAPDHr * BPG * NADH / (KmGAPDHBPG * KmGAPDHNADH)
@@ -310,6 +129,45 @@ def teusink2000(y0, t):
 
     def atpase_activity():
         return KATPASE * atp
+
+    '''
+        
+    function R_PFK(KmF6P, KmATP, g, AT_, F6)
+      1 + F6/KmF6P + AT_/KmATP + g*(F6/KmF6P)*(AT_/KmATP);
+    end
+    
+    function T_PFK(CATP, KmATP, AT_)
+      1 + CATP*(AT_/KmATP);
+    end
+    
+    function L_PFK(L, CiATP, KiATP, CAMP, KAMP, CF26BP, KF26BP, CF16BP, KF16BP, AT_, AM, F16, F26)
+      L*((1 + CiATP*(AT_/KiATP))/(1 + AT_/KiATP))^2
+      *((1 + CAMP*(AM/KAMP))/(1 + AM/KAMP))^2
+      *((1 + CF26BP*F26/KF26BP + CF16BP*F16/KF16BP)/(1 + F26/KF26BP + F16/KF16BP))^2;
+    end
+    
+    function Function_for_Phosphofructokinase(AMP, ATP, CPFKAMP, CPFKATP, CPFKF16BP, CPFKF26BP, CiPFKATP, F16P, F26BP, F6P, KPFKAMP, KPFKF16BP, KPFKF26BP, KiPFKATP, KmPFKATP, KmPFKF6P, Lzero, VmPFK, gR)
+        VmPFK*gR*(F6P/KmPFKF6P)*(ATP/KmPFKATP)*
+            R_PFK(KmPFKF6P, KmPFKATP, gR, ATP, F6P)/
+            (R_PFK(KmPFKF6P, KmPFKATP, gR, ATP, F6P)^2 + 
+            L_PFK(Lzero, CiPFKATP, KiPFKATP, CPFKAMP, KPFKAMP, CPFKF26BP, KPFKF26BP, CPFKF16BP, KPFKF16BP, ATP, AMP, F16P, F26BP)*
+            T_PFK(CPFKATP, KmPFKATP, ATP)^2);
+    end
+
+    
+    '''
+
+    def r_pfk():
+        return 1 + F6P / KmPFKF6P + atp / KmPFKATP + gR * (F6P / KmPFKF6P) * (atp / KmPFKATP)
+
+    def t_pfk():
+        return 1 + CPFKATP * (atp / KmPFKATP)
+
+    def l_pfk():
+        return Lzero * ((1 + CiPFKATP * (atp / KiPFKATP)) / (1 + atp / KiPFKATP)) ** 2 \
+               * ((1 + CPFKAMP * (amp / KPFKAMP)) / (1 + amp / KPFKAMP)) ** 2 \
+               * ((1 + CPFKF26BP * F26BP / KPFKF26BP + CPFKF16BP * F16P / KPFKF16BP) / (
+                1 + F26BP / KPFKF26BP + F16P / KPFKF16BP)) ** 2
 
     def phosphofructokinase():
         return VmPFK * gR * (F6P / KmPFKF6P) * (atp / KmPFKATP) * r_pfk() / (r_pfk() ** 2 + l_pfk() * t_pfk() ** 2)
@@ -386,34 +244,184 @@ def teusink2000(y0, t):
         + cytosol * glyceraldehyde_3_phosphate_dehydrogenase()
     ]
 
+# initial conditions
+GLCi=0.087
+G6P = 2.45
+F6P = 0.62
+F16P = 5.51
+TRIO = 0.96
+BPG = 0
+P3G = 0.9
+P2G = 0.12
+PEP = 0.07
+PYR = 1.85
+ACE = 0.17
+P = 6.31
+NAD = 1.2
+NADH = 0.39
+
+y0 = [GLCi, G6P, F6P, F16P, TRIO, BPG, P3G, P2G, PEP, PYR, ACE, P, NAD, NADH]
+
+parameters = parameters_named_tuple(
+    # Compartment
+    extracellular=1,
+    cytosol=1,
+
+    KeqAK=0.45,
+
+    # Hexokinase reaction parameters
+    KeqGLK=3800,
+    KmGLKADP=0.23,
+    KmGLKATP=0.15,
+    KmGLKG6P=30,
+    KmGLKGLCi=0.08,
+    VmGLK=226.452,
+
+    # Glucose-6-phosphate isomerase parameters
+    KeqPGI_2=0.314,
+    KmPGIF6P_2=0.3,
+    KmPGIG6P_2=1.4,
+    VmPGI_2=339.677,
+
+    # Glycogen synthesis parameters
+    vGLYCO_v=6,
+
+    # Trehalose 6-phosphate synthase parameters
+    vTreha_v=2.4,
+
+    # Phosphofructokinase parameters
+    CPFKAMP=0.0845,
+    CPFKATP=3,
+    CPFKF16BP=0.397,
+    CPFKF26BP=0.0174,
+    CiPFKATP=100,
+    KPFKAMP=0.0995,
+    KPFKF16BP=0.111,
+    KPFKF26BP=0.000682,
+    KiPFKATP=0.65,
+    KmPFKATP=0.71,
+    KmPFKF6P=0.1,
+    Lzero=0.66,
+    gR=5.12,
+    VmPFK=182.903,
+
+    # Aldolase parameters
+    KeqTPI=0.045,  # note parameter also used in Glycer 3p dehy
+    KeqALD=0.069,
+    KmALDDHAP=2.4,
+    KmALDF16P=0.3,
+    KmALDGAP=2,
+    KmALDGAPi=10,
+    VmALD=322.258,
+
+    # Glyceraldehyde 3-phosphate dehydrogenase parameters
+    KmGAPDHBPG=0.0098,
+    KmGAPDHGAP=0.21,
+    KmGAPDHNAD=0.09,
+    KmGAPDHNADH=0.06,
+    VmGAPDHf=1184.52,
+    VmGAPDHr=6549.8,
+
+    # Phosphoglycerate kinase parameters
+    KeqPGK=3200,
+    KmPGKADP=0.2,
+    KmPGKATP=0.3,
+    KmPGKBPG=0.003,
+    KmPGKP3G=0.53,
+    VmPGK=1306.45,
+
+    # Phosphoglycerate mutase parameters
+    KeqPGM=0.19,
+    KmPGMP2G=0.08,
+    KmPGMP3G=1.2,
+    VmPGM=2525.81,
+
+    # Enolase parameters
+    KeqENO=6.7,
+    KmENOP2G=0.04,
+    KmENOPEP=0.5,
+    VmENO=365.806,
+
+    # Pyruvate kinase parameters
+    KeqPYK=6500,
+    KmPYKADP=0.53,
+    KmPYKATP=1.5,
+    KmPYKPEP=0.14,
+    KmPYKPYR=21,
+    VmPYK=1088.71,
+
+    # Pyruvate decarboxylase parameters
+    KmPDCPYR=4.33,
+    VmPDC=174.194,
+    nPDC=1.9,
+
+    # Succinate synthesis parameters
+    KSUCC=21.4,
+
+    # Glucose transport parameters
+    KeqGLT=1,
+    KmGLTGLCi=1.1918,
+    KmGLTGLCo=1.1918,
+    VmGLT=97.264,
+
+    # Alcohol dehydrogenase parameters
+    KeqADH=6.9e-05,
+    KiADHACE=1.1,
+    KiADHETOH=90,
+    KiADHNAD=0.92,
+    KiADHNADH=0.031,
+    KmADHACE=1.11,
+    KmADHETOH=17,
+    KmADHNAD=0.17,
+    KmADHNADH=0.11,
+    VmADH=810,
+
+    # Glycerol 3-phosphate dehydrogenase parameters
+    KeqG3PDH=4300,
+    KmG3PDHDHAP=0.4,
+    KmG3PDHGLY=1,
+    KmG3PDHNAD=0.93,
+    KmG3PDHNADH=0.023,
+    VmG3PDH=70.15,
+
+    # ATPase activity parameters
+    KATPASE=33.7
+)
+
 
 import numpy as np
-from scipy.integrate import odeint, ode
+from scipy.integrate import odeint, ode, solve_ivp
 
-t = np.linspace(0, 10, 11)
+# print(solve_ivp(teusink2000, t_span=(0, 10), y0)
 # print(teusink2000(y0, 0))
 
 # solver = ode(teusink2000)
 # solver.set_integrator('lsoda', method='bdf')
 # solver.set_initial_value(y0)
-#
-# print(solver.integrate(10, 1))
 
+# t1 = 10
+# dt = 1
+# while solver.successful() and solver.t < t1:
+#     solver.integrate(solver.t + dt)
+#     print(solver.t, solver.y)
+# print(solver)
+# print(solver.integrate(t=10))
+
+t = np.linspace(0, 10, 11)
 sol = odeint(func=teusink2000, y0=y0, t=t, full_output=True)
-y, d = sol
-
-import pandas as pd
-
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
-pd.set_option('display.width', None)
-pd.set_option('display.max_colwidth', -1)
-
-df = pd.DataFrame(y)
-cols = ['GLCi','G6P', 'F6P', 'F16P', 'TRIO', 'BPG', 'P3G', 'P2G', 'PEP', 'PYR', 'ACE', 'P', 'NAD', 'NADH']
-df.columns = cols
-print(df)
-
+# y, d = sol
+#
+# import pandas as pd
+#
+# pd.set_option('display.max_rows', None)
+# pd.set_option('display.max_columns', None)
+# pd.set_option('display.width', None)
+# pd.set_option('display.max_colwidth', -1)
+#
+# df = pd.DataFrame(y)
+# cols = ['GLCi', 'G6P', 'F6P', 'F16P', 'TRIO', 'BPG', 'P3G', 'P2G', 'PEP', 'PYR', 'ACE', 'P', 'NAD', 'NADH']
+# df.columns = cols
+# print(df)
 
 # print(sol)
 
