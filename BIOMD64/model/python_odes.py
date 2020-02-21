@@ -420,6 +420,11 @@ P       6.308882
 NAD     1.545560
 NADH    0.044440
 
+Steady state calcculated by tellurium
+--------------------------------------
+ERROR!
+
+
 
 Steady state calculated by copasi steady state task
 ---------------------------------------------------
@@ -437,6 +442,7 @@ ACE   0.17011445161350183
 P     6.308881637770621         
 NAD   1.5455597670249495        
 NADH  0.044440232975050405      
+
 
 
 '''
