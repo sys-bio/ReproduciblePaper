@@ -13,7 +13,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', -1)
 
-# create named tuple for parameters so we can refer to them by name and not a number in an array
+# create named tuple type for parameters so we can refer to them by name and not a number in an array
 param_named_tuple = namedtuple(
     'params',
     [
@@ -253,6 +253,7 @@ parameters = param_named_tuple(
     extracellular=1,
     cytosol=1,
 
+    # parameters used in assignments
     KeqAK=0.45,
 
     # Hexokinase reaction parameters
@@ -420,9 +421,24 @@ P       6.308882
 NAD     1.545560
 NADH    0.044440
 
-Steady state calcculated by tellurium
+
+Steady state calculated by tellurium
 --------------------------------------
-ERROR!
+            0
+GLCi  0.098759
+G6P   1.033246
+F6P   0.112813
+F16P  0.601908
+TRIO  0.777524
+BPG   0.000330
+P3G   0.356484
+P2G   0.044844
+PEP   0.073617
+PYR   8.523152
+ACE   0.170114
+P     6.308882
+NAD   1.545560
+NADH  0.044440
 
 
 

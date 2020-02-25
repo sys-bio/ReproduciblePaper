@@ -7,12 +7,11 @@ import tesedml as libsedml
 import matplotlib.pyplot as plt
 
 # find the sbml and sedml directories
-sbml = os.path.join(os.path.dirname(__file__), 'model.xml')
+sbml = os.path.join(os.path.dirname(__file__), 'teusink2000.xml')
 
 r = te.loadSBMLModel(sbml)
 
-r.conservedMoeityAnalysis = True
-print(r.conservedMoeityAnalysis)
+r.conservedMoietyAnalysis = True
 ss = r.steadyState()
 
 '''
