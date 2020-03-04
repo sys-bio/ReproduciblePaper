@@ -1,6 +1,6 @@
 <rdf:RDF
     xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:semsim="http://www.bhi.washington.edu/SemSim#"
+    xmlns:semsim="http://www.bhi.washington.edu/semsim#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:bqmodel="http://biomodels.net/model-qualifiers/"
     xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
