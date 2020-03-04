@@ -1,4 +1,4 @@
-function xdot = Teusink2000_Glycolysis(time,x)
+function xdot = matlab_odes(time,x)
 %  synopsis:
 %     xdot = Teusink2000_Glycolysis (time, x)
 %     x0 = Teusink2000_Glycolysis
