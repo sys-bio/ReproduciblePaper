@@ -1,0 +1,724 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bqb: <http://biomodels.net/biology-qualifiers/> .
+@prefix semsim: <http://www.bhi.washington.edu/SemSim#> .
+
+<#metaid_1>
+    bqb:is <http://identifiers.org/obo.chebi/15343> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_10>
+    bqb:is <http://identifiers.org/obo.chebi/17754> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_11>
+    bqb:is <http://identifiers.org/obo.chebi/28087> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_12>
+    bqb:is <http://identifiers.org/obo.chebi/15846> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_13>
+    bqb:is <http://identifiers.org/kegg.compound/C00004>, <http://identifiers.org/obo.chebi/16908> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_14>
+    bqb:is <http://identifiers.org/kegg.compound/C00631>, <http://identifiers.org/obo.chebi/17835> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_15>
+    bqb:is <http://identifiers.org/kegg.compound/C00197>, <http://identifiers.org/obo.chebi/17794> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_16>
+    bqb:is <http://identifiers.org/kegg.compound/C00074>, <http://identifiers.org/obo.chebi/18021> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_17>
+    bqb:is <http://identifiers.org/kegg.compound/C00022>, <http://identifiers.org/obo.chebi/15361> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_18>
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_19>
+    bqb:is <http://identifiers.org/kegg.compound/C00042>, <http://identifiers.org/obo.chebi/15741> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_2>
+    bqb:is <http://identifiers.org/kegg.compound/C00236>, <http://identifiers.org/obo.chebi/28907> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_20>
+    bqb:is <http://identifiers.org/kegg.compound/C00111>, <http://identifiers.org/obo.chebi/29052> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_21>
+    bqb:is <http://identifiers.org/obo.chebi/27082> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_22>
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_3>
+    bqb:is <http://identifiers.org/obo.chebi/16526> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_4>
+    bqb:is <http://identifiers.org/obo.chebi/16236> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_5>
+    bqb:is <http://identifiers.org/kegg.compound/C00354>, <http://identifiers.org/obo.chebi/16905> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_6>
+    bqb:is <http://identifiers.org/kegg.compound/C00085>, <http://identifiers.org/obo.chebi/15946> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_7>
+    bqb:is <http://identifiers.org/kegg.compound/C00092>, <http://identifiers.org/obo.chebi/17665> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_8>
+    bqb:is <http://identifiers.org/obo.chebi/17234> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#metaid_9>
+    bqb:is <http://identifiers.org/obo.chebi/17234> ;
+    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+
+<#sink0>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_7> .
+
+<#sink1>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_16> .
+
+<#sink10>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_4> .
+
+<#sink11>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_12> .
+
+<#sink12>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_10> .
+
+<#sink13>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_22> .
+
+<#sink14>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_6> .
+
+<#sink15>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_11> .
+
+<#sink16>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_21> .
+
+<#sink17>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_5> .
+
+<#sink18>
+    semsim:hasMultiplier "2" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_20> .
+
+<#sink19>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_2> .
+
+<#sink2>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_17> .
+
+<#sink20>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_13> .
+
+<#sink21>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_15> .
+
+<#sink22>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_18> .
+
+<#sink23>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_14> .
+
+<#sink3>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_18> .
+
+<#sink4>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_3> .
+
+<#sink5>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_1> .
+
+<#sink6>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_19> .
+
+<#sink7>
+    semsim:hasMultiplier "3" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_13> .
+
+<#sink8>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_8> .
+
+<#sink9>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_12> .
+
+<#source0>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_8> .
+
+<#source1>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_18> .
+
+<#source10>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_20> .
+
+<#source11>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_13> .
+
+<#source12>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_18> .
+
+<#source13>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_7> .
+
+<#source14>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_7> .
+
+<#source15>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_18> .
+
+<#source16>
+    semsim:hasMultiplier "2" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_7> .
+
+<#source17>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_18> .
+
+<#source18>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_6> .
+
+<#source19>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_18> .
+
+<#source2>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_14> .
+
+<#source20>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_5> .
+
+<#source21>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_20> .
+
+<#source22>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_12> .
+
+<#source23>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_2> .
+
+<#source24>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_15> .
+
+<#source3>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_16> .
+
+<#source4>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_17> .
+
+<#source5>
+    semsim:hasMultiplier "2" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_1> .
+
+<#source6>
+    semsim:hasMultiplier "3" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_12> .
+
+<#source7>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_9> .
+
+<#source8>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_1> .
+
+<#source9>
+    semsim:hasMultiplier "1" ;
+    semsim:hasPhysicalEntityReference <JWSOnline_Teusink.xml#metaid_13> .
+
+<JWSOnline_Teusink.xml#metaid_0>
+    semsim:hasSBOTerm <https://identifiers.org/sbo/SBO:0000410> .
+
+<JWSOnline_Teusink.xml#metaid_100>
+    semsim:hasValue "6549.68" .
+
+<JWSOnline_Teusink.xml#metaid_101>
+    semsim:hasValue "226.452" .
+
+<JWSOnline_Teusink.xml#metaid_102>
+    semsim:hasValue "97.264" .
+
+<JWSOnline_Teusink.xml#metaid_103>
+    semsim:hasValue "174.194" .
+
+<JWSOnline_Teusink.xml#metaid_104>
+    semsim:hasValue "182.903" .
+
+<JWSOnline_Teusink.xml#metaid_105>
+    semsim:hasValue "339.677" .
+
+<JWSOnline_Teusink.xml#metaid_106>
+    semsim:hasValue "1306.45" .
+
+<JWSOnline_Teusink.xml#metaid_107>
+    semsim:hasValue "2525.81" .
+
+<JWSOnline_Teusink.xml#metaid_108>
+    semsim:hasValue "1088.71" .
+
+<JWSOnline_Teusink.xml#metaid_109>
+    semsim:hasValue "5.12" .
+
+<JWSOnline_Teusink.xml#metaid_10_property>
+    bqb:isPropertyOf <#metaid_10> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_110>
+    semsim:hasValue "1.9" .
+
+<JWSOnline_Teusink.xml#metaid_114>
+    bqb:is <http://identifiers.org/ec-code/2.7.1.1>, <http://identifiers.org/interpro/IPR001312> ;
+    semsim:hasSinkParticipant <#sink0> ;
+    semsim:hasSourceParticipant <#source0>, <#source1> .
+
+<JWSOnline_Teusink.xml#metaid_117>
+    bqb:is <http://identifiers.org/kegg.reaction/R01518> ;
+    semsim:hasSinkParticipant <#sink1> ;
+    semsim:hasSourceParticipant <#source2> .
+
+<JWSOnline_Teusink.xml#metaid_11_property>
+    bqb:isPropertyOf <#metaid_11> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_121>
+    bqb:is <http://identifiers.org/kegg.reaction/R00658> ;
+    semsim:hasSinkParticipant <#sink2>, <#sink3> ;
+    semsim:hasSourceParticipant <#source3> .
+
+<JWSOnline_Teusink.xml#metaid_125>
+    bqb:is <http://identifiers.org/kegg.reaction/R00200> ;
+    semsim:hasSinkParticipant <#sink4>, <#sink5> ;
+    semsim:hasSourceParticipant <#source4> .
+
+<JWSOnline_Teusink.xml#metaid_12_property>
+    bqb:isPropertyOf <#metaid_12> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_130>
+    bqb:is <http://identifiers.org/kegg.reaction/R00224> ;
+    semsim:hasSinkParticipant <#sink6>, <#sink7> ;
+    semsim:hasSourceParticipant <#source5>, <#source6> .
+
+<JWSOnline_Teusink.xml#metaid_133>
+    semsim:hasSinkParticipant <#sink8> ;
+    semsim:hasSourceParticipant <#source7> .
+
+<JWSOnline_Teusink.xml#metaid_138>
+    bqb:is <http://identifiers.org/kegg.reaction/R00754> ;
+    semsim:hasSinkParticipant <#sink10>, <#sink9> ;
+    semsim:hasSourceParticipant <#source8>, <#source9> .
+
+<JWSOnline_Teusink.xml#metaid_13_property>
+    bqb:isPropertyOf <#metaid_13> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_143>
+    bqb:is <http://identifiers.org/ec-code/1.1.1.94> ;
+    semsim:hasSinkParticipant <#sink11>, <#sink12> ;
+    semsim:hasSourceParticipant <#source10>, <#source11> .
+
+<JWSOnline_Teusink.xml#metaid_146>
+    bqb:is <http://identifiers.org/obo.go/0006200> ;
+    semsim:hasSinkParticipant <#sink13> ;
+    semsim:hasSourceParticipant <#source12> .
+
+<JWSOnline_Teusink.xml#metaid_149>
+    bqb:is <http://identifiers.org/kegg.reaction/R00299> ;
+    semsim:hasSinkParticipant <#sink14> ;
+    semsim:hasSourceParticipant <#source13> .
+
+<JWSOnline_Teusink.xml#metaid_14_property>
+    bqb:isPropertyOf <#metaid_14> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_153>
+    semsim:hasSinkParticipant <#sink15> ;
+    semsim:hasSourceParticipant <#source14>, <#source15> .
+
+<JWSOnline_Teusink.xml#metaid_157>
+    semsim:hasSinkParticipant <#sink16> ;
+    semsim:hasSourceParticipant <#source16>, <#source17> .
+
+<JWSOnline_Teusink.xml#metaid_15_property>
+    bqb:isPropertyOf <#metaid_15> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_161>
+    bqb:is <http://identifiers.org/kegg.reaction/R02740> ;
+    semsim:hasSinkParticipant <#sink17> ;
+    semsim:hasSourceParticipant <#source18>, <#source19> .
+
+<JWSOnline_Teusink.xml#metaid_164>
+    bqb:is <http://identifiers.org/ec-code/2.7.1.11>, <http://identifiers.org/kegg.reaction/R04779> ;
+    semsim:hasSinkParticipant <#sink18> ;
+    semsim:hasSourceParticipant <#source20> .
+
+<JWSOnline_Teusink.xml#metaid_169>
+    bqb:is <http://identifiers.org/kegg.reaction/R01068> ;
+    semsim:hasSinkParticipant <#sink19>, <#sink20> ;
+    semsim:hasSourceParticipant <#source21>, <#source22> .
+
+<JWSOnline_Teusink.xml#metaid_16_property>
+    bqb:isPropertyOf <#metaid_16> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_173>
+    bqb:is <http://identifiers.org/kegg.reaction/R01061> ;
+    semsim:hasSinkParticipant <#sink21>, <#sink22> ;
+    semsim:hasSourceParticipant <#source23> .
+
+<JWSOnline_Teusink.xml#metaid_176>
+    bqb:is <http://identifiers.org/kegg.reaction/R01512> ;
+    semsim:hasSinkParticipant <#sink23> ;
+    semsim:hasSourceParticipant <#source24> .
+
+<JWSOnline_Teusink.xml#metaid_17_property>
+    bqb:isPropertyOf <#metaid_17> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_18_property>
+    bqb:isPropertyOf <#metaid_18> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_19_property>
+    bqb:isPropertyOf <#metaid_19> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_1_property>
+    bqb:isPropertyOf <#metaid_1> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_20_property>
+    bqb:isPropertyOf <#metaid_20> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_21_property>
+    bqb:isPropertyOf <#metaid_21> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_22_property>
+    bqb:isPropertyOf <#metaid_22> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_23>
+    semsim:hasValue "0.0845" .
+
+<JWSOnline_Teusink.xml#metaid_24>
+    semsim:hasValue "3" .
+
+<JWSOnline_Teusink.xml#metaid_25>
+    semsim:hasValue "0.397" .
+
+<JWSOnline_Teusink.xml#metaid_26>
+    semsim:hasValue "0.0174" .
+
+<JWSOnline_Teusink.xml#metaid_27>
+    semsim:hasValue "0" .
+
+<JWSOnline_Teusink.xml#metaid_28>
+    semsim:hasValue "100" .
+
+<JWSOnline_Teusink.xml#metaid_29>
+    semsim:hasValue "0.02" .
+
+<JWSOnline_Teusink.xml#metaid_2_property>
+    bqb:isPropertyOf <#metaid_2> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_30>
+    semsim:hasValue "39.5" .
+
+<JWSOnline_Teusink.xml#metaid_31>
+    semsim:hasValue "6" .
+
+<JWSOnline_Teusink.xml#metaid_32>
+    semsim:hasValue "0.0995" .
+
+<JWSOnline_Teusink.xml#metaid_33>
+    semsim:hasValue "0.111" .
+
+<JWSOnline_Teusink.xml#metaid_34>
+    semsim:hasValue "0.000682" .
+
+<JWSOnline_Teusink.xml#metaid_35>
+    semsim:hasValue "21.4" .
+
+<JWSOnline_Teusink.xml#metaid_36>
+    semsim:hasValue "2.4" .
+
+<JWSOnline_Teusink.xml#metaid_37>
+    semsim:hasValue "6.9e-05" .
+
+<JWSOnline_Teusink.xml#metaid_38>
+    semsim:hasValue "0.45" .
+
+<JWSOnline_Teusink.xml#metaid_39>
+    semsim:hasValue "0.069" .
+
+<JWSOnline_Teusink.xml#metaid_3_property>
+    bqb:isPropertyOf <#metaid_3> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_40>
+    semsim:hasValue "6.7" .
+
+<JWSOnline_Teusink.xml#metaid_41>
+    semsim:hasValue "4300" .
+
+<JWSOnline_Teusink.xml#metaid_42>
+    semsim:hasValue "3800" .
+
+<JWSOnline_Teusink.xml#metaid_43>
+    semsim:hasValue "1" .
+
+<JWSOnline_Teusink.xml#metaid_44>
+    semsim:hasValue "0.314" .
+
+<JWSOnline_Teusink.xml#metaid_45>
+    semsim:hasValue "3200" .
+
+<JWSOnline_Teusink.xml#metaid_46>
+    semsim:hasValue "0.19" .
+
+<JWSOnline_Teusink.xml#metaid_47>
+    semsim:hasValue "6500" .
+
+<JWSOnline_Teusink.xml#metaid_48>
+    semsim:hasValue "0.045" .
+
+<JWSOnline_Teusink.xml#metaid_49>
+    semsim:hasValue "1.1" .
+
+<JWSOnline_Teusink.xml#metaid_4_property>
+    bqb:isPropertyOf <#metaid_4> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_50>
+    semsim:hasValue "90" .
+
+<JWSOnline_Teusink.xml#metaid_51>
+    semsim:hasValue "0.92" .
+
+<JWSOnline_Teusink.xml#metaid_52>
+    semsim:hasValue "0.031" .
+
+<JWSOnline_Teusink.xml#metaid_53>
+    semsim:hasValue "0.65" .
+
+<JWSOnline_Teusink.xml#metaid_54>
+    semsim:hasValue "1.11" .
+
+<JWSOnline_Teusink.xml#metaid_55>
+    semsim:hasValue "17" .
+
+<JWSOnline_Teusink.xml#metaid_56>
+    semsim:hasValue "0.17" .
+
+<JWSOnline_Teusink.xml#metaid_57>
+    semsim:hasValue "0.11" .
+
+<JWSOnline_Teusink.xml#metaid_58>
+    semsim:hasValue "2.4" .
+
+<JWSOnline_Teusink.xml#metaid_59>
+    semsim:hasValue "0.3" .
+
+<JWSOnline_Teusink.xml#metaid_5_property>
+    bqb:isPropertyOf <#metaid_5> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_60>
+    semsim:hasValue "2" .
+
+<JWSOnline_Teusink.xml#metaid_61>
+    semsim:hasValue "10" .
+
+<JWSOnline_Teusink.xml#metaid_62>
+    semsim:hasValue "0.04" .
+
+<JWSOnline_Teusink.xml#metaid_63>
+    semsim:hasValue "0.5" .
+
+<JWSOnline_Teusink.xml#metaid_64>
+    semsim:hasValue "0.4" .
+
+<JWSOnline_Teusink.xml#metaid_65>
+    semsim:hasValue "1" .
+
+<JWSOnline_Teusink.xml#metaid_66>
+    semsim:hasValue "0.93" .
+
+<JWSOnline_Teusink.xml#metaid_67>
+    semsim:hasValue "0.023" .
+
+<JWSOnline_Teusink.xml#metaid_68>
+    semsim:hasValue "0.0098" .
+
+<JWSOnline_Teusink.xml#metaid_69>
+    semsim:hasValue "0.21" .
+
+<JWSOnline_Teusink.xml#metaid_6_property>
+    bqb:isPropertyOf <#metaid_6> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_70>
+    semsim:hasValue "0.09" .
+
+<JWSOnline_Teusink.xml#metaid_71>
+    semsim:hasValue "0.06" .
+
+<JWSOnline_Teusink.xml#metaid_72>
+    semsim:hasValue "0.23" .
+
+<JWSOnline_Teusink.xml#metaid_73>
+    semsim:hasValue "0.15" .
+
+<JWSOnline_Teusink.xml#metaid_74>
+    semsim:hasValue "30" .
+
+<JWSOnline_Teusink.xml#metaid_75>
+    semsim:hasValue "0.08" .
+
+<JWSOnline_Teusink.xml#metaid_76>
+    semsim:hasValue "1.1918" .
+
+<JWSOnline_Teusink.xml#metaid_77>
+    semsim:hasValue "1.1918" .
+
+<JWSOnline_Teusink.xml#metaid_78>
+    semsim:hasValue "4.33" .
+
+<JWSOnline_Teusink.xml#metaid_79>
+    semsim:hasValue "0.71" .
+
+<JWSOnline_Teusink.xml#metaid_7_property>
+    bqb:isPropertyOf <#metaid_7> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_80>
+    semsim:hasValue "0.1" .
+
+<JWSOnline_Teusink.xml#metaid_81>
+    semsim:hasValue "0.3" .
+
+<JWSOnline_Teusink.xml#metaid_82>
+    semsim:hasValue "1.4" .
+
+<JWSOnline_Teusink.xml#metaid_83>
+    semsim:hasValue "0.2" .
+
+<JWSOnline_Teusink.xml#metaid_84>
+    semsim:hasValue "0.3" .
+
+<JWSOnline_Teusink.xml#metaid_85>
+    semsim:hasValue "0.003" .
+
+<JWSOnline_Teusink.xml#metaid_86>
+    semsim:hasValue "0.53" .
+
+<JWSOnline_Teusink.xml#metaid_87>
+    semsim:hasValue "0.08" .
+
+<JWSOnline_Teusink.xml#metaid_88>
+    semsim:hasValue "1.2" .
+
+<JWSOnline_Teusink.xml#metaid_89>
+    semsim:hasValue "0.53" .
+
+<JWSOnline_Teusink.xml#metaid_8_property>
+    bqb:isPropertyOf <#metaid_8> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+<JWSOnline_Teusink.xml#metaid_90>
+    semsim:hasValue "1.5" .
+
+<JWSOnline_Teusink.xml#metaid_91>
+    semsim:hasValue "0.14" .
+
+<JWSOnline_Teusink.xml#metaid_92>
+    semsim:hasValue "21" .
+
+<JWSOnline_Teusink.xml#metaid_93>
+    semsim:hasValue "0.66" .
+
+<JWSOnline_Teusink.xml#metaid_94>
+    semsim:hasValue "4.1" .
+
+<JWSOnline_Teusink.xml#metaid_95>
+    semsim:hasValue "810" .
+
+<JWSOnline_Teusink.xml#metaid_96>
+    semsim:hasValue "322.258" .
+
+<JWSOnline_Teusink.xml#metaid_97>
+    semsim:hasValue "365.806" .
+
+<JWSOnline_Teusink.xml#metaid_98>
+    semsim:hasValue "70.15" .
+
+<JWSOnline_Teusink.xml#metaid_99>
+    semsim:hasValue "1184.52" .
+
+<JWSOnline_Teusink.xml#metaid_9_property>
+    bqb:isPropertyOf <#metaid_9> ;
+    bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
+
+
