@@ -3,89 +3,89 @@
 @prefix semsim: <http://www.bhi.washington.edu/SemSim#> .
 
 <#metaid_1>
-    bqb:is <http://identifiers.org/obo.chebi/15343> ;
+    bqb:is <http://identifiers.org/chebi:15343> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_10>
-    bqb:is <http://identifiers.org/obo.chebi/17754> ;
+    bqb:is <http://identifiers.org/chebi:17754> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_11>
-    bqb:is <http://identifiers.org/obo.chebi/28087> ;
+    bqb:is <http://identifiers.org/chebi:28087> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_12>
-    bqb:is <http://identifiers.org/obo.chebi/15846> ;
+    bqb:is <http://identifiers.org/chebi:15846> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_13>
-    bqb:is <http://identifiers.org/kegg.compound/C00004>, <http://identifiers.org/obo.chebi/16908> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00004>, <http://identifiers.org/chebi:16908> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_14>
-    bqb:is <http://identifiers.org/kegg.compound/C00631>, <http://identifiers.org/obo.chebi/17835> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00631>, <http://identifiers.org/chebi:17835> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_15>
-    bqb:is <http://identifiers.org/kegg.compound/C00197>, <http://identifiers.org/obo.chebi/17794> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00197>, <http://identifiers.org/chebi:17794> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_16>
-    bqb:is <http://identifiers.org/kegg.compound/C00074>, <http://identifiers.org/obo.chebi/18021> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00074>, <http://identifiers.org/chebi:18021> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_17>
-    bqb:is <http://identifiers.org/kegg.compound/C00022>, <http://identifiers.org/obo.chebi/15361> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00022>, <http://identifiers.org/chebi:15361> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_18>
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_19>
-    bqb:is <http://identifiers.org/kegg.compound/C00042>, <http://identifiers.org/obo.chebi/15741> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00042>, <http://identifiers.org/chebi:15741> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_2>
-    bqb:is <http://identifiers.org/kegg.compound/C00236>, <http://identifiers.org/obo.chebi/28907> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00236>, <http://identifiers.org/chebi:28907> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_20>
-    bqb:is <http://identifiers.org/kegg.compound/C00111>, <http://identifiers.org/obo.chebi/29052> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00111>, <http://identifiers.org/chebi:29052> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_21>
-    bqb:is <http://identifiers.org/obo.chebi/27082> ;
+    bqb:is <http://identifiers.org/chebi:27082> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_22>
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_3>
-    bqb:is <http://identifiers.org/obo.chebi/16526> ;
+    bqb:is <http://identifiers.org/chebi:16526> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_4>
-    bqb:is <http://identifiers.org/obo.chebi/16236> ;
+    bqb:is <http://identifiers.org/chebi:16236> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_5>
-    bqb:is <http://identifiers.org/kegg.compound/C00354>, <http://identifiers.org/obo.chebi/16905> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00354>, <http://identifiers.org/chebi:16905> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_6>
-    bqb:is <http://identifiers.org/kegg.compound/C00085>, <http://identifiers.org/obo.chebi/15946> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00085>, <http://identifiers.org/chebi:15946> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_7>
-    bqb:is <http://identifiers.org/kegg.compound/C00092>, <http://identifiers.org/obo.chebi/17665> ;
+    bqb:is <http://identifiers.org/kegg.compound/C00092>, <http://identifiers.org/chebi:17665> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_8>
-    bqb:is <http://identifiers.org/obo.chebi/17234> ;
+    bqb:is <http://identifiers.org/chebi:17234> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_9>
-    bqb:is <http://identifiers.org/obo.chebi/17234> ;
+    bqb:is <http://identifiers.org/chebi:17234> ;
     bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
 
 <#sink0>
