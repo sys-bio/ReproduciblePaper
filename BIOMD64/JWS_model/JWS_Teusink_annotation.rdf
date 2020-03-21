@@ -1,92 +1,92 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix bqb: <http://biomodels.net/biology-qualifiers/> .
-@prefix semsim: <http://www.bhi.washington.edu/SemSim#> .
+@prefix semsim: <http://www.bhi.washington.edu/semsim#> .
 
 <#metaid_1>
     bqb:is <http://identifiers.org/CHEBI:15343> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_10>
     bqb:is <http://identifiers.org/CHEBI:17754> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_11>
     bqb:is <http://identifiers.org/CHEBI:28087> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_12>
     bqb:is <http://identifiers.org/CHEBI:15846> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_13>
     bqb:is <http://identifiers.org/CHEBI:16908> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_14>
     bqb:is <http://identifiers.org/CHEBI:17835> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_15>
     bqb:is <http://identifiers.org/CHEBI:17794> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_16>
     bqb:is <http://identifiers.org/CHEBI:18021> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_17>
     bqb:is <http://identifiers.org/CHEBI:15361> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_18>
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_19>
     bqb:is <http://identifiers.org/CHEBI:15741> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_2>
     bqb:is <http://identifiers.org/CHEBI:28907> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_20>
     bqb:is <http://identifiers.org/CHEBI:29052> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_21>
     bqb:is <http://identifiers.org/CHEBI:27082> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_22>
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_3>
     bqb:is <http://identifiers.org/CHEBI:16526> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_4>
     bqb:is <http://identifiers.org/CHEBI:16236> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_5>
     bqb:is <http://identifiers.org/CHEBI:16905> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_6>
     bqb:is <http://identifiers.org/CHEBI:15946> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_7>
     bqb:is <http://identifiers.org/CHEBI:17665> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_8>
     bqb:is <http://identifiers.org/CHEBI:17234> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#metaid_9>
     bqb:is <http://identifiers.org/CHEBI:17234> ;
-    bqb:occursIn <JWSOnline_Teusink.xml#metaid_0> .
+    bqb:isPartOf <JWSOnline_Teusink.xml#metaid_0> .
 
 <#sink0>
     semsim:hasMultiplier "1" ;
@@ -353,7 +353,7 @@
     bqb:isVersionOf <https://identifiers.org/opb/OPB_00425> .
 
 <JWSOnline_Teusink.xml#metaid_130>
-    bqb:is <http://identifiers.org/obo.go/GO:0006105> ;
+    bqb:is <http://identifiers.org/GO:0006105> ;
     semsim:hasSinkParticipant <#sink6>, <#sink7> ;
     semsim:hasSourceParticipant <#source5>, <#source6> .
 
@@ -376,7 +376,7 @@
     semsim:hasSourceParticipant <#source10>, <#source11> .
 
 <JWSOnline_Teusink.xml#metaid_146>
-    bqb:is <http://identifiers.org/ec-code/3.6.1.3>, <http://identifiers.org/obo.go/0006200> ;
+    bqb:is <http://identifiers.org/ec-code/3.6.1.3>, <http://identifiers.org/GO:0006200> ;
     semsim:hasSinkParticipant <#sink13> ;
     semsim:hasSourceParticipant <#source12> .
 
