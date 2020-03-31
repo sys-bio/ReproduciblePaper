@@ -1,0 +1,2879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model metaid="metaid_0000002" id="BIOMD0000000064_url">
+    <listOfFunctionDefinitions>
+      <functionDefinition metaid="metaid_0000073" id="L_PFK">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> L </ci>
+            </bvar>
+            <bvar>
+              <ci> CiATP </ci>
+            </bvar>
+            <bvar>
+              <ci> KiATP </ci>
+            </bvar>
+            <bvar>
+              <ci> CAMP </ci>
+            </bvar>
+            <bvar>
+              <ci> KAMP </ci>
+            </bvar>
+            <bvar>
+              <ci> CF26BP </ci>
+            </bvar>
+            <bvar>
+              <ci> KF26BP </ci>
+            </bvar>
+            <bvar>
+              <ci> CF16BP </ci>
+            </bvar>
+            <bvar>
+              <ci> KF16BP </ci>
+            </bvar>
+            <bvar>
+              <ci> AT </ci>
+            </bvar>
+            <bvar>
+              <ci> AM </ci>
+            </bvar>
+            <bvar>
+              <ci> F16 </ci>
+            </bvar>
+            <bvar>
+              <ci> F26 </ci>
+            </bvar>
+            <apply>
+              <times />
+              <ci> L </ci>
+              <apply>
+                <power />
+                <apply>
+                  <divide />
+                  <apply>
+                    <plus />
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <times />
+                      <ci> CiATP </ci>
+                      <apply>
+                        <divide />
+                        <ci> AT </ci>
+                        <ci> KiATP </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus />
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide />
+                      <ci> AT </ci>
+                      <ci> KiATP </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <apply>
+                <power />
+                <apply>
+                  <divide />
+                  <apply>
+                    <plus />
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <times />
+                      <ci> CAMP </ci>
+                      <apply>
+                        <divide />
+                        <ci> AM </ci>
+                        <ci> KAMP </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus />
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide />
+                      <ci> AM </ci>
+                      <ci> KAMP </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <apply>
+                <power />
+                <apply>
+                  <divide />
+                  <apply>
+                    <plus />
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide />
+                      <apply>
+                        <times />
+                        <ci> CF26BP </ci>
+                        <ci> F26 </ci>
+                      </apply>
+                      <ci> KF26BP </ci>
+                    </apply>
+                    <apply>
+                      <divide />
+                      <apply>
+                        <times />
+                        <ci> CF16BP </ci>
+                        <ci> F16 </ci>
+                      </apply>
+                      <ci> KF16BP </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus />
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide />
+                      <ci> F26 </ci>
+                      <ci> KF26BP </ci>
+                    </apply>
+                    <apply>
+                      <divide />
+                      <ci> F16 </ci>
+                      <ci> KF16BP </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+            </functionDefinition>
+      <functionDefinition metaid="metaid_0000180" id="T_PFK">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> CATP </ci>
+            </bvar>
+            <bvar>
+              <ci> KmATP </ci>
+            </bvar>
+            <bvar>
+              <ci> AT </ci>
+            </bvar>
+            <apply>
+              <plus />
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <times />
+                <ci> CATP </ci>
+                <apply>
+                  <divide />
+                  <ci> AT </ci>
+                  <ci> KmATP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+            </functionDefinition>
+      <functionDefinition metaid="metaid_0000074" id="R_PFK">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> KmF6P </ci>
+            </bvar>
+            <bvar>
+              <ci> KmATP </ci>
+            </bvar>
+            <bvar>
+              <ci> g </ci>
+            </bvar>
+            <bvar>
+              <ci> AT </ci>
+            </bvar>
+            <bvar>
+              <ci> F6 </ci>
+            </bvar>
+            <apply>
+              <plus />
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide />
+                <ci> F6 </ci>
+                <ci> KmF6P </ci>
+              </apply>
+              <apply>
+                <divide />
+                <ci> AT </ci>
+                <ci> KmATP </ci>
+              </apply>
+              <apply>
+                <times />
+                <ci> g </ci>
+                <apply>
+                  <divide />
+                  <ci> F6 </ci>
+                  <ci> KmF6P </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <ci> AT </ci>
+                  <ci> KmATP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+            </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0000070" id="substance">
+        <listOfUnits>
+          <unit scale="-3" kind="mole" multiplier="1" exponent="1" />
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_0000085" id="permin">
+        <listOfUnits>
+          <unit scale="0" kind="second" multiplier="60" exponent="-1" />
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_0000086" id="mmolepermin">
+        <listOfUnits>
+          <unit scale="-3" kind="mole" multiplier="1" exponent="1" />
+          <unit scale="0" kind="second" multiplier="60" exponent="-1" />
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance_per_volume">
+        <listOfUnits>
+          <unit scale="-3" kind="mole" multiplier="1" exponent="1" />
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance_per_time">
+        <listOfUnits>
+          <unit scale="0" kind="second" multiplier="60" exponent="-1" />
+          <unit scale="-3" kind="mole" multiplier="1" exponent="1" />
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_0000084" id="mMpermin">
+        <listOfUnits>
+          <unit scale="0" kind="second" multiplier="60" exponent="-1" />
+          <unit scale="-3" kind="mole" multiplier="1" exponent="1" />
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_0000072" id="mM">
+        <listOfUnits>
+          <unit scale="-3" kind="mole" multiplier="1" exponent="1" />
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_0000071" id="time">
+        <listOfUnits>
+          <unit scale="0" kind="second" multiplier="60" exponent="1" />
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment constant="true" size="1" metaid="metaid_0000075" name="cytosol" id="cytosol" spatialDimensions="3" />
+      <compartment constant="true" size="1" metaid="metaid_0000003" name="extracellular region" id="extracellular" spatialDimensions="3" />
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000020" hasOnlySubstanceUnits="false" compartment="cytosol" id="CO2" initialConcentration="1" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000006" hasOnlySubstanceUnits="false" compartment="cytosol" id="F6P" initialConcentration="0.62" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000013" hasOnlySubstanceUnits="false" compartment="cytosol" id="PYR" initialConcentration="1.85" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000076" hasOnlySubstanceUnits="false" compartment="cytosol" id="ATP" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000077" hasOnlySubstanceUnits="false" compartment="cytosol" id="ADP" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000008" hasOnlySubstanceUnits="false" compartment="cytosol" name="Triose-phosphate" id="TRIO" initialConcentration="0.96" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000018" hasOnlySubstanceUnits="false" compartment="cytosol" id="Glyc" initialConcentration="0" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000014" hasOnlySubstanceUnits="false" compartment="cytosol" id="ACE" initialConcentration="0.17" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000012" hasOnlySubstanceUnits="false" compartment="cytosol" id="PEP" initialConcentration="0.07" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000010" hasOnlySubstanceUnits="false" compartment="cytosol" id="P3G" initialConcentration="0.9" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000011" hasOnlySubstanceUnits="false" compartment="cytosol" id="P2G" initialConcentration="0.12" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000024" hasOnlySubstanceUnits="false" compartment="cytosol" id="GLY" initialConcentration="0.15" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000007" hasOnlySubstanceUnits="false" compartment="cytosol" id="F16P" initialConcentration="5.51" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000019" hasOnlySubstanceUnits="false" compartment="cytosol" id="Trh" initialConcentration="0" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000022" hasOnlySubstanceUnits="false" compartment="extracellular" id="GLCo" initialConcentration="50" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000016" hasOnlySubstanceUnits="false" compartment="cytosol" id="NAD" initialConcentration="1.2" />
+      <species boundaryCondition="false" constant="true" metaid="metaid_0000079" hasOnlySubstanceUnits="false" compartment="cytosol" name="sum of AXP conc" id="SUM_P" initialConcentration="4.1" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000042" hasOnlySubstanceUnits="false" compartment="cytosol" name="High energy phosphates" id="P" initialConcentration="6.31" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000009" hasOnlySubstanceUnits="false" compartment="cytosol" id="BPG" initialConcentration="0" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000005" hasOnlySubstanceUnits="false" compartment="cytosol" id="G6P" initialConcentration="2.45" />
+      <species boundaryCondition="false" constant="false" metaid="metaid_0000017" hasOnlySubstanceUnits="false" compartment="cytosol" id="NADH" initialConcentration="0.39" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000078" hasOnlySubstanceUnits="false" compartment="cytosol" id="AMP" />
+      <species boundaryCondition="false" constant="true" metaid="metaid_0000061" hasOnlySubstanceUnits="false" compartment="cytosol" id="F26BP" initialConcentration="0.02" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000021" hasOnlySubstanceUnits="false" compartment="cytosol" id="SUCC" initialConcentration="0" />
+      <species boundaryCondition="true" constant="false" metaid="metaid_0000023" hasOnlySubstanceUnits="false" compartment="cytosol" id="ETOH" initialConcentration="50" />
+      <species boundaryCondition="false" constant="false" metaid="metaid0" hasOnlySubstanceUnits="false" compartment="cytosol" name="GLCi" id="GLCi" initialConcentration="0.087" />
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter constant="true" id="gR" metaid="metaid_0000050" value="5.12" />
+      <parameter constant="true" id="KmPFKF6P" units="mM" metaid="metaid_0000051" value="0.1" />
+      <parameter constant="true" id="KmPFKATP" units="mM" metaid="metaid_0000054" value="0.71" />
+      <parameter constant="true" id="Lzero" metaid="metaid_0000055" value="0.66" />
+      <parameter constant="true" id="CiPFKATP" metaid="metaid_0000056" value="100" />
+      <parameter constant="true" id="KiPFKATP" units="mM" metaid="metaid_0000057" value="0.65" />
+      <parameter constant="true" id="CPFKAMP" metaid="metaid_0000058" value="0.0845" />
+      <parameter constant="true" id="KPFKAMP" units="mM" metaid="metaid_0000059" value="0.0995" />
+      <parameter constant="true" id="CPFKF26BP" metaid="metaid_0000060" value="0.0174" />
+      <parameter constant="true" id="KPFKF26BP" units="mM" metaid="metaid_0000062" value="0.000682" />
+      <parameter constant="true" id="CPFKF16BP" metaid="metaid_0000063" value="0.397" />
+      <parameter constant="true" id="KPFKF16BP" units="mM" metaid="metaid_0000064" value="0.111" />
+      <parameter constant="true" id="CPFKATP" metaid="metaid_0000065" value="3" />
+      <parameter constant="true" id="KeqAK" metaid="metaid_0000080" value="0.45" />
+      <parameter constant="true" id="KeqTPI" metaid="metaid_0000090" value="0.045" />
+    </listOfParameters>
+    <listOfRules>
+      <rateRule variable="CO2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </rateRule>
+      <assignmentRule variable="ATP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide />
+            <apply>
+              <minus />
+              <ci> P </ci>
+              <ci> ADP </ci>
+            </apply>
+            <cn type="integer"> 2 </cn>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="ADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide />
+            <apply>
+              <minus />
+              <ci> SUM_P </ci>
+              <apply>
+                <power />
+                <apply>
+                  <plus />
+                  <apply>
+                    <times />
+                    <apply>
+                      <power />
+                      <ci> P </ci>
+                      <cn type="integer"> 2 </cn>
+                    </apply>
+                    <apply>
+                      <minus />
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <times />
+                        <cn type="integer"> 4 </cn>
+                        <ci> KeqAK </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times />
+                    <cn type="integer"> 2 </cn>
+                    <ci> SUM_P </ci>
+                    <ci> P </ci>
+                    <apply>
+                      <minus />
+                      <apply>
+                        <times />
+                        <cn type="integer"> 4 </cn>
+                        <ci> KeqAK </ci>
+                      </apply>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <power />
+                    <ci> SUM_P </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <cn> 0.5 </cn>
+              </apply>
+            </apply>
+            <apply>
+              <minus />
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <times />
+                <cn type="integer"> 4 </cn>
+                <ci> KeqAK </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <rateRule variable="Glyc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </rateRule>
+      <rateRule variable="GLY">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </rateRule>
+      <rateRule variable="Trh">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </rateRule>
+      <rateRule variable="GLCo">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </rateRule>
+      <assignmentRule variable="AMP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus />
+            <apply>
+              <minus />
+              <ci> SUM_P </ci>
+              <ci> ATP </ci>
+            </apply>
+            <ci> ADP </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <rateRule variable="SUCC">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </rateRule>
+      <rateRule variable="ETOH">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </rateRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction fast="false" id="vENO" metaid="metaid_0000034" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="P2G" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="PEP" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> cytosol </ci>
+                    <ci> VmENO </ci>
+                  </apply>
+                  <ci> KmENOP2G </ci>
+                </apply>
+                <apply>
+                  <minus />
+                  <ci> P2G </ci>
+                  <apply>
+                    <divide />
+                    <ci> PEP </ci>
+                    <ci> KeqENO </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus />
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide />
+                  <ci> P2G </ci>
+                  <ci> KmENOP2G </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <ci> PEP </ci>
+                  <ci> KmENOPEP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmENO" units="mMpermin" metaid="_773566" value="365.806" />
+            <localParameter id="KmENOP2G" units="mM" metaid="_773578" value="0.04" />
+            <localParameter id="KeqENO" metaid="_773590" value="6.7" />
+            <localParameter id="KmENOPEP" units="mM" metaid="_773602" value="0.5" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vSUC" metaid="metaid_0000037" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="2" constant="false" species="ACE" />
+          <speciesReference stoichiometry="3" constant="false" species="NAD" />
+          <speciesReference stoichiometry="4" constant="false" species="P" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="3" constant="false" species="NADH" />
+          <speciesReference stoichiometry="1" constant="false" species="SUCC" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times />
+              <ci> cytosol </ci>
+              <ci> KSUCC </ci>
+              <ci> ACE </ci>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="KSUCC" metaid="_773915" value="21.4" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vALD" metaid="metaid_0000030" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="F16P" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="2" constant="false" species="TRIO" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> cytosol </ci>
+                    <ci> VmALD </ci>
+                  </apply>
+                  <ci> KmALDF16P </ci>
+                </apply>
+                <apply>
+                  <minus />
+                  <ci> F16P </ci>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <apply>
+                        <divide />
+                        <ci> KeqTPI </ci>
+                        <apply>
+                          <plus />
+                          <cn type="integer"> 1 </cn>
+                          <ci> KeqTPI </ci>
+                        </apply>
+                      </apply>
+                      <ci> TRIO </ci>
+                      <apply>
+                        <divide />
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <plus />
+                          <cn type="integer"> 1 </cn>
+                          <ci> KeqTPI </ci>
+                        </apply>
+                      </apply>
+                      <ci> TRIO </ci>
+                    </apply>
+                    <ci> KeqALD </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus />
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide />
+                  <ci> F16P </ci>
+                  <ci> KmALDF16P </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <apply>
+                      <divide />
+                      <ci> KeqTPI </ci>
+                      <apply>
+                        <plus />
+                        <cn type="integer"> 1 </cn>
+                        <ci> KeqTPI </ci>
+                      </apply>
+                    </apply>
+                    <ci> TRIO </ci>
+                  </apply>
+                  <ci> KmALDGAP </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <apply>
+                      <divide />
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <plus />
+                        <cn type="integer"> 1 </cn>
+                        <ci> KeqTPI </ci>
+                      </apply>
+                    </apply>
+                    <ci> TRIO </ci>
+                  </apply>
+                  <ci> KmALDDHAP </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <apply>
+                      <divide />
+                      <ci> KeqTPI </ci>
+                      <apply>
+                        <plus />
+                        <cn type="integer"> 1 </cn>
+                        <ci> KeqTPI </ci>
+                      </apply>
+                    </apply>
+                    <ci> TRIO </ci>
+                    <apply>
+                      <divide />
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <plus />
+                        <cn type="integer"> 1 </cn>
+                        <ci> KeqTPI </ci>
+                      </apply>
+                    </apply>
+                    <ci> TRIO </ci>
+                  </apply>
+                  <apply>
+                    <times />
+                    <ci> KmALDGAP </ci>
+                    <ci> KmALDDHAP </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> F16P </ci>
+                    <apply>
+                      <divide />
+                      <ci> KeqTPI </ci>
+                      <apply>
+                        <plus />
+                        <cn type="integer"> 1 </cn>
+                        <ci> KeqTPI </ci>
+                      </apply>
+                    </apply>
+                    <ci> TRIO </ci>
+                  </apply>
+                  <apply>
+                    <times />
+                    <ci> KmALDGAPi </ci>
+                    <ci> KmALDF16P </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmALD" units="mMpermin" metaid="_773097" value="322.258" />
+            <localParameter id="KmALDF16P" units="mM" metaid="_773110" value="0.3" />
+            <localParameter id="KeqALD" metaid="_773122" value="0.069" />
+            <localParameter id="KmALDGAP" units="mM" metaid="_773134" value="2" />
+            <localParameter id="KmALDDHAP" units="mM" metaid="_773146" value="2.4" />
+            <localParameter id="KmALDGAPi" units="mM" metaid="_773158" value="10" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vATP" metaid="metaid_0000041" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="P" />
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ATP" />
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times />
+              <ci> cytosol </ci>
+              <ci> KATPASE </ci>
+              <ci> ATP </ci>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="KATPASE" units="permin" metaid="_774360" value="33.7" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vPYK" metaid="metaid_0000035" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="PEP" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="PYR" />
+          <speciesReference stoichiometry="1" constant="false" species="P" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ADP" />
+          <modifierSpeciesReference species="ATP" />
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> cytosol </ci>
+                    <ci> VmPYK </ci>
+                  </apply>
+                  <apply>
+                    <times />
+                    <ci> KmPYKPEP </ci>
+                    <ci> KmPYKADP </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <minus />
+                  <apply>
+                    <times />
+                    <ci> PEP </ci>
+                    <ci> ADP </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> PYR </ci>
+                      <ci> ATP </ci>
+                    </apply>
+                    <ci> KeqPYK </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times />
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> PEP </ci>
+                    <ci> KmPYKPEP </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> PYR </ci>
+                    <ci> KmPYKPYR </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> ATP </ci>
+                    <ci> KmPYKATP </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> ADP </ci>
+                    <ci> KmPYKADP </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmPYK" units="mMpermin" metaid="_773686" value="1088.71" />
+            <localParameter id="KmPYKPEP" units="mM" metaid="_773698" value="0.14" />
+            <localParameter id="KmPYKADP" units="mM" metaid="_773710" value="0.53" />
+            <localParameter id="KeqPYK" metaid="_773722" value="6500" />
+            <localParameter id="KmPYKPYR" units="mM" metaid="_773734" value="21" />
+            <localParameter id="KmPYKATP" units="mM" metaid="_773746" value="1.5" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vPGI" metaid="metaid_0000026" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="G6P" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="F6P" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> cytosol </ci>
+                    <ci> VmPGI_2 </ci>
+                  </apply>
+                  <ci> KmPGIG6P_2 </ci>
+                </apply>
+                <apply>
+                  <minus />
+                  <ci> G6P </ci>
+                  <apply>
+                    <divide />
+                    <ci> F6P </ci>
+                    <ci> KeqPGI_2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus />
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide />
+                  <ci> G6P </ci>
+                  <ci> KmPGIG6P_2 </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <ci> F6P </ci>
+                  <ci> KmPGIF6P_2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmPGI_2" units="mMpermin" metaid="_772782" value="339.677" />
+            <localParameter id="KmPGIG6P_2" units="mM" metaid="_772794" value="1.4" />
+            <localParameter id="KeqPGI_2" metaid="_772807" value="0.314" />
+            <localParameter id="KmPGIF6P_2" units="mM" metaid="_772819" value="0.3" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vPGM" metaid="metaid_0000033" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="P3G" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="P2G" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> cytosol </ci>
+                    <ci> VmPGM </ci>
+                  </apply>
+                  <ci> KmPGMP3G </ci>
+                </apply>
+                <apply>
+                  <minus />
+                  <ci> P3G </ci>
+                  <apply>
+                    <divide />
+                    <ci> P2G </ci>
+                    <ci> KeqPGM </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus />
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide />
+                  <ci> P3G </ci>
+                  <ci> KmPGMP3G </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <ci> P2G </ci>
+                  <ci> KmPGMP2G </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmPGM" units="mMpermin" metaid="_773482" value="2525.81" />
+            <localParameter id="KmPGMP3G" units="mM" metaid="_773494" value="1.2" />
+            <localParameter id="KeqPGM" metaid="_773506" value="0.19" />
+            <localParameter id="KmPGMP2G" units="mM" metaid="_773518" value="0.08" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vTreha" metaid="metaid_0000028" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="2" constant="false" species="G6P" />
+          <speciesReference stoichiometry="1" constant="false" species="P" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="Trh" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times />
+              <ci> cytosol </ci>
+              <ci> KTREHALOSE </ci>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="KTREHALOSE" units="mMpermin" metaid="_772940" value="2.4" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vG3PDH" metaid="metaid_0000040" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="TRIO" />
+          <speciesReference stoichiometry="1" constant="false" species="NADH" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="NAD" />
+          <speciesReference stoichiometry="1" constant="false" species="GLY" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> cytosol </ci>
+                    <ci> VmG3PDH </ci>
+                  </apply>
+                  <apply>
+                    <times />
+                    <ci> KmG3PDHDHAP </ci>
+                    <ci> KmG3PDHNADH </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <minus />
+                  <apply>
+                    <times />
+                    <apply>
+                      <divide />
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <plus />
+                        <cn type="integer"> 1 </cn>
+                        <ci> KeqTPI </ci>
+                      </apply>
+                    </apply>
+                    <ci> TRIO </ci>
+                    <ci> NADH </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> GLY </ci>
+                      <ci> NAD </ci>
+                    </apply>
+                    <ci> KeqG3PDH </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times />
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <apply>
+                        <divide />
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <plus />
+                          <cn type="integer"> 1 </cn>
+                          <ci> KeqTPI </ci>
+                        </apply>
+                      </apply>
+                      <ci> TRIO </ci>
+                    </apply>
+                    <ci> KmG3PDHDHAP </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> GLY </ci>
+                    <ci> KmG3PDHGLY </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> NADH </ci>
+                    <ci> KmG3PDHNADH </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> NAD </ci>
+                    <ci> KmG3PDHNAD </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmG3PDH" units="mMpermin" metaid="_774252" value="70.15" />
+            <localParameter id="KmG3PDHDHAP" units="mM" metaid="_774264" value="0.4" />
+            <localParameter id="KmG3PDHNADH" units="mM" metaid="_774276" value="0.023" />
+            <localParameter id="KeqG3PDH" metaid="_774288" value="4300" />
+            <localParameter id="KmG3PDHGLY" units="mM" metaid="_774300" value="1" />
+            <localParameter id="KmG3PDHNAD" units="mM" metaid="_774312" value="0.93" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vGLK" metaid="metaid_0000025" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="GLCi" />
+          <speciesReference stoichiometry="1" constant="false" species="P" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="G6P" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ADP" />
+          <modifierSpeciesReference species="ATP" />
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> cytosol </ci>
+                    <ci> VmGLK </ci>
+                  </apply>
+                  <apply>
+                    <times />
+                    <ci> KmGLKGLCi </ci>
+                    <ci> KmGLKATP </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <minus />
+                  <apply>
+                    <times />
+                    <ci> GLCi </ci>
+                    <ci> ATP </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> G6P </ci>
+                      <ci> ADP </ci>
+                    </apply>
+                    <ci> KeqGLK </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times />
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> GLCi </ci>
+                    <ci> KmGLKGLCi </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> G6P </ci>
+                    <ci> KmGLKG6P </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> ATP </ci>
+                    <ci> KmGLKATP </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> ADP </ci>
+                    <ci> KmGLKADP </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmGLK" units="mMpermin" metaid="_772671" value="226.452" />
+            <localParameter id="KmGLKGLCi" units="mM" metaid="_772683" value="0.08" />
+            <localParameter id="KmGLKATP" units="mM" metaid="_772695" value="0.15" />
+            <localParameter id="KeqGLK" metaid="_772707" value="3800" />
+            <localParameter id="KmGLKG6P" units="mM" metaid="_772719" value="30" />
+            <localParameter id="KmGLKADP" units="mM" metaid="_772731" value="0.23" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vGAPDH" metaid="metaid_0000031" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="TRIO" />
+          <speciesReference stoichiometry="1" constant="false" species="NAD" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="BPG" />
+          <speciesReference stoichiometry="1" constant="false" species="NADH" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <ci> cytosol </ci>
+                <apply>
+                  <minus />
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> VmGAPDHf </ci>
+                      <apply>
+                        <divide />
+                        <ci> KeqTPI </ci>
+                        <apply>
+                          <plus />
+                          <cn type="integer"> 1 </cn>
+                          <ci> KeqTPI </ci>
+                        </apply>
+                      </apply>
+                      <ci> TRIO </ci>
+                      <ci> NAD </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KmGAPDHGAP </ci>
+                      <ci> KmGAPDHNAD </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> VmGAPDHr </ci>
+                      <ci> BPG </ci>
+                      <ci> NADH </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KmGAPDHBPG </ci>
+                      <ci> KmGAPDHNADH </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times />
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <apply>
+                        <divide />
+                        <ci> KeqTPI </ci>
+                        <apply>
+                          <plus />
+                          <cn type="integer"> 1 </cn>
+                          <ci> KeqTPI </ci>
+                        </apply>
+                      </apply>
+                      <ci> TRIO </ci>
+                    </apply>
+                    <ci> KmGAPDHGAP </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> BPG </ci>
+                    <ci> KmGAPDHBPG </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> NAD </ci>
+                    <ci> KmGAPDHNAD </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> NADH </ci>
+                    <ci> KmGAPDHNADH </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmGAPDHf" units="mMpermin" metaid="_773230" value="1184.52" />
+            <localParameter id="KmGAPDHGAP" units="mM" metaid="_773242" value="0.21" />
+            <localParameter id="KmGAPDHNAD" units="mM" metaid="_773254" value="0.09" />
+            <localParameter id="VmGAPDHr" units="mMpermin" metaid="_773266" value="6549.8" />
+            <localParameter id="KmGAPDHBPG" units="mM" metaid="_773278" value="0.0098" />
+            <localParameter id="KmGAPDHNADH" units="mM" metaid="_773290" value="0.06" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vGLYCO" metaid="metaid_0000027" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="G6P" />
+          <speciesReference stoichiometry="1" constant="false" species="P" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="Glyc" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times />
+              <ci> cytosol </ci>
+              <ci> KGLYCOGEN_3 </ci>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="KGLYCOGEN_3" units="mMpermin" metaid="_772879" value="6" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vPDC" metaid="metaid_0000036" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="PYR" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="ACE" />
+          <speciesReference stoichiometry="1" constant="false" species="CO2" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <ci> cytosol </ci>
+                <ci> VmPDC </ci>
+                <apply>
+                  <divide />
+                  <apply>
+                    <power />
+                    <ci> PYR </ci>
+                    <ci> nPDC </ci>
+                  </apply>
+                  <apply>
+                    <power />
+                    <ci> KmPDCPYR </ci>
+                    <ci> nPDC </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus />
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide />
+                  <apply>
+                    <power />
+                    <ci> PYR </ci>
+                    <ci> nPDC </ci>
+                  </apply>
+                  <apply>
+                    <power />
+                    <ci> KmPDCPYR </ci>
+                    <ci> nPDC </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmPDC" units="mMpermin" metaid="_773806" value="174.194" />
+            <localParameter id="nPDC" metaid="_773818" value="1.9" />
+            <localParameter id="KmPDCPYR" units="mM" metaid="_773831" value="4.33" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vPGK" metaid="metaid_0000032" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="BPG" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="P3G" />
+          <speciesReference stoichiometry="1" constant="false" species="P" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ADP" />
+          <modifierSpeciesReference species="ATP" />
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <ci> cytosol </ci>
+                    <ci> VmPGK </ci>
+                  </apply>
+                  <apply>
+                    <times />
+                    <ci> KmPGKP3G </ci>
+                    <ci> KmPGKATP </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <minus />
+                  <apply>
+                    <times />
+                    <ci> KeqPGK </ci>
+                    <ci> BPG </ci>
+                    <ci> ADP </ci>
+                  </apply>
+                  <apply>
+                    <times />
+                    <ci> P3G </ci>
+                    <ci> ATP </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times />
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> BPG </ci>
+                    <ci> KmPGKBPG </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> P3G </ci>
+                    <ci> KmPGKP3G </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> ATP </ci>
+                    <ci> KmPGKATP </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> ADP </ci>
+                    <ci> KmPGKADP </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmPGK" units="mMpermin" metaid="_773374" value="1306.45" />
+            <localParameter id="KmPGKP3G" units="mM" metaid="_773386" value="0.53" />
+            <localParameter id="KmPGKATP" units="mM" metaid="_773398" value="0.3" />
+            <localParameter id="KeqPGK" metaid="_773410" value="3200" />
+            <localParameter id="KmPGKBPG" units="mM" metaid="_773422" value="0.003" />
+            <localParameter id="KmPGKADP" units="mM" metaid="_773434" value="0.2" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vADH" metaid="metaid_0000039" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="ACE" />
+          <speciesReference stoichiometry="1" constant="false" species="NADH" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="NAD" />
+          <speciesReference stoichiometry="1" constant="false" species="ETOH" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times />
+              <apply>
+                <minus />
+                <ci> cytosol </ci>
+              </apply>
+              <apply>
+                <divide />
+                <apply>
+                  <times />
+                  <apply>
+                    <divide />
+                    <ci> VmADH </ci>
+                    <apply>
+                      <times />
+                      <ci> KiADHNAD </ci>
+                      <ci> KmADHETOH </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <minus />
+                    <apply>
+                      <times />
+                      <ci> NAD </ci>
+                      <ci> ETOH </ci>
+                    </apply>
+                    <apply>
+                      <divide />
+                      <apply>
+                        <times />
+                        <ci> NADH </ci>
+                        <ci> ACE </ci>
+                      </apply>
+                      <ci> KeqADH </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus />
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide />
+                    <ci> NAD </ci>
+                    <ci> KiADHNAD </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> KmADHNAD </ci>
+                      <ci> ETOH </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KiADHNAD </ci>
+                      <ci> KmADHETOH </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> KmADHNADH </ci>
+                      <ci> ACE </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KiADHNADH </ci>
+                      <ci> KmADHACE </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <ci> NADH </ci>
+                    <ci> KiADHNADH </ci>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> NAD </ci>
+                      <ci> ETOH </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KiADHNAD </ci>
+                      <ci> KmADHETOH </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> KmADHNADH </ci>
+                      <ci> NAD </ci>
+                      <ci> ACE </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KiADHNAD </ci>
+                      <ci> KiADHNADH </ci>
+                      <ci> KmADHACE </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> KmADHNAD </ci>
+                      <ci> ETOH </ci>
+                      <ci> NADH </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KiADHNAD </ci>
+                      <ci> KmADHETOH </ci>
+                      <ci> KiADHNADH </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> NADH </ci>
+                      <ci> ACE </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KiADHNADH </ci>
+                      <ci> KmADHACE </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> NAD </ci>
+                      <ci> ETOH </ci>
+                      <ci> ACE </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KiADHNAD </ci>
+                      <ci> KmADHETOH </ci>
+                      <ci> KiADHACE </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide />
+                    <apply>
+                      <times />
+                      <ci> ETOH </ci>
+                      <ci> NADH </ci>
+                      <ci> ACE </ci>
+                    </apply>
+                    <apply>
+                      <times />
+                      <ci> KiADHETOH </ci>
+                      <ci> KiADHNADH </ci>
+                      <ci> KmADHACE </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmADH" units="mMpermin" metaid="_774071" value="810" />
+            <localParameter id="KiADHNAD" units="mM" metaid="_774083" value="0.92" />
+            <localParameter id="KmADHETOH" units="mM" metaid="_774095" value="17" />
+            <localParameter id="KeqADH" metaid="_774107" value="6.9E-5" />
+            <localParameter id="KmADHNAD" units="mM" metaid="_774119" value="0.17" />
+            <localParameter id="KmADHNADH" units="mM" metaid="_774131" value="0.11" />
+            <localParameter id="KiADHNADH" units="mM" metaid="_774143" value="0.031" />
+            <localParameter id="KmADHACE" units="mM" metaid="_774155" value="1.11" />
+            <localParameter id="KiADHACE" units="mM" metaid="_774167" value="1.1" />
+            <localParameter id="KiADHETOH" units="mM" metaid="_774179" value="90" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vGLT" metaid="metaid_0000038" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="GLCo" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="GLCi" />
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <apply>
+                  <divide />
+                  <ci> VmGLT </ci>
+                  <ci> KmGLTGLCo </ci>
+                </apply>
+                <apply>
+                  <minus />
+                  <ci> GLCo </ci>
+                  <apply>
+                    <divide />
+                    <ci> GLCi </ci>
+                    <ci> KeqGLT </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus />
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide />
+                  <ci> GLCo </ci>
+                  <ci> KmGLTGLCo </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <ci> GLCi </ci>
+                  <ci> KmGLTGLCi </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <apply>
+                    <times />
+                    <cn> 0.91 </cn>
+                    <ci> GLCo </ci>
+                    <ci> GLCi </ci>
+                  </apply>
+                  <apply>
+                    <times />
+                    <ci> KmGLTGLCo </ci>
+                    <ci> KmGLTGLCi </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmGLT" units="mmolepermin" metaid="_773963" value="97.264" />
+            <localParameter id="KmGLTGLCo" units="mM" metaid="_773975" value="1.1918" />
+            <localParameter id="KeqGLT" units="mM" metaid="_773987" value="1" />
+            <localParameter id="KmGLTGLCi" units="mM" metaid="_773999" value="1.1918" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="vPFK" metaid="metaid_0000029" reversible="true">
+        <listOfReactants>
+          <speciesReference stoichiometry="1" constant="false" species="F6P" />
+          <speciesReference stoichiometry="1" constant="false" species="P" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference stoichiometry="1" constant="false" species="F16P" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F26BP" />
+          <modifierSpeciesReference species="ATP" />
+          <modifierSpeciesReference species="AMP" />
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <ci> cytosol </ci>
+                <ci> VmPFK </ci>
+                <ci> gR </ci>
+                <apply>
+                  <divide />
+                  <ci> F6P </ci>
+                  <ci> KmPFKF6P </ci>
+                </apply>
+                <apply>
+                  <divide />
+                  <ci> ATP </ci>
+                  <ci> KmPFKATP </ci>
+                </apply>
+                <apply>
+                  <ci> R_PFK </ci>
+                  <ci> KmPFKF6P </ci>
+                  <ci> KmPFKATP </ci>
+                  <ci> gR </ci>
+                  <ci> ATP </ci>
+                  <ci> F6P </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus />
+                <apply>
+                  <power />
+                  <apply>
+                    <ci> R_PFK </ci>
+                    <ci> KmPFKF6P </ci>
+                    <ci> KmPFKATP </ci>
+                    <ci> gR </ci>
+                    <ci> ATP </ci>
+                    <ci> F6P </ci>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <times />
+                  <apply>
+                    <ci> L_PFK </ci>
+                    <ci> Lzero </ci>
+                    <ci> CiPFKATP </ci>
+                    <ci> KiPFKATP </ci>
+                    <ci> CPFKAMP </ci>
+                    <ci> KPFKAMP </ci>
+                    <ci> CPFKF26BP </ci>
+                    <ci> KPFKF26BP </ci>
+                    <ci> CPFKF16BP </ci>
+                    <ci> KPFKF16BP </ci>
+                    <ci> ATP </ci>
+                    <ci> AMP </ci>
+                    <ci> F16P </ci>
+                    <ci> F26BP </ci>
+                  </apply>
+                  <apply>
+                    <power />
+                    <apply>
+                      <ci> T_PFK </ci>
+                      <ci> CPFKATP </ci>
+                      <ci> KmPFKATP </ci>
+                      <ci> ATP </ci>
+                    </apply>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfLocalParameters>
+            <localParameter id="VmPFK" units="mMpermin" metaid="_773045" value="182.903" />
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+        <layout:listOfLayouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1">
+        <layout:layout layout:id="Graphfab_Layout">
+            <layout:dimensions layout:width="1024" layout:height="1024"/>
+            <layout:listOfSpeciesGlyphs>
+                <layout:speciesGlyph layout:id="ACE_Glyph" layout:species="ACE">
+                    <layout:boundingBox>
+                        <layout:position layout:x="738" layout:y="693"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="BPG_Glyph" layout:species="BPG">
+                    <layout:boundingBox>
+                        <layout:position layout:x="418" layout:y="573"/>
+                        <layout:dimensions layout:width="290" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="CO2_Glyph" layout:species="CO2">
+                    <layout:boundingBox>
+                        <layout:position layout:x="812" layout:y="552"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="ETOH_Glyph" layout:species="ETOH">
+                    <layout:boundingBox>
+                        <layout:position layout:x="731" layout:y="873"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="F16P_Glyph" layout:species="F16P">
+                    <layout:boundingBox>
+                        <layout:position layout:x="229" layout:y="581"/>
+                        <layout:dimensions layout:width="290" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="F6P_Glyph" layout:species="F6P">
+                    <layout:boundingBox>
+                        <layout:position layout:x="159" layout:y="451"/>
+                        <layout:dimensions layout:width="240" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="G6P_Glyph" layout:species="G6P">
+                    <layout:boundingBox>
+                        <layout:position layout:x="133" layout:y="290"/>
+                        <layout:dimensions layout:width="290" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="GLCi_Glyph" layout:species="GLCi">
+                    <layout:boundingBox>
+                        <layout:position layout:x="141" layout:y="343"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="GLCo_Glyph" layout:species="GLCo">
+                    <layout:boundingBox>
+                        <layout:position layout:x="-7" layout:y="371"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="GLY_Glyph" layout:species="GLY">
+                    <layout:boundingBox>
+                        <layout:position layout:x="491" layout:y="886"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="Glyc_Glyph" layout:species="Glyc">
+                    <layout:boundingBox>
+                        <layout:position layout:x="264" layout:y="199"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="NAD_Glyph" layout:species="NAD">
+                    <layout:boundingBox>
+                        <layout:position layout:x="604" layout:y="809"/>
+                        <layout:dimensions layout:width="80" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="NADH_Glyph" layout:species="NADH">
+                    <layout:boundingBox>
+                        <layout:position layout:x="616" layout:y="770"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="P2G_Glyph" layout:species="P2G">
+                    <layout:boundingBox>
+                        <layout:position layout:x="645" layout:y="250"/>
+                        <layout:dimensions layout:width="270" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="P3G_Glyph" layout:species="P3G">
+                    <layout:boundingBox>
+                        <layout:position layout:x="513" layout:y="372"/>
+                        <layout:dimensions layout:width="270" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="PEP_Glyph" layout:species="PEP">
+                    <layout:boundingBox>
+                        <layout:position layout:x="548" layout:y="284"/>
+                        <layout:dimensions layout:width="210" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="PYR_Glyph" layout:species="PYR">
+                    <layout:boundingBox>
+                        <layout:position layout:x="635" layout:y="466"/>
+                        <layout:dimensions layout:width="100" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="Prb_Glyph" layout:species="Prb">
+                    <layout:boundingBox>
+                        <layout:position layout:x="406" layout:y="351"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="SUCC_Glyph" layout:species="SUCC">
+                    <layout:boundingBox>
+                        <layout:position layout:x="784" layout:y="797"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="TRIO_Glyph" layout:species="TRIO">
+                    <layout:boundingBox>
+                        <layout:position layout:x="465" layout:y="745"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="Trh_Glyph" layout:species="Trh">
+                    <layout:boundingBox>
+                        <layout:position layout:x="342" layout:y="175"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+                <layout:speciesGlyph layout:id="X_Glyph" layout:species="X">
+                    <layout:boundingBox>
+                        <layout:position layout:x="478" layout:y="184"/>
+                        <layout:dimensions layout:width="30" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:speciesGlyph>
+            </layout:listOfSpeciesGlyphs>
+            <layout:listOfReactionGlyphs>
+                <layout:reactionGlyph layout:id="v_1_Glyph" layout:reaction="v_1">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_1_SpeciesRef1" layout:speciesReference="GLCi"
+                                                      layout:speciesGlyph="GLCi_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="211.016607789441" layout:y="356.907750922956"/>
+                                        <layout:end layout:x="295.646933529566" layout:y="348.171471688637"/>
+                                        <layout:basePoint1 layout:x="230.998129003277" layout:y="354.881005965288"/>
+                                        <layout:basePoint2 layout:x="305.48080323515" layout:y="365.586838656163"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_1_SpeciesRef2" layout:speciesReference="Prb"
+                                                      layout:speciesGlyph="Prb_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="394.948340646519" layout:y="362.351925022725"/>
+                                        <layout:end layout:x="295.646933529566" layout:y="348.171471688637"/>
+                                        <layout:basePoint1 layout:x="375.071217571439" layout:y="359.544633819088"/>
+                                        <layout:basePoint2 layout:x="305.48080323515" layout:y="365.586838656163"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_1_SpeciesRef3" layout:speciesReference="G6P"
+                                                      layout:speciesGlyph="G6P_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="295.646933529566" layout:y="348.171471688637"/>
+                                        <layout:end layout:x="282.60505135474" layout:y="318.714591331962"/>
+                                        <layout:basePoint1 layout:x="285.813063823983" layout:y="330.756104721111"/>
+                                        <layout:basePoint2 layout:x="282.59716901752" layout:y="318.696778849698"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_10_Glyph" layout:reaction="v_10">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_10_SpeciesRef1" layout:speciesReference="P2G"
+                                                      layout:speciesGlyph="P2G_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="726.615972199898" layout:y="253.836729909314"/>
+                                        <layout:end layout:x="721.543189637394" layout:y="255.973689324097"/>
+                                        <layout:basePoint1 layout:x="728.73363276548" layout:y="253.039315636062"/>
+                                        <layout:basePoint2 layout:x="740.414959697569" layout:y="249.35128078974"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_10_SpeciesRef2" layout:speciesReference="PEP"
+                                                      layout:speciesGlyph="PEP_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="721.543189637394" layout:y="255.973689324097"/>
+                                        <layout:end layout:x="676.67098531699" layout:y="277.902425835679"/>
+                                        <layout:basePoint1 layout:x="702.67141957722" layout:y="262.596097858453"/>
+                                        <layout:basePoint2 layout:x="676.653456228211" layout:y="277.910997135299"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_11_Glyph" layout:reaction="v_11">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_11_SpeciesRef1" layout:speciesReference="PEP"
+                                                      layout:speciesGlyph="PEP_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="637.677176338077" layout:y="310.822968133068"/>
+                                        <layout:end layout:x="582.068570860723" layout:y="379.273220579031"/>
+                                        <layout:basePoint1 layout:x="625.044162563194" layout:y="326.373845154826"/>
+                                        <layout:basePoint2 layout:x="594.812641885614" layout:y="363.859309533728"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_11_SpeciesRef2" layout:speciesReference="PYR"
+                                                      layout:speciesGlyph="PYR_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="582.068570860723" layout:y="379.273220579031"/>
+                                        <layout:end layout:x="662.733341742457" layout:y="459.27079495441"/>
+                                        <layout:basePoint1 layout:x="569.324499835832" layout:y="394.687131624335"/>
+                                        <layout:basePoint2 layout:x="662.747333587016" layout:y="459.284617627726"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_11_SpeciesRef3" layout:speciesReference="Prb"
+                                                      layout:speciesGlyph="Prb_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="582.068570860723" layout:y="379.273220579031"/>
+                                        <layout:end layout:x="464.777614501937" layout:y="369.358758166978"/>
+                                        <layout:basePoint1 layout:x="569.324499835832" layout:y="394.687131624335"/>
+                                        <layout:basePoint2 layout:x="464.758029288459" layout:y="369.357071236435"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_12_Glyph" layout:reaction="v_12">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_12_SpeciesRef1" layout:speciesReference="PYR"
+                                                      layout:speciesGlyph="PYR_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="697.803136757825" layout:y="493.215935502319"/>
+                                        <layout:end layout:x="759.288945264094" layout:y="580.306502542645"/>
+                                        <layout:basePoint1 layout:x="709.379298465137" layout:y="509.612735707265"/>
+                                        <layout:basePoint2 layout:x="747.769628729842" layout:y="563.957027120365"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_12_SpeciesRef2" layout:speciesReference="CO2"
+                                                      layout:speciesGlyph="CO2_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="759.288945264094" layout:y="580.306502542645"/>
+                                        <layout:end layout:x="809.156052907683" layout:y="575.781669503313"/>
+                                        <layout:basePoint1 layout:x="770.808261798345" layout:y="596.655977964924"/>
+                                        <layout:basePoint2 layout:x="809.175501512164" layout:y="575.779871630589"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_12_SpeciesRef3" layout:speciesReference="ACE"
+                                                      layout:speciesGlyph="ACE_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="759.288945264094" layout:y="580.306502542645"/>
+                                        <layout:end layout:x="763.813644000839" layout:y="681.974701089405"/>
+                                        <layout:basePoint1 layout:x="770.808261798345" layout:y="596.655977964924"/>
+                                        <layout:basePoint2 layout:x="763.814495663064" layout:y="681.994299563975"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_13_Glyph" layout:reaction="v_13">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_13_SpeciesRef1" layout:speciesReference="ACE"
+                                                      layout:speciesGlyph="ACE_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="748.868935601929" layout:y="719.970366002132"/>
+                                        <layout:end layout:x="727.969564826652" layout:y="779.730680886537"/>
+                                        <layout:basePoint1 layout:x="742.227165672953" layout:y="738.849943459219"/>
+                                        <layout:basePoint2 layout:x="712.123894761322" layout:y="767.527618148818"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_13_SpeciesRef2" layout:speciesReference="NAD"
+                                                      layout:speciesGlyph="NAD_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="665.11592729871" layout:y="802.062104561401"/>
+                                        <layout:end layout:x="727.969564826652" layout:y="779.730680886537"/>
+                                        <layout:basePoint1 layout:x="683.961641798505" layout:y="795.331604017269"/>
+                                        <layout:basePoint2 layout:x="712.123894761322" layout:y="767.527618148818"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_13_SpeciesRef3" layout:speciesReference="SUCC"
+                                                      layout:speciesGlyph="SUCC_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="727.969564826652" layout:y="779.730680886537"/>
+                                        <layout:end layout:x="774.141110592356" layout:y="798.010420335348"/>
+                                        <layout:basePoint1 layout:x="743.815234891982" layout:y="791.933743624257"/>
+                                        <layout:basePoint2 layout:x="774.159257427808" layout:y="798.017593534387"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_13_SpeciesRef4" layout:speciesReference="NADH"
+                                                      layout:speciesGlyph="NADH_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="727.969564826652" layout:y="779.730680886537"/>
+                                        <layout:end layout:x="684.975104384147" layout:y="784.281284893161"/>
+                                        <layout:basePoint1 layout:x="743.815234891982" layout:y="791.933743624257"/>
+                                        <layout:basePoint2 layout:x="684.955645219741" layout:y="784.283318029429"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_14_Glyph" layout:reaction="v_14">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_14_SpeciesRef1" layout:speciesReference="GLCo"
+                                                      layout:speciesGlyph="GLCo_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="59.5263515109559" layout:y="367.772781624854"/>
+                                        <layout:end layout:x="85.0026118346411" layout:y="362.145334079753"/>
+                                        <layout:basePoint1 layout:x="78.9718184341859" layout:y="363.476117651624"/>
+                                        <layout:basePoint2 layout:x="65.3380721530728" layout:y="365.793056535208"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_14_SpeciesRef2" layout:speciesReference="GLCi"
+                                                      layout:speciesGlyph="GLCi_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="85.0026118346411" layout:y="362.145334079753"/>
+                                        <layout:end layout:x="130.987982090187" layout:y="355.966023940305"/>
+                                        <layout:basePoint1 layout:x="104.667151516209" layout:y="358.497611624298"/>
+                                        <layout:basePoint2 layout:x="131.007314081079" layout:y="355.963428108932"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_15_Glyph" layout:reaction="v_15">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_15_SpeciesRef1" layout:speciesReference="ACE"
+                                                      layout:speciesGlyph="ACE_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="751.838378241132" layout:y="720.632550932601"/>
+                                        <layout:end layout:x="718.272861075636" layout:y="803.462250397622"/>
+                                        <layout:basePoint1 layout:x="744.289598045026" layout:y="739.201593339939"/>
+                                        <layout:basePoint2 layout:x="713.893042016962" layout:y="783.947712611313"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_15_SpeciesRef2" layout:speciesReference="NADH"
+                                                      layout:speciesGlyph="NADH_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="685.020475939412" layout:y="781.78767435044"/>
+                                        <layout:end layout:x="718.272861075636" layout:y="803.462250397622"/>
+                                        <layout:basePoint1 layout:x="701.750092178188" layout:y="792.659892991013"/>
+                                        <layout:basePoint2 layout:x="713.893042016962" layout:y="783.947712611313"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_15_SpeciesRef3" layout:speciesReference="NAD"
+                                                      layout:speciesGlyph="NAD_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="718.272861075636" layout:y="803.462250397622"/>
+                                        <layout:end layout:x="693.020310207852" layout:y="820.715625226236"/>
+                                        <layout:basePoint1 layout:x="722.652680134311" layout:y="822.976788183931"/>
+                                        <layout:basePoint2 layout:x="693.004189959173" layout:y="820.726596204491"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_15_SpeciesRef4" layout:speciesReference="ETOH"
+                                                      layout:speciesGlyph="ETOH_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="718.272861075636" layout:y="803.462250397622"/>
+                                        <layout:end layout:x="748.586396748824" layout:y="863.522815365762"/>
+                                        <layout:basePoint1 layout:x="722.652680134311" layout:y="822.976788183931"/>
+                                        <layout:basePoint2 layout:x="748.595212235846" layout:y="863.540260945742"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_16_Glyph" layout:reaction="v_16">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_16_SpeciesRef1" layout:speciesReference="TRIO"
+                                                      layout:speciesGlyph="TRIO_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="518.399098793446" layout:y="769.531370911244"/>
+                                        <layout:end layout:x="566.624769361812" layout:y="822.047711827851"/>
+                                        <layout:basePoint1 layout:x="531.957511648398" layout:y="784.25421977428"/>
+                                        <layout:basePoint2 layout:x="568.027720132502" layout:y="802.096979281526"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_16_SpeciesRef2" layout:speciesReference="NADH"
+                                                      layout:speciesGlyph="NADH_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="605.376340476829" layout:y="790.911130262375"/>
+                                        <layout:end layout:x="566.624769361812" layout:y="822.047711827851"/>
+                                        <layout:basePoint1 layout:x="589.788675747314" layout:y="803.398999319777"/>
+                                        <layout:basePoint2 layout:x="568.027720132502" layout:y="802.096979281526"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_16_SpeciesRef3" layout:speciesReference="NAD"
+                                                      layout:speciesGlyph="NAD_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="566.624769361812" layout:y="822.047711827851"/>
+                                        <layout:end layout:x="599.418591192483" layout:y="831.03025274874"/>
+                                        <layout:basePoint1 layout:x="565.221818591122" layout:y="841.998444374177"/>
+                                        <layout:basePoint2 layout:x="599.437420317746" layout:y="831.03537146342"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_16_SpeciesRef4" layout:speciesReference="GLY"
+                                                      layout:speciesGlyph="GLY_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="566.624769361812" layout:y="822.047711827851"/>
+                                        <layout:end layout:x="531.777730902765" layout:y="878.56914527092"/>
+                                        <layout:basePoint1 layout:x="565.221818591122" layout:y="841.998444374177"/>
+                                        <layout:basePoint2 layout:x="531.767457058404" layout:y="878.58577563177"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_17_Glyph" layout:reaction="v_17">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_17_SpeciesRef1" layout:speciesReference="Prb"
+                                                      layout:speciesGlyph="Prb_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="437.279097729977" layout:y="341.490872249379"/>
+                                        <layout:end layout:x="463.356610704605" layout:y="270.403516466215"/>
+                                        <layout:basePoint1 layout:x="444.168899347422" layout:y="322.703053776343"/>
+                                        <layout:basePoint2 layout:x="455.449796690932" layout:y="288.774207584221"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_17_SpeciesRef2" layout:speciesReference="X"
+                                                      layout:speciesGlyph="X_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="463.356610704605" layout:y="270.403516466215"/>
+                                        <layout:end layout:x="484.689053622033" layout:y="213.498035192637"/>
+                                        <layout:basePoint1 layout:x="471.263424718278" layout:y="252.032825348209"/>
+                                        <layout:basePoint2 layout:x="484.695908364607" layout:y="213.479744599373"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_2_Glyph" layout:reaction="v_2">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_2_SpeciesRef1" layout:speciesReference="G6P"
+                                                      layout:speciesGlyph="G6P_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="270.936383479823" layout:y="318.580115489335"/>
+                                        <layout:end layout:x="259.891599098766" layout:y="382.510531253192"/>
+                                        <layout:basePoint1 layout:x="267.520518161892" layout:y="338.27831150843"/>
+                                        <layout:basePoint2 layout:x="256.761259469518" layout:y="362.757025898305"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_2_SpeciesRef2" layout:speciesReference="F6P"
+                                                      layout:speciesGlyph="F6P_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="259.891599098766" layout:y="382.510531253192"/>
+                                        <layout:end layout:x="273.413599445146" layout:y="441.279650967267"/>
+                                        <layout:basePoint1 layout:x="263.021938728013" layout:y="402.264036608079"/>
+                                        <layout:basePoint2 layout:x="273.417981635051" layout:y="441.298685061005"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_3_Glyph" layout:reaction="v_3">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_3_SpeciesRef1" layout:speciesReference="G6P"
+                                                      layout:speciesGlyph="G6P_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="324.35368320208" layout:y="300.240199297595"/>
+                                        <layout:end layout:x="341.472799530025" layout:y="288.742665579952"/>
+                                        <layout:basePoint1 layout:x="335.996106852512" layout:y="300.190455478834"/>
+                                        <layout:basePoint2 layout:x="347.43202315185" layout:y="307.834225333547"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_3_SpeciesRef2" layout:speciesReference="Prb"
+                                                      layout:speciesGlyph="Prb_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="406.528678074444" layout:y="345.577759478847"/>
+                                        <layout:end layout:x="341.472799530025" layout:y="288.742665579952"/>
+                                        <layout:basePoint1 layout:x="391.425109022747" layout:y="332.409815513448"/>
+                                        <layout:basePoint2 layout:x="347.43202315185" layout:y="307.834225333547"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_3_SpeciesRef3" layout:speciesReference="Glyc"
+                                                      layout:speciesGlyph="Glyc_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="341.472799530025" layout:y="288.742665579952"/>
+                                        <layout:end layout:x="306.659915189802" layout:y="227.314886423079"/>
+                                        <layout:basePoint1 layout:x="335.5135759082" layout:y="269.651105826357"/>
+                                        <layout:basePoint2 layout:x="306.650267786015" layout:y="227.297879796937"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_4_Glyph" layout:reaction="v_4">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_4_SpeciesRef1" layout:speciesReference="G6P"
+                                                      layout:speciesGlyph="G6P_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="332.523315637072" layout:y="292.536090477996"/>
+                                        <layout:end layout:x="365.518395736503" layout:y="275.671021504541"/>
+                                        <layout:basePoint1 layout:x="348.974011429318" layout:y="289.878007785823"/>
+                                        <layout:basePoint2 layout:x="361.567281569664" layout:y="295.276854739591"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_4_SpeciesRef2" layout:speciesReference="Prb"
+                                                      layout:speciesGlyph="Prb_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="412.7297610914" layout:y="344.050449869993"/>
+                                        <layout:end layout:x="365.518395736503" layout:y="275.671021504541"/>
+                                        <layout:basePoint1 layout:x="401.322044132916" layout:y="327.57724476976"/>
+                                        <layout:basePoint2 layout:x="361.567281569664" layout:y="295.276854739591"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_4_SpeciesRef3" layout:speciesReference="Trh"
+                                                      layout:speciesGlyph="Trh_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="365.518395736503" layout:y="275.671021504541"/>
+                                        <layout:end layout:x="367.402521493335" layout:y="205.050437433894"/>
+                                        <layout:basePoint1 layout:x="369.469509903343" layout:y="256.06518826949"/>
+                                        <layout:basePoint2 layout:x="367.403036425091" layout:y="205.030892004397"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_5_Glyph" layout:reaction="v_5">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_5_SpeciesRef1" layout:speciesReference="F6P"
+                                                      layout:speciesGlyph="F6P_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="333.838981465414" layout:y="460.154008115553"/>
+                                        <layout:end layout:x="367.064671726471" layout:y="472.382034662105"/>
+                                        <layout:basePoint1 layout:x="350.448172189907" layout:y="460.322363042956"/>
+                                        <layout:basePoint2 layout:x="363.126735500482" layout:y="452.773550317821"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_5_SpeciesRef2" layout:speciesReference="Prb"
+                                                      layout:speciesGlyph="Prb_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="417.064610766407" layout:y="379.12022127352"/>
+                                        <layout:end layout:x="367.064671726471" layout:y="472.382034662105"/>
+                                        <layout:basePoint1 layout:x="407.555446838959" layout:y="396.804550245909"/>
+                                        <layout:basePoint2 layout:x="363.126735500482" layout:y="452.773550317821"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_5_SpeciesRef3" layout:speciesReference="F16P"
+                                                      layout:speciesGlyph="F16P_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="367.064671726471" layout:y="472.382034662105"/>
+                                        <layout:end layout:x="372.769687648893" layout:y="569.9439716589"/>
+                                        <layout:basePoint1 layout:x="371.00260795246" layout:y="491.990519006389"/>
+                                        <layout:basePoint2 layout:x="372.770826732668" layout:y="569.963542162666"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_6_Glyph" layout:reaction="v_6">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_6_SpeciesRef1" layout:speciesReference="F16P"
+                                                      layout:speciesGlyph="F16P_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="382.173915214361" layout:y="609.151303890327"/>
+                                        <layout:end layout:x="425.681349834598" layout:y="680.076901505154"/>
+                                        <layout:basePoint1 layout:x="392.633477422778" layout:y="626.232364683652"/>
+                                        <layout:basePoint2 layout:x="409.25808675977" layout:y="668.663031435148"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_6_SpeciesRef2" layout:speciesReference="TRIO"
+                                                      layout:speciesGlyph="TRIO_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="425.681349834598" layout:y="680.076901505154"/>
+                                        <layout:end layout:x="479.54572137239" layout:y="736.285340752425"/>
+                                        <layout:basePoint1 layout:x="442.104612909427" layout:y="691.49077157516"/>
+                                        <layout:basePoint2 layout:x="479.559253566584" layout:y="736.299472746121"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_7_Glyph" layout:reaction="v_7">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_7_SpeciesRef1" layout:speciesReference="TRIO"
+                                                      layout:speciesGlyph="TRIO_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="534.937136417868" layout:y="748.462224433731"/>
+                                        <layout:end layout:x="585.047879693182" layout:y="722.083176917588"/>
+                                        <layout:basePoint1 layout:x="552.637209857844" layout:y="739.177786696832"/>
+                                        <layout:basePoint2 layout:x="580.397452487064" layout:y="741.535002713656"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_7_SpeciesRef2" layout:speciesReference="NAD"
+                                                      layout:speciesGlyph="NAD_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="628.623547871193" layout:y="800.221854506859"/>
+                                        <layout:end layout:x="585.047879693182" layout:y="722.083176917588"/>
+                                        <layout:basePoint1 layout:x="618.835898830017" layout:y="782.725078534788"/>
+                                        <layout:basePoint2 layout:x="580.397452487064" layout:y="741.535002713656"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_7_SpeciesRef3" layout:speciesReference="BPG"
+                                                      layout:speciesGlyph="BPG_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="585.047879693182" layout:y="722.083176917588"/>
+                                        <layout:end layout:x="567.206484828572" layout:y="602.813623053459"/>
+                                        <layout:basePoint1 layout:x="589.6983068993" layout:y="702.631351121519"/>
+                                        <layout:basePoint2 layout:x="567.203563726899" layout:y="602.794191796293"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_7_SpeciesRef4" layout:speciesReference="NADH"
+                                                      layout:speciesGlyph="NADH_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="585.047879693182" layout:y="722.083176917588"/>
+                                        <layout:end layout:x="632.128347025341" layout:y="761.835122101676"/>
+                                        <layout:basePoint1 layout:x="589.6983068993" layout:y="702.631351121519"/>
+                                        <layout:basePoint2 layout:x="632.143292927271" layout:y="761.847786078547"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_8_Glyph" layout:reaction="v_8">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_8_SpeciesRef1" layout:speciesReference="BPG"
+                                                      layout:speciesGlyph="BPG_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="559.654599006939" layout:y="563.031620029388"/>
+                                        <layout:end layout:x="543.600029808187" layout:y="445.142774337848"/>
+                                        <layout:basePoint1 layout:x="556.943167436531" layout:y="543.119834270732"/>
+                                        <layout:basePoint2 layout:x="546.416713570737" layout:y="464.943438280802"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_8_SpeciesRef2" layout:speciesReference="P3G"
+                                                      layout:speciesGlyph="P3G_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="543.600029808187" layout:y="445.142774337848"/>
+                                        <layout:end layout:x="613.685017257003" layout:y="395.791872830509"/>
+                                        <layout:basePoint1 layout:x="540.783346045638" layout:y="425.342110394894"/>
+                                        <layout:basePoint2 layout:x="613.701063297797" layout:y="395.780615386394"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_8_SpeciesRef3" layout:speciesReference="Prb"
+                                                      layout:speciesGlyph="Prb_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="543.600029808187" layout:y="445.142774337848"/>
+                                        <layout:end layout:x="455.698622303258" layout:y="376.049854453446"/>
+                                        <layout:basePoint1 layout:x="540.783346045638" layout:y="425.342110394894"/>
+                                        <layout:basePoint2 layout:x="455.683164575251" layout:y="376.037737758419"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+                <layout:reactionGlyph layout:id="v_9_Glyph" layout:reaction="v_9">
+                    <layout:boundingBox>
+                        <layout:position layout:x="0" layout:y="0"/>
+                        <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                    <layout:listOfSpeciesReferenceGlyphs>
+                        <layout:speciesReferenceGlyph layout:id="v_9_SpeciesRef1" layout:speciesReference="P3G"
+                                                      layout:speciesGlyph="P3G_Glyph" layout:role="substrate">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="668.89582539393" layout:y="365.768495201346"/>
+                                        <layout:end layout:x="724.42148177231" layout:y="319.89776456251"/>
+                                        <layout:basePoint1 layout:x="684.31943042379" layout:y="353.029741750323"/>
+                                        <layout:basePoint2 layout:x="709.774720636991" layout:y="333.516589337244"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                        <layout:speciesReferenceGlyph layout:id="v_9_SpeciesRef2" layout:speciesReference="P2G"
+                                                      layout:speciesGlyph="P2G_Glyph" layout:role="product">
+                            <layout:curve>
+                                <layout:listOfCurveSegments>
+                                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                                         xsi:type="CubicBezier">
+                                        <layout:start layout:x="724.42148177231" layout:y="319.89776456251"/>
+                                        <layout:end layout:x="764.454833540487" layout:y="276.637747703959"/>
+                                        <layout:basePoint1 layout:x="739.068242907629" layout:y="306.278939787776"/>
+                                        <layout:basePoint2 layout:x="764.468095944883" layout:y="276.623412149185"/>
+                                    </layout:curveSegment>
+                                </layout:listOfCurveSegments>
+                            </layout:curve>
+                        </layout:speciesReferenceGlyph>
+                    </layout:listOfSpeciesReferenceGlyphs>
+                </layout:reactionGlyph>
+            </layout:listOfReactionGlyphs>
+            <layout:listOfTextGlyphs>
+                <layout:textGlyph layout:id="tACE_Glyph" layout:text="ACE" layout:graphicalObject="ACE_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="738" layout:y="693"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tBPG_Glyph" layout:text="1,3-bisphosphoglyceric acid"
+                                  layout:graphicalObject="BPG_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="418" layout:y="573"/>
+                        <layout:dimensions layout:width="290" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tCO2_Glyph" layout:text="CO2" layout:graphicalObject="CO2_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="812" layout:y="552"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tETOH_Glyph" layout:text="ETOH" layout:graphicalObject="ETOH_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="731" layout:y="873"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tF16P_Glyph" layout:text="D-fructose 1,6-bisphosphate"
+                                  layout:graphicalObject="F16P_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="229" layout:y="581"/>
+                        <layout:dimensions layout:width="290" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tF6P_Glyph" layout:text="D-fructose 6-phosphate"
+                                  layout:graphicalObject="F6P_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="159" layout:y="451"/>
+                        <layout:dimensions layout:width="240" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tG6P_Glyph" layout:text="alpha-D-glucose 6-phosphate"
+                                  layout:graphicalObject="G6P_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="133" layout:y="290"/>
+                        <layout:dimensions layout:width="290" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tGLCi_Glyph" layout:text="GLCi" layout:graphicalObject="GLCi_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="141" layout:y="343"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tGLCo_Glyph" layout:text="GLCo" layout:graphicalObject="GLCo_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="-7" layout:y="371"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tGLY_Glyph" layout:text="GLY" layout:graphicalObject="GLY_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="491" layout:y="886"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tGlyc_Glyph" layout:text="Glyc" layout:graphicalObject="Glyc_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="264" layout:y="199"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tNAD_Glyph" layout:text="NAD(+)" layout:graphicalObject="NAD_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="604" layout:y="809"/>
+                        <layout:dimensions layout:width="80" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tNADH_Glyph" layout:text="NADH" layout:graphicalObject="NADH_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="616" layout:y="770"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tP2G_Glyph" layout:text="2-phospho-D-glyceric acid"
+                                  layout:graphicalObject="P2G_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="645" layout:y="250"/>
+                        <layout:dimensions layout:width="270" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tP3G_Glyph" layout:text="3-phospho-D-glyceric acid"
+                                  layout:graphicalObject="P3G_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="513" layout:y="372"/>
+                        <layout:dimensions layout:width="270" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tPEP_Glyph" layout:text="phosphoenolpyruvate"
+                                  layout:graphicalObject="PEP_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="548" layout:y="284"/>
+                        <layout:dimensions layout:width="210" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tPYR_Glyph" layout:text="pyruvate" layout:graphicalObject="PYR_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="635" layout:y="466"/>
+                        <layout:dimensions layout:width="100" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tPrb_Glyph" layout:text="Prb" layout:graphicalObject="Prb_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="406" layout:y="351"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tSUCC_Glyph" layout:text="SUCC" layout:graphicalObject="SUCC_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="784" layout:y="797"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tTRIO_Glyph" layout:text="TRIO" layout:graphicalObject="TRIO_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="465" layout:y="745"/>
+                        <layout:dimensions layout:width="60" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tTrh_Glyph" layout:text="Trh" layout:graphicalObject="Trh_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="342" layout:y="175"/>
+                        <layout:dimensions layout:width="50" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+                <layout:textGlyph layout:id="tX_Glyph" layout:text="X" layout:graphicalObject="X_Glyph">
+                    <layout:boundingBox>
+                        <layout:position layout:x="478" layout:y="184"/>
+                        <layout:dimensions layout:width="30" layout:height="20"/>
+                    </layout:boundingBox>
+                </layout:textGlyph>
+            </layout:listOfTextGlyphs>
+        </layout:layout>
+    </layout:listOfLayouts>
+  </model>
+</sbml>

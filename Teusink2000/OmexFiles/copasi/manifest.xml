@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<omexManifest xmlns="http://identifiers.org/combine.specifications/omex-manifest">
+    <content location="simulation.sedml" format="sedml" master="true"/>
+    <content location="teusink2000.cps" format="copasi" master="true"/>
+    <content location="teusink2000.xml" format="sbml" master="true"/>
+    <content location="teusink2000network.png" format="png" master="true"/>
+</omexManifest>

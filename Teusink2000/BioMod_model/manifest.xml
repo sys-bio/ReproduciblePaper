@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<omexManifest xmlns="http://identifiers.org/combine.specifications/omex-manifest">
+    <content location="teusink.rdf" format="rdf/xml" master="true"/>
+    <content location="teusink2000.sbml" format="sbml" master="true"/>
+    <content location="/COPASI_model/simulation.sedml" format="sedml" master="true"/>
+    <content location="/COPASI_model/teusink2000.cps" format="copasi" master="true"/>
+    <content location="/COPASI_model/teusink2000.xml" format="sbml" master="true"/>
+    <content location="/JWS_model/JWSOnline_Teusink.sedml" format="sedml" master="true"/>
+    <content location="/JWS_model/JWSOnline_Teusink.xml" format="antimony" master="true"/>
+    <content location="/JWS_model/JWSOnline_Teusink_annotation.rdf" format="rdf/turtle" master="true"/>
+    <content location="/Matlab_model/matlab.odes.m" format="matlab" master="true"/>
+    <content location="/Python_model/python_pdes.py" format="python" master="true"/>
+    <content location="/Python_model/teusink2000.ant" format="antimony" master="true"/>
+</omexManifest>
