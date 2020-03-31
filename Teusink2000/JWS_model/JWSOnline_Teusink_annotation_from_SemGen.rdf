@@ -1,0 +1,590 @@
+<rdf:RDF
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:bqmodel="http://biomodels.net/model-qualifiers/"
+    xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+    xmlns:semsim="http://www.bhi.washington.edu/semsim#" > 
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid7">
+    <bqbiol:isPropertyOf rdf:resource="metaid_7"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_2">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_2">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_8">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_15">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_114">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_0"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_1"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_0"/>
+    <semsim:name>hexokinase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_130">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_7"/>
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_6"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_6"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_5"/>
+    <semsim:name>Succinate synthesis</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_0">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid31">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_146"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_10">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:17754"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid39">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_176"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid27">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_130"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid15">
+    <bqbiol:isPropertyOf rdf:resource="metaid_15"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_15">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_15">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid8">
+    <bqbiol:isPropertyOf rdf:resource="metaid_9"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_1">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_3">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_14">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_7">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_125">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_5"/>
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_4"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_4"/>
+    <semsim:name>Pyruvate decarboxylase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid0">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_0"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00154"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_177">
+    <bqbiol:hasTaxon rdf:resource="http://identifiers.org/taxonomy/4932"/>
+    <bqmodel:isDescribedBy rdf:resource="http://identifiers.org/pubmed/10951190"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_153">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_15"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_15"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_14"/>
+    <semsim:name>Glycogen synthesis</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_21">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:27082"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid30">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_143"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_20">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_138">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_10"/>
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_9"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_9"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_8"/>
+    <semsim:name>Alcohol dehydrogenase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_7">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:17665"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_17">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:15361"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid38">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_173"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid26">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_125"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid14">
+    <bqbiol:isPropertyOf rdf:resource="metaid_14"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_9">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_14">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_16">
+    <semsim:hasMultiplier>2.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_13">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_6">
+    <semsim:hasMultiplier>3.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_18">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_12">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid5">
+    <bqbiol:isPropertyOf rdf:resource="metaid_5"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_5">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:16905"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_176">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_23"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_24"/>
+    <semsim:name>Phosphoglycerate mutase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_164">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_18"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_20"/>
+    <semsim:name>Aldolase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_149">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_14"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_13"/>
+    <semsim:name>Glucose-6-phosphate isomerase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_6">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:15946"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_12">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:15846"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_21">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid37">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_169"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_4">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid25">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_121"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid13">
+    <bqbiol:isPropertyOf rdf:resource="metaid_13"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_13">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_17">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_19">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_12">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_5">
+    <semsim:hasMultiplier>2.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_11">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid6">
+    <bqbiol:isPropertyOf rdf:resource="metaid_6"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_1">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_4">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:16236"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_9">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_11">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:28087"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_22">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_10">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_3">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid36">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_164"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid24">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_117"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid12">
+    <bqbiol:isPropertyOf rdf:resource="metaid_12"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_19">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:15741"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_6">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_23">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_10">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_4">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_22">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_11">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid19">
+    <bqbiol:isPropertyOf rdf:resource="metaid_19"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid3">
+    <bqbiol:isPropertyOf rdf:resource="metaid_3"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_19">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_3">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:16526"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_146">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_13"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_12"/>
+    <semsim:name>ATPase activity</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_14">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:17835"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_11">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_6">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_19">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_23">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid35">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_161"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid23">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_114"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid11">
+    <bqbiol:isPropertyOf rdf:resource="metaid_11"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_161">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_17"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_19"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_18"/>
+    <semsim:name>Phosphofructokinase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_7">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_21">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_173">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_22"/>
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_21"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_23"/>
+    <semsim:name>Phosphoglycerate kinase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_22">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_3">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_10">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid4">
+    <bqbiol:isPropertyOf rdf:resource="metaid_4"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid18">
+    <bqbiol:isPropertyOf rdf:resource="metaid_18"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_169">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_20"/>
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_19"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_22"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_21"/>
+    <semsim:name>Glyceraldehyde 3-phosphate dehydrogenase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_2">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:28907"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_157">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_16"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_17"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_16"/>
+    <semsim:name>Trehalose 6-phosphate synthase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_18">
+    <semsim:hasMultiplier>2.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_121">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_3"/>
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_2"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_3"/>
+    <semsim:name>Pyruvate kinase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_133">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_8"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_7"/>
+    <semsim:name>glucose transport</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_13">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:16908"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_5">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_18">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_24">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_12">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid34">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_157"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid22">
+    <bqbiol:isPropertyOf rdf:resource="metaid_22"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid10">
+    <bqbiol:isPropertyOf rdf:resource="metaid_10"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid9">
+    <bqbiol:isPropertyOf rdf:resource="metaid_9"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_20">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_4">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_21">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_17">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_0">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid29">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_138"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid1">
+    <bqbiol:isPropertyOf rdf:resource="metaid_1"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_2">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_1">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:15343"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_20">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:29052"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_117">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_1"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_2"/>
+    <semsim:name>Enolase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid17">
+    <bqbiol:isPropertyOf rdf:resource="metaid_17"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_17">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_13">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_16">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:18021"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_20">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid33">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_153"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid21">
+    <bqbiol:isPropertyOf rdf:resource="metaid_21"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_8">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_5">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_9">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_16">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid2">
+    <bqbiol:isPropertyOf rdf:resource="metaid_2"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_0">
+    <semsim:name>default_compartment</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_143">
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_12"/>
+    <semsim:hasSinkParticipant rdf:resource="./JWSOnline_Teusink.xml#sink_11"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_11"/>
+    <semsim:hasSourceParticipant rdf:resource="./JWSOnline_Teusink.xml#source_10"/>
+    <semsim:name>Glycerol 3-phosphate dehydrogenase</semsim:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_1">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid20">
+    <bqbiol:isPropertyOf rdf:resource="metaid_20"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_9">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid28">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_133"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid16">
+    <bqbiol:isPropertyOf rdf:resource="metaid_16"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00340"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid_15">
+    <bqbiol:is rdf:resource="http://identifiers.org/chebi/CHEBI:17794"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#source_14">
+    <semsim:hasMultiplier>1.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#sink_7">
+    <semsim:hasMultiplier>3.0</semsim:hasMultiplier>
+    <semsim:hasPhysicalEntityReference rdf:resource="metaid_13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="./JWSOnline_Teusink.xml#metaid32">
+    <bqbiol:isPropertyOf rdf:resource="./JWSOnline_Teusink.xml#metaid_149"/>
+    <bqbiol:isVersionOf rdf:resource="https://identifiers.org/opb/OPB_00592"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="metaid_16">
+    <bqbiol:isPartOf rdf:resource="metaid_0"/>
+  </rdf:Description>
+</rdf:RDF>

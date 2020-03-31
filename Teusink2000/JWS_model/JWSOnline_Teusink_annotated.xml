@@ -8,74 +8,381 @@
         <listOfSpecies>
             <species metaid="metaid_1" id="ACE" compartment="default_compartment" initialConcentration="0.04"
                      hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_1">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15343"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_2" id="BPG" name="1,3-bisphosphoglyceric acid" compartment="default_compartment"
                      initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_2">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28907"/>
+
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_3" id="CO2" compartment="default_compartment" initialConcentration="1"
                      hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_3">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16526"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_4" id="ETOH" compartment="default_compartment" initialConcentration="50"
                      hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_4">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16236"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_5" id="F16P" name="D-fructose 1,6-bisphosphate" compartment="default_compartment"
                      initialConcentration="0.1" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_5">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16905"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_6" id="F6P" name="D-fructose 6-phosphate" compartment="default_compartment"
                      initialConcentration="0.28" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_6">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15946"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_7" id="G6P" name="alpha-D-glucose 6-phosphate" compartment="default_compartment"
                      initialConcentration="1.39" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_7">
+                            <bqbiol:is>
+                                <rdf:Bag>
+
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17665"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_8" id="GLCi" compartment="default_compartment" initialConcentration="0.087"
                      hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_8">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_9" id="GLCo" compartment="default_compartment" initialConcentration="50"
                      hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_9">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_10" id="GLY" compartment="default_compartment" initialConcentration="0.15"
                      hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_10">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17754"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_11" id="Glyc" compartment="default_compartment" initialConcentration="0"
                      hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_11">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28087"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_12" id="NAD" name="NAD(+)" compartment="default_compartment"
                      initialConcentration="1.2" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_12">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15846"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_13" id="NADH" name="NADH" compartment="default_compartment"
                      initialConcentration="0.39" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_13">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16908"/>
+
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_14" id="P2G" name="2-phospho-D-glyceric acid" compartment="default_compartment"
                      initialConcentration="0.1" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_14">
+                            <bqbiol:is>
+                                <rdf:Bag>
+
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17835"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_15" id="P3G" name="3-phospho-D-glyceric acid" compartment="default_compartment"
                      initialConcentration="0.1" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_15">
+                            <bqbiol:is>
+                                <rdf:Bag>
+
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17794"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_16" id="PEP" name="phosphoenolpyruvate" compartment="default_compartment"
                      initialConcentration="0.1" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_16">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18021"/>
+
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_17" id="PYR" name="pyruvate" compartment="default_compartment"
                      initialConcentration="3.36" hasOnlySubstanceUnits="false" boundaryCondition="false"
                      constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_17">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15361"/>
+
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_18" id="Prb" compartment="default_compartment" initialConcentration="5"
                      hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
             <species metaid="metaid_19" id="SUCC" compartment="default_compartment" initialConcentration="0"
                      hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_19">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15741"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_20" id="TRIO" compartment="default_compartment" initialConcentration="5.17"
                      hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_20">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29052"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_21" id="Trh" compartment="default_compartment" initialConcentration="0"
                      hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_21">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:27082"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
             </species>
             <species metaid="metaid_22" id="X" compartment="default_compartment" initialConcentration="0"
                      hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
@@ -172,6 +479,22 @@
         </listOfParameters>
         <listOfReactions>
             <reaction metaid="metaid_114" id="v_1" name="hexokinase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_114">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.1"/>
+                                    <rdf:li rdf:resource="http://identifiers.org/interpro/IPR001312"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_111" species="GLCi" stoichiometry="1" constant="true"/>
                     <speciesReference metaid="metaid_112" species="Prb" stoichiometry="1" constant="true"/>
@@ -521,6 +844,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_117" id="v_10" name="Enolase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_117">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/4.2.1.11"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_115" species="P2G" stoichiometry="1" constant="true"/>
                 </listOfReactants>
@@ -567,6 +905,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_121" id="v_11" name="Pyruvate kinase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_121">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.40"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_118" species="PEP" stoichiometry="1" constant="true"/>
                 </listOfReactants>
@@ -913,6 +1266,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_125" id="v_12" name="Pyruvate decarboxylase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_125">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/6.4.1.1"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_122" species="PYR" stoichiometry="1" constant="true"/>
                 </listOfReactants>
@@ -963,6 +1331,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_130" id="v_13" name="Succinate synthesis" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_130">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/GO:0006105"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_126" species="ACE" stoichiometry="2" constant="true"/>
                     <speciesReference metaid="metaid_127" species="NAD" stoichiometry="3" constant="true"/>
@@ -1042,6 +1425,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_138" id="v_15" name="Alcohol dehydrogenase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_138">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.1"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_134" species="ACE" stoichiometry="1" constant="true"/>
                     <speciesReference metaid="metaid_135" species="NADH" stoichiometry="1" constant="true"/>
@@ -1218,6 +1616,21 @@
             </reaction>
             <reaction metaid="metaid_143" id="v_16" name="Glycerol 3-phosphate dehydrogenase" reversible="true"
                       fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_143">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.8"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_139" species="TRIO" stoichiometry="1" constant="true"/>
                     <speciesReference metaid="metaid_140" species="NADH" stoichiometry="1" constant="true"/>
@@ -1308,6 +1721,22 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_146" id="v_17" name="ATPase activity" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_146">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/GO:0006200"/>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/3.6.1.3"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_144" species="Prb" stoichiometry="1" constant="true"/>
                 </listOfReactants>
@@ -1399,6 +1828,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_149" id="v_2" name="Glucose-6-phosphate isomerase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_149">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.63"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_147" species="G6P" stoichiometry="1" constant="true"/>
                 </listOfReactants>
@@ -1445,6 +1889,26 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_153" id="v_3" name="Glycogen synthesis" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_0000027">
+                            <bqbiol:isVersionOf>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/GO:0005978"/>
+                                </rdf:Bag>
+                            </bqbiol:isVersionOf>
+
+                            <bqbiol:isHomologTo>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1736"/>
+                                </rdf:Bag>
+                            </bqbiol:isHomologTo>
+                        </rdf:Description>
+
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_150" species="G6P" stoichiometry="1" constant="true"/>
                     <speciesReference metaid="metaid_151" species="Prb" stoichiometry="1" constant="true"/>
@@ -1459,6 +1923,20 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_157" id="v_4" name="Trehalose 6-phosphate synthase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_0000028">
+                            <bqbiol:isVersionOf>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/GO:0005992"/>
+                                </rdf:Bag>
+                            </bqbiol:isVersionOf>
+                        </rdf:Description>
+
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_154" species="G6P" stoichiometry="2" constant="true"/>
                     <speciesReference metaid="metaid_155" species="Prb" stoichiometry="1" constant="true"/>
@@ -1473,6 +1951,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_161" id="v_5" name="Phosphofructokinase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_161">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.11"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_158" species="F6P" stoichiometry="1" constant="true"/>
                     <speciesReference metaid="metaid_159" species="Prb" stoichiometry="1" constant="true"/>
@@ -2571,6 +3064,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_164" id="v_6" name="Aldolase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_164">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/4.1.2.13"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_162" species="F16P" stoichiometry="1" constant="true"/>
                 </listOfReactants>
@@ -2708,6 +3216,21 @@
             </reaction>
             <reaction metaid="metaid_169" id="v_7" name="Glyceraldehyde 3-phosphate dehydrogenase" reversible="true"
                       fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_169">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/1.2.1.12"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_165" species="TRIO" stoichiometry="1" constant="true"/>
                     <speciesReference metaid="metaid_166" species="NAD" stoichiometry="1" constant="true"/>
@@ -2808,6 +3331,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_173" id="v_8" name="Phosphoglycerate kinase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_173">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.2.3"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_170" species="BPG" stoichiometry="1" constant="true"/>
                 </listOfReactants>
@@ -3151,6 +3689,21 @@
                 </kineticLaw>
             </reaction>
             <reaction metaid="metaid_176" id="v_9" name="Phosphoglycerate mutase" reversible="true" fast="false">
+                <annotation>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                             xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+                             xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+                             xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+                        <rdf:Description rdf:about="#metaid_176">
+                            <bqbiol:is>
+                                <rdf:Bag>
+                                    <rdf:li rdf:resource="http://identifiers.org/ec-code/5.4.2.1"/>
+                                </rdf:Bag>
+                            </bqbiol:is>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </annotation>
                 <listOfReactants>
                     <speciesReference metaid="metaid_174" species="P3G" stoichiometry="1" constant="true"/>
                 </listOfReactants>
