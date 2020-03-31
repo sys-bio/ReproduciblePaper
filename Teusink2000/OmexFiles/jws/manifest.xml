@@ -3,5 +3,6 @@
     <content location="JWSOnline_Teusink.sbml" format="sbml" master="true"/>
     <content location="JWSOnline_Teusink.sedml" format="sedml" master="true"/>
     <content location="JWSOnline_Teusink_annotation.rdf" format="rdf/turtle" master="true"/>
+    <content location="JWSOnline_Teusink_annotation_from_SemGen.rdf" format="rdf/xml" master="true"/>
     <content location="teusink2000network.png" format="png" master="true"/>
 </omexManifest>
